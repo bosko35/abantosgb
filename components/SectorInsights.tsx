@@ -3,10 +3,10 @@ import { HardHat, Truck, UtensilsCrossed, ArrowRight } from "lucide-react";
 
 type Card = {
   id: string;
+  slug: string;
   title: string;
   excerpt: string;
   icon: "hard-hat" | "truck" | "utensils-crossed";
-  href: string;
   ctaLabel: string;
   a11y: { ariaLabel: string };
   seoTag?: string;
@@ -15,30 +15,30 @@ type Card = {
 const cards: Card[] = [
   {
     id: "insaat",
+    slug: "insaatta-isg",
     title: "İnşaatta İSG",
     excerpt: "Yüksekte çalışma, iskele güvenliği, KKD ve düşme önleyici sistemler.",
     icon: "hard-hat",
-    href: "/blog/insaatta-isg",
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "İnşaatta İSG yazısına git" },
     seoTag: "insaat-isg-card",
   },
   {
     id: "lojistik",
+    slug: "lojistikte-isg",
     title: "Lojistikte İSG",
     excerpt: "Depo düzeni, forklift operasyonları, elle taşıma ve ergonomi.",
     icon: "truck",
-    href: "/blog/lojistikte-isg",
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "Lojistikte İSG yazısına git" },
     seoTag: "lojistik-isg-card",
   },
   {
     id: "gida",
+    slug: "gida-sektorunde-isg",
     title: "Gıda Sektöründe İSG",
     excerpt: "Hijyen standartları, kimyasal temizlik maddeleri ve çalışan sağlığı.",
     icon: "utensils-crossed",
-    href: "/blog/gida-sektorunde-isg",
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "Gıda Sektöründe İSG yazısına git" },
     seoTag: "gida-isg-card",
@@ -80,7 +80,7 @@ export default function SectorInsights() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((c) => (
             <Link
-              href={c.href}
+              href={{ pathname: "/blog/[slug]", query: { slug: c.slug } }}
               key={c.id}
               aria-label={c.a11y.ariaLabel}
               className="group block rounded-2xl bg-white ring-1 ring-black/5 shadow-md hover:shadow-lg transition-all duration-200 p-6 hover:scale-[1.01]"

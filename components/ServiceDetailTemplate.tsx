@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import type { Route } from "next";
 
 type CTA = { label: string; href: string };
 type Data = {
@@ -57,6 +58,41 @@ const HelmetSVG = ({ className = "w-24 h-24" }: { className?: string }) => (
     </g>
   </svg>
 );
+
+const isInternalHref = (href: string) => href.startsWith("/") && !href.startsWith("//");
+
+type SmartLinkProps = {
+  href: string;
+  className?: string;
+  ariaLabel?: string;
+  rel?: string;
+  children: React.ReactNode;
+};
+
+function SmartLink({ href, className, ariaLabel, rel, children }: SmartLinkProps) {
+  if (isInternalHref(href)) {
+    return (
+      <Link href={href as Route} className={className} aria-label={ariaLabel} rel={rel}>
+        {children}
+      </Link>
+    );
+  }
+
+  const isHttp = /^https?:/i.test(href);
+  const resolvedRel = rel ?? (isHttp ? "noopener noreferrer" : undefined);
+
+  return (
+    <a
+      href={href}
+      className={className}
+      aria-label={ariaLabel}
+      rel={resolvedRel}
+      target={isHttp ? "_blank" : undefined}
+    >
+      {children}
+    </a>
+  );
+}
 
 // Small helper components
 const H2 = ({ id, children }: { id: string; children: React.ReactNode }) => (
@@ -174,24 +210,24 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
             )}
             <div className="mt-6 flex flex-wrap gap-3">
               {data.hero?.primaryCta && (
-                <Link
+                <SmartLink
                   href={data.hero.primaryCta.href}
-                  aria-label={data.hero.primaryCta.label}
+                  ariaLabel={data.hero.primaryCta.label}
                   rel="internal"
                   className="btn-primary btn-cta"
                 >
                   {data.hero.primaryCta.label}
-                </Link>
+                </SmartLink>
               )}
               {data.hero?.secondaryCta && (
-                <Link
+                <SmartLink
                   href={data.hero.secondaryCta.href}
-                  aria-label={data.hero.secondaryCta.label}
+                  ariaLabel={data.hero.secondaryCta.label}
                   rel="internal"
                   className="btn-outline"
                 >
                   {data.hero.secondaryCta.label}
-                </Link>
+                </SmartLink>
               )}
             </div>
           </div>
@@ -337,9 +373,9 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {data.related!.map((r, i) => (
                     <Card key={i}>
-                      <Link href={r.href} rel="internal" className="text-emerald-700 hover:underline">
+                      <SmartLink href={r.href} rel="internal" className="text-emerald-700 hover:underline">
                         {r.title}
-                      </Link>
+                      </SmartLink>
                     </Card>
                   ))}
                 </div>
@@ -389,24 +425,29 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-5">
               <div className="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 p-4 flex items-center justify-between">
                 <div className="text-sm text-slate-700 truncate pr-4">{data.cta.banner ?? data.title}</div>
-                <Link href={data.cta.primary.href} rel="internal" aria-label={data.cta.primary.label} className="btn-primary btn-cta">
+                <SmartLink
+                  href={data.cta.primary.href}
+                  rel="internal"
+                  ariaLabel={data.cta.primary.label}
+                  className="btn-primary btn-cta"
+                >
                   {data.cta.primary.label}
-                </Link>
+                </SmartLink>
               </div>
             </div>
           </div>
 
           {/* Desktop FAB */}
           <div className="hidden lg:block">
-            <Link
+            <SmartLink
               href={data.cta.primary.href}
               rel="internal"
-              aria-label={data.cta.primary.label}
+              ariaLabel={data.cta.primary.label}
               className="fixed right-6 bottom-6 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-500 text-white px-5 py-3 shadow-lg hover:bg-emerald-600 transition"
             >
               <span>{data.cta.primary.label}</span>
               <span aria-hidden>→</span>
-            </Link>
+            </SmartLink>
           </div>
         </>
       )}

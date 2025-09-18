@@ -33,7 +33,7 @@ export default function Reveal({ children, className = "", delay = 0, once = tru
     return () => io.disconnect();
   }, [once]);
 
-  const style: CSSProperties = visible ? { transitionDelay: `${delay}ms` } : undefined;
+  const style: CSSProperties = visible ? { transitionDelay: `${delay}ms` } : {};
 
   return (
     <div
@@ -47,4 +47,3 @@ export default function Reveal({ children, className = "", delay = 0, once = tru
     </div>
   );
 }
-

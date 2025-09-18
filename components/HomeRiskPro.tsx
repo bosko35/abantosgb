@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import type { Route } from "next";
 
 type HazardClass = "Az" | "Tehlikeli" | "Çok";
 type Sector =
@@ -155,9 +156,9 @@ export default function HomeRiskPro() {
   if (values.heightConfined === "Evet") actions.push("Yüksekte çalışma eğitimi, kurtarma planı ve izinli çalışma");
   if (values.maturity === "Zayıf") actions.push("Prosedür/Eğitim/KKD disiplini iyileştirme");
 
-  const secondary = result && (result.level === "Düşük" || result.level === "Orta")
-    ? { href: "/hizmetler/isg-egitimleri-bolu", label: "Eğitim Planı Oluştur" }
-    : { href: "/hizmetler/is-guvenligi-bolu", label: "Mevzuat Uyum Desteği" };
+  const secondary: { href: Route; label: string } = result && (result.level === "Düşük" || result.level === "Orta")
+    ? { href: "/hizmetler/isg-egitimleri-bolu" as Route, label: "Eğitim Planı Oluştur" }
+    : { href: "/hizmetler/is-guvenligi-bolu" as Route, label: "Mevzuat Uyum Desteği" };
 
   return (
     <section className="relative py-16 md:py-24">
@@ -367,4 +368,3 @@ export default function HomeRiskPro() {
 const _k = `
 @keyframes fadeIn { from { opacity: 0; transform: translateY(4px);} to { opacity:1; transform: translateY(0);} }
 `;
-
