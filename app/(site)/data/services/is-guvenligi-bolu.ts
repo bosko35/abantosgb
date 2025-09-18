@@ -8,7 +8,6 @@ const data: ServicePageData = {
     tagline:
       "Mevzuata uygun, ölçülebilir ve sürdürülebilir güvenlik uygulamaları ile işletmenizde koruyucu sistemler kuruyoruz.",
     primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
-    secondaryCta: { label: "WhatsApp", href: "https://wa.me/90XXXXXXXXXX" },
   },
   highlights: [
     { label: "Yasal Dayanak", value: "6331 sayılı kanun" },
@@ -76,4 +75,3 @@ const data: ServicePageData = {
 };
 
 export default data;
-

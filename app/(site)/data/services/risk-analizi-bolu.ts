@@ -8,7 +8,6 @@ const data: ServicePageData = {
     tagline:
       "Fiziksel, kimyasal, biyolojik ve ergonomik riskleri puanlayıp mevzuata uygun aksiyon planları çıkarıyoruz.",
     primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
-    secondaryCta: { label: "WhatsApp", href: "https://wa.me/90XXXXXXXXXX" },
   },
   highlights: [
     { label: "Yasal Dayanak", value: "6331 sayılı kanun" },
@@ -87,4 +86,3 @@ const data: ServicePageData = {
 };
 
 export default data;
-
