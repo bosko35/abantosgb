@@ -175,18 +175,6 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
   const activeId = useActiveSection(tocIds);
 
   // Sticky CTA visibility on mobile: show when scrolled past hero
-  const heroRef = useRef<HTMLDivElement | null>(null);
-  const [showBar, setShowBar] = useState(false);
-  useEffect(() => {
-    if (!heroRef.current) return;
-    const io = new IntersectionObserver(
-      (e) => setShowBar(!e[0].isIntersecting),
-      { rootMargin: "0px 0px 0px 0px", threshold: 0.1 }
-    );
-    io.observe(heroRef.current);
-    return () => io.disconnect();
-  }, []);
-
   const [pendingId, setPendingId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -199,7 +187,7 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
     <div className="bg-slate-50 pt-28 md:pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero */}
-        <div ref={heroRef} className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p className="text-sm text-emerald-600 font-medium">{data.hero?.subtitle}</p>
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mt-2">
@@ -413,44 +401,7 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
         </div>
       </div>
 
-      {/* Sticky CTA */}
-      {data.cta?.primary && (
-        <>
-          {/* Mobile bottom bar */}
-          <div
-            className={`fixed inset-x-0 bottom-0 z-40 lg:hidden transition-transform ${
-              showBar ? "translate-y-0" : "translate-y-full"
-            }`}
-          >
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-5">
-              <div className="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 p-4 flex items-center justify-between">
-                <div className="text-sm text-slate-700 truncate pr-4">{data.cta.banner ?? data.title}</div>
-                <SmartLink
-                  href={data.cta.primary.href}
-                  rel="internal"
-                  ariaLabel={data.cta.primary.label}
-                  className="btn-primary btn-cta"
-                >
-                  {data.cta.primary.label}
-                </SmartLink>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop FAB */}
-          <div className="hidden lg:block">
-            <SmartLink
-              href={data.cta.primary.href}
-              rel="internal"
-              ariaLabel={data.cta.primary.label}
-              className="fixed right-6 bottom-6 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-500 text-white px-5 py-3 shadow-lg hover:bg-emerald-600 transition"
-            >
-              <span>{data.cta.primary.label}</span>
-              <span aria-hidden>→</span>
-            </SmartLink>
-          </div>
-        </>
-      )}
+      {/* Sticky CTA kaldırıldı */}
     </div>
   );
 }
