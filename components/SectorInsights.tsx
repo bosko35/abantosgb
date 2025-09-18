@@ -1,9 +1,12 @@
 import Link from "next/link";
+import type { Route } from "next";
 import { HardHat, Truck, UtensilsCrossed, ArrowRight } from "lucide-react";
+
+type BlogSlug = "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
 
 type Card = {
   id: string;
-  slug: string;
+  slug: BlogSlug;
   title: string;
   excerpt: string;
   icon: "hard-hat" | "truck" | "utensils-crossed";
@@ -45,6 +48,12 @@ const cards: Card[] = [
   },
 ];
 
+const hrefMap = {
+  "insaatta-isg": "/blog/insaatta-isg",
+  "lojistikte-isg": "/blog/lojistikte-isg",
+  "gida-sektorunde-isg": "/blog/gida-sektorunde-isg",
+} as const;
+
 function Icon({ name }: { name: Card["icon"] }) {
   const common = "h-6 w-6 text-emerald-600";
   switch (name) {
@@ -80,7 +89,7 @@ export default function SectorInsights() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((c) => (
             <Link
-              href={{ pathname: "/blog/[slug]", query: { slug: c.slug } }}
+              href={hrefMap[c.slug] as Route}
               key={c.id}
               aria-label={c.a11y.ariaLabel}
               className="group block rounded-2xl bg-white ring-1 ring-black/5 shadow-md hover:shadow-lg transition-all duration-200 p-6 hover:scale-[1.01]"
