@@ -219,7 +219,7 @@ export default function Page({ params }: Props) {
                 </>
               )}
 
-              {false && post.internalLinks && post.internalLinks.length > 0 && (
+              {false && ((post.internalLinks?.length ?? 0) > 0) && (
                 <section />
               )}
 
