@@ -8,11 +8,10 @@ type Props = { params: { slug: string } };
 export function generateMetadata({ params }: Props) {
   const data = servicesBySlug[params.slug];
   if (!data) return { title: "Hizmet Bulunamadı" };
-  const seo = data.seo ?? {};
   return {
-    title: seo.title ?? data.title,
-    description: seo.description,
-    keywords: seo.keywords,
+    title: data.seo?.title ?? data.title,
+    description: data.seo?.description,
+    keywords: data.seo?.keywords,
   };
 }
 
