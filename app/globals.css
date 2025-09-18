@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts: Inter with key weights (includes latin-ext via unicode-range) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Typography mapping */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-brand-gray text-brand-text antialiased overflow-x-hidden;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 400; /* Default regular */
+  }
+  /* Headings: Inter 600/700 */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 700;
+  }
+  h3, h4, h5, h6 { font-weight: 600; }
+  /* Paragraphs and general text: Inter 400 */
+  p, span, li, input, textarea, button {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 400;
+  }
+  /* Menus: Inter 500 for emphasis */
+  nav a, .menu a { font-weight: 500; }
+}
+
+/* Utilities */
+@layer utilities {
+  /* Panel helpers */
+  .mask-fade {
+    -webkit-mask-image: radial-gradient(75% 75% at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            mask-image: radial-gradient(75% 75% at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-soft;
+  }
+  .gold-underline {
+    background-image: linear-gradient(90deg, rgba(217,164,65,0.35), rgba(217,164,65,0.35));
+    background-repeat: no-repeat;
+    background-size: 100% 0.35em;
+    background-position: 0 100%;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-3 text-white transition-transform duration-200 bg-brand-gradient shadow-soft hover:scale-[1.02] active:scale-[0.98];
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-3 border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white transition-colors duration-200;
+  }
+
+  /* CTA with arrow */
+  .btn-cta {
+    position: relative;
+    padding-right: 2.75rem; /* space for arrow */
+  }
+  .btn-cta::after {
+    content: '→';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 200ms ease;
+  }
+  .btn-cta:hover::after {
+    transform: translateY(-50%) translateX(3px);
+  }
+
+  /* Animated background grid (subtle moving lines) */
+  .bg-grid-animated {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 40px);
+    background-size: 40px 40px, 40px 40px;
+    animation: grid-move 20s linear infinite;
+  }
+  @keyframes grid-move {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 80px 0, 0 80px; }
+  }
+
+  /* Static background grid (no motion) */
+  .bg-grid {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 40px);
+    background-size: 40px 40px, 40px 40px;
+  }
+
+  /* Services timeline helpers */
+  .timeline-connector {
+    @apply hidden md:block absolute top-1/2 left-full -translate-y-1/2 h-0.5 w-10 bg-gradient-to-r from-brand-navy/10 to-brand-gold/30;
+  }
+
+  /* Icon bubble (soft gradient circle behind icons) */
+  .icon-bubble {
+    position: relative;
+    display: inline-flex;
+  }
+  .icon-bubble::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 9999px;
+    background: radial-gradient(circle at 30% 30%, rgba(217,164,65,0.12), rgba(27,58,87,0.08), transparent 60%);
+    filter: blur(2px);
+    z-index: 0;
+  }
+  .icon-bubble > * { position: relative; z-index: 1; }
+
+  /* Details button: green base → gold on hover */
+  .btn-details {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-3 text-white transition-all duration-300 shadow-soft;
+    background-image: linear-gradient(135deg, #2E7D32 0%, #2E7D32 100%);
+  }
+  .btn-details:hover {
+    background-image: linear-gradient(135deg, #C8A24C 0%, #D9A441 100%);
+    transform: translateY(-1px);
+  }
+
+  /* References subtle glow on hover */
+  .logo-glow:hover img { filter: drop-shadow(0 4px 12px rgba(217,164,65,0.25)); }
+
+  /* WhatsApp/Telefon hızlı erişim butonları kaldırıldı */
+}
