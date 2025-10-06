@@ -25,7 +25,7 @@ export default function Contact() {
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Telefon</div>
                 <div className="mt-1 flex flex-col gap-1 text-base text-brand-navy">
-                  <a href="tel:05379104049" className="hover:underline">0537 910 40 49</a>
+                  <a href="tel:05323373814" className="hover:underline">0532 337 38 14</a>
                   <a href="tel:05428017857" className="hover:underline">0542 801 78 57</a>
                 </div>
               </div>
