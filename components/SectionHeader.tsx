@@ -1,11 +1,14 @@
 type Props = {
   title: string
   subtitle?: string
+  className?: string
 }
 
-export default function SectionHeader({ title, subtitle }: Props) {
+export default function SectionHeader({ title, subtitle, className }: Props) {
+  const containerClasses = `mx-auto max-w-2xl text-center ${className ?? 'mb-10'}`
+
   return (
-    <div className="mx-auto max-w-2xl text-center mb-10">
+    <div className={containerClasses}>
       <h2 className="text-3xl md:text-4xl font-semibold text-brand-navy gold-underline inline-block">
         {title}
       </h2>
@@ -15,4 +18,3 @@ export default function SectionHeader({ title, subtitle }: Props) {
     </div>
   )
 }
-

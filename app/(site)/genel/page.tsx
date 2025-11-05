@@ -48,15 +48,16 @@ export default function GenelPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-28 md:pt-36">
-        <section className="relative py-16 md:py-24">
+      <main className="pt-24 md:pt-36">
+        <section className="relative py-12 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(217,164,65,0.08),transparent_55%)]" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeader
               title="Abant OSGB Genel Bağlantılar"
               subtitle="Dijital kanallarımıza hızlıca ulaşın."
+              className="mb-6 md:mb-10"
             />
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-4 md:gap-6 md:grid-cols-3">
               {resources.map((resource) => {
                 const Icon = resource.icon
                 return (
@@ -68,9 +69,9 @@ export default function GenelPage() {
                     className="group relative overflow-hidden rounded-2xl border border-brand-navy/10 bg-white/90 shadow-soft transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/10 via-transparent to-brand-navy/5 opacity-0 transition-opacity duration-200 group-hover:opacity-100" aria-hidden />
-                    <div className="relative flex h-full flex-col gap-5 p-6">
-                      <span className="icon-bubble inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-navy/10 bg-white text-brand-navy">
-                        <Icon className="h-6 w-6" />
+                    <div className="relative flex h-full flex-col gap-4 p-5 md:p-6">
+                      <span className="icon-bubble inline-flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-brand-navy/10 bg-white text-brand-navy">
+                        <Icon className="h-5 w-5 md:h-6 md:w-6" />
                       </span>
                       <div className="space-y-2">
                         <h3 className="text-xl font-semibold text-brand-navy">{resource.title}</h3>
