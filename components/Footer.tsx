@@ -40,7 +40,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold">İletişim</h4>
             <ul className="mt-4 space-y-2 text-white/80">
-              <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Bolu, Türkiye</li>
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" /> Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu
+              </li>
               {/* Telefon bilgisi kaldırıldı */}
               <li>
                 <a href="mailto:info@abantosgb.com" className="inline-flex items-center gap-2 hover:text-white transition-colors">

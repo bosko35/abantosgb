@@ -17,11 +17,14 @@ export default function Contact() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Bolu&output=embed"
+                src="https://www.google.com/maps?q=Akta%C5%9F%20Mah.%20Ta%C5%9Fhanc%C4%B1lar%20Cd.%20No:31%20B/22%20Merkez/Bolu&output=embed"
               />
             </div>
             <div className="space-y-4 p-4 text-sm text-brand-text/70">
-              <p>Ofis: Bolu, Türkiye — Randevu ile ziyaret edebilirsiniz.</p>
+              <p>
+                Ofis: Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu — Randevu ile ziyaret
+                edebilirsiniz.
+              </p>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Telefon</div>
                 <div className="mt-1 flex flex-col gap-1 text-base text-brand-navy">
