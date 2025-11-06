@@ -6,6 +6,7 @@ import { blogPostsBySlug, blogPosts, type BlogPost, type ContentBlock } from "..
 import { CheckCircle2 } from "lucide-react";
 
 type Props = { params: { slug: string } };
+const siteUrl = "https://abantosgb.com";
 
 function slugify(input: string) {
   return input
@@ -29,17 +30,27 @@ export function generateMetadata({ params }: Props) {
   if (!data) return { title: "Yazı Bulunamadı" };
   const title = data.metaTitle || data.title;
   const description = data.metaDescription;
+  const canonical = `${siteUrl}/blog/${data.slug}`;
+  const ogImage = data.heroImage ? new URL(data.heroImage, siteUrl).toString() : undefined;
   return {
     title,
     description,
     keywords: data.keywords,
-    alternates: { canonical: `https://alanadiniz.com/blog/${data.slug}` },
+    alternates: { canonical },
     openGraph: {
       title,
       description,
       type: "article",
-      images: data.heroImage ? [{ url: data.heroImage }] : undefined,
-      url: `/blog/${data.slug}`,
+      url: canonical,
+      siteName: "Abant OSGB",
+      locale: "tr_TR",
+      images: ogImage ? [{ url: ogImage }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ogImage ? [ogImage] : undefined,
     },
   } as const;
 }
@@ -63,7 +74,7 @@ export default function Page({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    image: post.heroImage,
+    image: post.heroImage ? new URL(post.heroImage, siteUrl).toString() : undefined,
     dateModified: updatedISO,
     keywords: post.keywords.join(", "),
     author: { "@type": "Organization", name: "Abant OSGB" },

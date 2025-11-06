@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "../data/blog/posts";
+
+const siteUrl = "https://abantosgb.com";
+
+export const metadata: Metadata = {
+  title: "İş Güvenliği Blogu | Abant OSGB",
+  description: "Abant OSGB uzmanlarının hazırladığı sektör bazlı iş sağlığı ve güvenliği rehberleri, kontrol listeleri ve mevzuat yorumları.",
+  alternates: {
+    canonical: `${siteUrl}/blog`,
+  },
+  openGraph: {
+    title: "İş Güvenliği Blogu | Abant OSGB",
+    description: "Risk analizi, İSG uygulamaları ve sektörel güvenlik trendleri hakkında rehber içerikler.",
+    url: `${siteUrl}/blog`,
+    siteName: "Abant OSGB",
+    locale: "tr_TR",
+  },
+};
 
 export default function BlogIndex() {
   const posts = blogPosts;
@@ -36,4 +54,3 @@ export default function BlogIndex() {
     </>
   );
 }
-

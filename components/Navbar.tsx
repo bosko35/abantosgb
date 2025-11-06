@@ -8,6 +8,7 @@ const links = [
   { href: '#misyon-vizyon', label: 'Misyon & Vizyon' },
   { href: '#sector-insights', label: 'Blog' },
   { href: '#iletisim', label: 'İletişim' },
+  { href: '/genel', label: 'Genel Bağlantılar' },
 ]
 
 export default function Navbar() {
