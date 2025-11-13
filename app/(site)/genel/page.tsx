@@ -1,11 +1,31 @@
 import type { Metadata } from 'next'
-import { Globe, Instagram, MapPin, ArrowUpRight, Phone, Mail } from 'lucide-react'
+import Link from 'next/link'
+import { Globe, Instagram, MapPin, ArrowUpRight, Phone, Mail, ChevronRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
-const pageUrl = 'https://abantosgb.com/genel'
+const siteHomeUrl = 'https://abantosgb.com'
+const pageUrl = `${siteHomeUrl}/genel`
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Abant OSGB',
+      item: siteHomeUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Genel Bağlantılar',
+      item: pageUrl,
+    },
+  ],
+} as const
 
 export const metadata: Metadata = {
   title: 'Genel Bağlantılar | Abant OSGB',
@@ -70,6 +90,26 @@ export default function GenelPage() {
               subtitle="Dijital kanallarımıza hızlıca ulaşın."
               className="mb-6 md:mb-10"
             />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
+            <nav aria-label="Sayfa konumu" className="mb-8 md:mb-12">
+              <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-brand-text/70">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-brand-navy transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                  >
+                    www.abantosgb.com
+                  </Link>
+                </li>
+                <li aria-hidden>
+                  <ChevronRight className="h-4 w-4 text-brand-text/50" />
+                </li>
+                <li className="font-semibold text-brand-navy">Genel Bağlantılar</li>
+              </ol>
+            </nav>
             <div className="mb-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
               <article className="space-y-4 text-base text-brand-text/80">
                 <p>
