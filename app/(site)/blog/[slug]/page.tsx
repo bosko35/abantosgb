@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { blogPostsBySlug, blogPosts, type BlogPost, type ContentBlock } from "../../data/blog/posts";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronRight } from "lucide-react";
 
 type Props = { params: { slug: string } };
 const siteUrl = "https://abantosgb.com";
@@ -59,6 +59,8 @@ export default function Page({ params }: Props) {
   const post = blogPostsBySlug[params.slug];
   if (!post) return notFound();
 
+  const blogHomeUrl = `${siteUrl}/blog`;
+  const canonicalUrl = `${blogHomeUrl}/${post.slug}`;
   const subtitle = post.subtitle ?? post.excerpt;
   const readTime = post.readTime ?? estimateReadTime(post);
   const updatedISO = post.updatedAt ?? new Date().toISOString();
@@ -83,6 +85,30 @@ export default function Page({ params }: Props) {
   const mergedStructured = post.structuredData
     ? { ...schema, ...post.structuredData }
     : schema;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Abant OSGB",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sektörel Bilgilendirme",
+        item: blogHomeUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: canonicalUrl,
+      },
+    ],
+  } as const;
 
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.locale === post.locale).slice(0, 3);
 
@@ -92,13 +118,31 @@ export default function Page({ params }: Props) {
       <section className="pt-28 md:pt-36 pb-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
-            <ol className="flex items-center gap-2">
-              <li><Link href="/" className="hover:underline">Anasayfa</Link></li>
-              <li>/</li>
-              <li><Link href="/blog" className="hover:underline">Blog</Link></li>
-              <li>/</li>
-              <li aria-current="page" className="text-slate-900 font-medium">{post.title}</li>
+          <nav aria-label="Sayfa konumu" className="mb-6">
+            <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-brand-text/70">
+              <li>
+                <Link
+                  href="/"
+                  className="text-brand-navy transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                >
+                  www.abantosgb.com
+                </Link>
+              </li>
+              <li aria-hidden>
+                <ChevronRight className="h-4 w-4 text-brand-text/50" />
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-brand-navy/80 transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                >
+                  Sektörel Bilgilendirme
+                </Link>
+              </li>
+              <li aria-hidden>
+                <ChevronRight className="h-4 w-4 text-brand-text/50" />
+              </li>
+              <li className="font-semibold text-brand-navy">{post.title}</li>
             </ol>
           </nav>
 
@@ -286,7 +330,7 @@ export default function Page({ params }: Props) {
           <script
             type="application/ld+json"
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(mergedStructured) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify([mergedStructured, breadcrumbJsonLd]) }}
           />
         </div>
       </section>

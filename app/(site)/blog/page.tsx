@@ -2,9 +2,29 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import { blogPosts } from "../data/blog/posts";
 
 const siteUrl = "https://abantosgb.com";
+const blogPageUrl = `${siteUrl}/blog`;
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Abant OSGB",
+      item: siteUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Sektörel Bilgilendirme",
+      item: blogPageUrl,
+    },
+  ],
+} as const;
 
 export const metadata: Metadata = {
   title: "İş Güvenliği Blogu | Abant OSGB",
@@ -28,6 +48,26 @@ export default function BlogIndex() {
       <Navbar />
       <section className="pt-28 md:pt-36 pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+          />
+          <nav aria-label="Sayfa konumu" className="mb-6">
+            <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-brand-text/70">
+              <li>
+                <Link
+                  href="/"
+                  className="text-brand-navy transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                >
+                  www.abantosgb.com
+                </Link>
+              </li>
+              <li aria-hidden>
+                <ChevronRight className="h-4 w-4 text-brand-text/50" />
+              </li>
+              <li className="font-semibold text-brand-navy">Sektörel Bilgilendirme</li>
+            </ol>
+          </nav>
           <header className="mb-6">
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Blog</h1>
             <p className="mt-2 text-slate-600">Sektörel İSG yazıları ve pratik rehberler.</p>

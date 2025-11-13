@@ -3,9 +3,13 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Route } from "next";
+import { ChevronRight } from "lucide-react";
 
 type CTA = { label: string; href: string };
+const siteUrl = "https://abantosgb.com";
+
 type Data = {
+  slug: string;
   title: string;
   hero?: {
     subtitle?: string;
@@ -149,6 +153,32 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
+  const canonicalUrl = `${siteUrl}/hizmetler/${data.slug}`;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Abant OSGB",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Hizmetlerimiz",
+        item: `${siteUrl}/#hizmetler`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: data.title,
+        item: canonicalUrl,
+      },
+    ],
+  } as const;
+
   const sectionsInUse = useMemo(() => {
     const keys: string[] = [];
     if (data.scope && (data.scope.intro || data.scope.bullets?.length)) keys.push("scope");
@@ -186,6 +216,38 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
   return (
     <div className="bg-slate-50 pt-28 md:pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        <nav aria-label="Sayfa konumu" className="mb-8 md:mb-12">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-brand-text/70">
+            <li>
+              <Link
+                href="/"
+                className="text-brand-navy transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+              >
+                www.abantosgb.com
+              </Link>
+            </li>
+            <li aria-hidden>
+              <ChevronRight className="h-4 w-4 text-brand-text/50" />
+            </li>
+            <li>
+              <Link
+                href="/#hizmetler"
+                className="text-brand-navy/80 transition-colors hover:text-brand-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+              >
+                Hizmetlerimiz
+              </Link>
+            </li>
+            <li aria-hidden>
+              <ChevronRight className="h-4 w-4 text-brand-text/50" />
+            </li>
+            <li className="font-semibold text-brand-navy">{data.title}</li>
+          </ol>
+        </nav>
         {/* Hero */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
