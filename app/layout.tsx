@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import './globals.css'
 // Inter font is imported globally via app/globals.css
@@ -121,6 +122,7 @@ export default function RootLayout({
         {children}
         <FloatingWhatsApp />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
