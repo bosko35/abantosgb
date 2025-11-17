@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import './globals.css'
 // Inter font is imported globally via app/globals.css
@@ -13,7 +14,7 @@ const organizationJsonLd = {
   legalName: 'Abant Ortak Sağlık Güvenlik Birimi',
   url: siteUrl,
   description:
-    'Bolu ve çevresinde risk analizi, iş güvenliği uzmanlığı, İSG eğitimleri ve danışmanlık sunan Abant OSGB.',
+    'Abant OSGB, Bolu iş sağlığı ve güvenliği hizmetlerinde risk analizi, iş güvenliği uzmanlığı, İSG eğitimleri ve danışmanlık sunar.',
   image: `${siteUrl}/brand/logo-horizontal.png`,
   logo: `${siteUrl}/brand/logo-mark.png`,
   email: 'info@abantosgb.com',
@@ -38,11 +39,11 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Abant OSGB – İş Sağlığı ve Güvenliğinde Güvenceniz',
+    default: 'Abant OSGB | Bolu İş Sağlığı ve Güvenliği Hizmetleri',
     template: '%s | Abant OSGB',
   },
   description:
-    'Abant OSGB, Bolu ve çevresinde risk analizi, iş güvenliği uzmanı hizmetleri, İSG eğitimleri ve danışmanlık sunar. Yerinde keşif, mevzuata uygun doküman yönetimi ve kapsamlı saha desteği.',
+    'Abant OSGB, Bolu İş Sağlığı ve Güvenliği (İSG) süreçlerinde risk analizi, iş güvenliği uzmanlığı, İSG eğitimleri ve danışmanlık sunar. Yerinde keşif, mevzuata uygun doküman yönetimi ve kapsamlı saha desteği.',
   keywords: [
     'Abant OSGB',
     'Bolu OSGB',
@@ -61,9 +62,9 @@ export const metadata: Metadata = {
     locale: 'tr_TR',
     url: siteUrl,
     siteName: 'Abant OSGB',
-    title: 'Abant OSGB – İş Sağlığı ve Güvenliğinde Güvenceniz',
+    title: 'Abant OSGB | Bolu İş Sağlığı ve Güvenliği Hizmetleri',
     description:
-      'Risk analizi, iş güvenliği uzmanlığı ve İSG eğitimlerinde Bolu merkezli profesyonel hizmetler.',
+      "Abant OSGB, Bolu'da iş sağlığı ve güvenliği risk analizi, iş güvenliği uzmanı görevlendirmesi ve İSG eğitimleri sunar.",
     images: [
       {
         url: `${siteUrl}/brand/logo-horizontal.png`,
@@ -75,8 +76,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Abant OSGB – İş Sağlığı ve Güvenliğinde Güvenceniz',
-    description: 'Bolu ve çevresinde OSGB çözümleri, risk analizi ve eğitim hizmetleri.',
+    title: 'Abant OSGB | Bolu İş Sağlığı ve Güvenliği Hizmetleri',
+    description: "Bolu ve çevresinde Abant OSGB'den iş sağlığı ve güvenliği risk analizi, danışmanlık ve eğitim hizmetleri.",
     images: [`${siteUrl}/brand/logo-horizontal.png`],
   },
   robots: {
@@ -114,6 +115,7 @@ export default function RootLayout({
       <body className="bg-brand-gray text-brand-text">
         {children}
         <FloatingWhatsApp />
+        <Analytics />
       </body>
     </html>
   )

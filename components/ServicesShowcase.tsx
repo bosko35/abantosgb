@@ -95,8 +95,8 @@ export default function ServicesShowcase() {
     <section id="hizmetler" className="relative py-16 md:py-20 scroll-mt-28 md:scroll-mt-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          title="Hizmetlerimiz"
-          subtitle="Metinlere uygun, yalın ve anlaşılır kartlar"
+          title="Abant OSGB Bolu İş Sağlığı ve Güvenliği Hizmetleri"
+          subtitle="Risk analizi, iş güvenliği uygulamaları ve İSG eğitimleri için hızlıca bilgi alın."
         />
 
         <div className="mt-8 grid items-stretch gap-6 md:grid-cols-3">

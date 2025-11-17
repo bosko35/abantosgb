@@ -28,19 +28,19 @@ const breadcrumbJsonLd = {
 } as const
 
 export const metadata: Metadata = {
-  title: 'Genel Bağlantılar | Abant OSGB',
-  description: 'Abant OSGB dijital kanalları, iletişim bilgileri ve Google Harita bağlantısı tek sayfada.',
+  title: 'Abant OSGB Bolu İş Sağlığı ve Güvenliği | Genel Bağlantılar',
+  description: "Abant OSGB'nin Bolu iş sağlığı ve güvenliği iletişim bilgileri, resmi kanalları ve harita bağlantıları tek sayfada.",
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: 'Abant OSGB Genel Bağlantılar',
-    description: 'Bolu merkezli OSGB hizmeti veren Abant OSGB’nin resmi iletişim bilgileri, sosyal medya hesapları ve konumu.',
+    title: 'Abant OSGB Bolu İş Sağlığı ve Güvenliği İletişim Rehberi',
+    description: "Bolu'da iş sağlığı ve güvenliği hizmeti veren Abant OSGB'nin resmi iletişim bilgileri, sosyal medya hesapları ve konumu.",
     url: pageUrl,
     siteName: 'Abant OSGB',
     locale: 'tr_TR',
   },
-  keywords: ['Abant OSGB', 'Abant OSGB iletişim', 'Bolu OSGB', 'Abant OSGB adres', 'Abant OSGB telefon'],
+  keywords: ['Abant OSGB', 'Bolu iş sağlığı ve güvenliği', 'Abant OSGB iletişim', 'Bolu OSGB', 'Abant OSGB adres', 'Abant OSGB telefon'],
 }
 
 type Resource = {
@@ -86,8 +86,8 @@ export default function GenelPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(217,164,65,0.08),transparent_55%)]" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeader
-              title="Abant OSGB Genel Bağlantılar"
-              subtitle="Dijital kanallarımıza hızlıca ulaşın."
+              title="Abant OSGB Bolu İş Sağlığı ve Güvenliği Bağlantıları"
+              subtitle="Resmi iletişim noktalarımıza, sosyal medya hesaplarımıza ve talep formlarımıza tek merkezden ulaşın."
               className="mb-6 md:mb-10"
             />
             <script

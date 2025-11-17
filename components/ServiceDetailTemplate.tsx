@@ -256,7 +256,9 @@ export default function ServiceDetailTemplate({ data }: { data: Data }) {
               {data.title}
             </h1>
             {data.hero?.tagline && (
-              <p className="mt-3 text-slate-600">{data.hero.tagline}</p>
+              <h2 className="mt-3 text-xl font-semibold text-slate-700 leading-snug">
+                {data.hero.tagline}
+              </h2>
             )}
             <div className="mt-6 flex flex-wrap gap-3">
               {data.hero?.primaryCta && (

@@ -2,11 +2,11 @@ import type { ServicePageData } from "./index";
 
 const data: ServicePageData = {
   slug: "isg-egitimleri-bolu",
-  title: "İş Sağlığı ve Güvenliği Eğitimleri (Online & Yerinde) – Bolu",
+  title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Eğitimleri",
   hero: {
     subtitle: "Abant OSGB",
     tagline:
-      "Online ve yerinde, ihtiyacınıza uygun; ölçülebilir, belgelendirilebilir İSG eğitimleriyle kurum içinde kalıcı güvenlik kültürü oluşturuyoruz.",
+      "Abant OSGB'nin Bolu iş sağlığı ve güvenliği eğitimleri online ve yerinde çözümlerle kalıcı güvenlik kültürü oluşturur.",
     primaryCta: { label: "Eğitim Takvimi Sor", href: "/iletisim#egitim" },
     secondaryCta: { label: "Eğitim Hizmetleri", href: "/hizmetler/isg-egitimleri-bolu" },
   },
@@ -70,12 +70,11 @@ const data: ServicePageData = {
     secondary: { label: "Telefon", href: "tel:+90XXXXXXXXXX" },
   },
   seo: {
-    title: "Bolu İSG Eğitimleri | Abant OSGB – Online & Yerinde",
+    title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Eğitimleri",
     description:
-      "Temel İSG, yangın, yüksekte çalışma ve ilk yardım eğitimleri. Bolu’da online ve yerinde seçeneklerle belgelendirme ve kayıt takibi.",
+      "Temel İSG, yangın, yüksekte çalışma ve ilk yardım eğitimleri Abant OSGB'nin Bolu iş sağlığı ve güvenliği uzmanlığıyla sunulur. Online ve yerinde seçeneklerle belgelendirme ve kayıt takibi yapılır.",
     keywords: ["Bolu İSG eğitimi", "OSGB eğitimleri", "online İSG", "yangın eğitimi", "Abant OSGB"],
   },
 };
 
 export default data;
-

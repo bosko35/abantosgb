@@ -2,11 +2,11 @@ import type { ServicePageData } from "./index";
 
 const data: ServicePageData = {
   slug: "is-guvenligi-bolu",
-  title: "İş Güvenliği Uygulamaları ve Mevzuat Uyum Hizmeti – Bolu",
+  title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Uygulamaları",
   hero: {
     subtitle: "Abant OSGB",
     tagline:
-      "Mevzuata uygun, ölçülebilir ve sürdürülebilir güvenlik uygulamaları ile işletmenizde koruyucu sistemler kuruyoruz.",
+      "Abant OSGB, Bolu iş sağlığı ve güvenliği süreçlerinde mevzuata uygun, ölçülebilir ve sürdürülebilir koruyucu sistemler kuruyor.",
     primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
   },
   highlights: [
@@ -67,9 +67,9 @@ const data: ServicePageData = {
     secondary: { label: "Telefon", href: "tel:+90XXXXXXXXXX" },
   },
   seo: {
-    title: "Bolu İş Güvenliği Hizmeti | Abant OSGB",
+    title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Uygulamaları",
     description:
-      "Bolu’da iş güvenliği uygulamaları: acil durum planı, KKD yönetimi, periyodik denetimler ve mevzuat uyumu. Ücretsiz keşif için bize ulaşın.",
+      "Abant OSGB, Bolu'da iş sağlığı ve güvenliği uygulamalarında acil durum planı, KKD yönetimi, periyodik denetimler ve mevzuat uyumu sağlar. Ücretsiz keşif için bize ulaşın.",
     keywords: ["Bolu iş güvenliği", "OSGB Bolu", "İSG hizmeti", "mevzuat uyumu"],
   },
 };

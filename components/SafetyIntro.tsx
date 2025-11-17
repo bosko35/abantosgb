@@ -72,7 +72,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
           transition={{ delay: textDelay, duration: 0.6, ease: "easeOut" }}
           className="mt-6 text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:mt-8 md:text-5xl"
         >
-          İş Sağlığı ve Güvenliğinde Güvenceniz
+          Abant OSGB ile Bolu İş Sağlığı ve Güvenliği Çözümleri
         </motion.h1>
 
         {/* Subtext */}
@@ -82,7 +82,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
           transition={{ delay: textDelay + 0.15, duration: 0.45, ease: "easeOut" }}
           className="mt-3 max-w-2xl text-center text-sm sm:text-base text-gray-600"
         >
-          Kurumsal ve yenilikçi yaklaşımımızla risk analizi, iş güvenliği danışmanlığı ve kapsamlı eğitim çözümleri sunuyoruz.
+          Kurumsal ve yenilikçi yaklaşımımızla Bolu'daki işletmelere iş sağlığı ve güvenliği (İSG) risk analizi, danışmanlık ve kapsamlı eğitim çözümleri sunuyoruz.
         </motion.p>
 
         {/* Buttons */}

@@ -2,11 +2,11 @@ import type { ServicePageData } from "./index";
 
 const data: ServicePageData = {
   slug: "risk-analizi-bolu",
-  title: "Risk Analizi ve İş Yeri Tehlike Değerlendirmesi – Bolu",
+  title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Risk Analizi Hizmeti",
   hero: {
     subtitle: "Abant OSGB",
     tagline:
-      "Fiziksel, kimyasal, biyolojik ve ergonomik riskleri puanlayıp mevzuata uygun aksiyon planları çıkarıyoruz.",
+      "Abant OSGB olarak Bolu iş sağlığı ve güvenliği risk analizlerinde fiziksel, kimyasal, biyolojik ve ergonomik tehlikeleri mevzuata uygun aksiyon planlarıyla yönetiyoruz.",
     primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
   },
   highlights: [
@@ -73,9 +73,9 @@ const data: ServicePageData = {
     secondary: { label: "Telefon", href: "tel:+90XXXXXXXXXX" },
   },
   seo: {
-    title: "Bolu Risk Analizi | Abant OSGB – İş Sağlığı ve Güvenliği",
+    title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Risk Analizi",
     description:
-      "Bolu’da 6331’e uygun risk analizi, eylem planı ve denetim hazırlığı. Saha keşfi, fotoğraflı bulgular ve önceliklendirme. Ücretsiz keşif için bize ulaşın.",
+      "Abant OSGB, Bolu'da iş sağlığı ve güvenliği risk analizi, eylem planı ve denetim hazırlığı sunar. Saha keşfi, fotoğraflı bulgular ve önceliklendirme için iletişime geçin.",
     keywords: [
       "Bolu risk analizi",
       "Bolu OSGB",
