@@ -30,7 +30,7 @@ const organizationJsonLd = {
   },
   sameAs: [
     'https://www.instagram.com/abantosgb',
-    'https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu',
+    'https://maps.google.com/?cid=7477624985782710532',
   ],
   areaServed: ['Bolu', 'Düzce', 'Zonguldak', 'Sakarya'],
   priceRange: '$$',
@@ -42,7 +42,7 @@ const organizationJsonLd = {
     recognizedBy: { '@type': 'GovernmentOrganization', name: 'T.C. Çalışma ve Sosyal Güvenlik Bakanlığı' },
     dateCreated: '2025-10-31',
   },
-  hasMap: 'https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu',
+  hasMap: 'https://maps.google.com/?cid=7477624985782710532',
 } as const
 
 export const metadata: Metadata = {

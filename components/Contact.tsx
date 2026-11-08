@@ -15,7 +15,7 @@ export default function Contact() {
                 <p className="mt-1 text-base text-brand-navy">Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu</p>
                 <p className="mt-0.5 text-xs">Randevu ile ziyaret edebilirsiniz.</p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu"
+                  href="https://maps.google.com/?cid=7477624985782710532"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand-navy underline-offset-2 hover:underline"
@@ -42,7 +42,7 @@ export default function Contact() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu&output=embed"
+                src="https://www.google.com/maps?q=40.7293945,31.6101212&z=17&output=embed"
               />
             </div>
           </div>

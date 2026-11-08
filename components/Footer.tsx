@@ -77,7 +77,7 @@ export default function Footer() {
               <li><a href="/iletisim" className="hover:text-white transition-colors">İletişim</a></li>
               <li><a href="/kvkk" className="hover:text-white transition-colors">KVKK Aydınlatma Metni</a></li>
               <li>
-                <a href="https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <a href="https://maps.google.com/?cid=7477624985782710532" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Google Harita
                 </a>
               </li>
