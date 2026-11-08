@@ -7,7 +7,7 @@ const siteUrl = 'https://abantosgb.com'
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
-  const staticRoutes: MetadataRoute.Sitemap = ['', '/genel', '/iletisim', '/blog', '/kvkk'].map((path) => ({
+  const staticRoutes: MetadataRoute.Sitemap = ['', '/genel', '/iletisim', '/blog', '/kvkk', '/hakkimizda', '/hesaplama'].map((path) => ({
     url: `${siteUrl}${path}`,
     lastModified: now,
   }))

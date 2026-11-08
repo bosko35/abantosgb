@@ -1,21 +1,31 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { HardHat, Truck, UtensilsCrossed, ArrowRight } from "lucide-react";
+import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale } from "lucide-react";
 
-type BlogSlug = "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
+type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
 
 type Card = {
   id: string;
   slug: BlogSlug;
   title: string;
   excerpt: string;
-  icon: "hard-hat" | "truck" | "utensils-crossed";
+  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale";
   ctaLabel: string;
   a11y: { ariaLabel: string };
   seoTag?: string;
 };
 
 const cards: Card[] = [
+  {
+    id: "egitim-2026",
+    slug: "yeni-isg-egitim-yonetmeligi-2026",
+    title: "Yeni İSG Eğitim Yönetmeliği 2026",
+    excerpt: "İşe başlama eğitimi, 8 saatlik tekrar eğitimi ve uzaktan eğitim sınırları: işverenler için özet.",
+    icon: "scale",
+    ctaLabel: "Detaylı Oku",
+    a11y: { ariaLabel: "Yeni İSG Eğitim Yönetmeliği 2026 yazısına git" },
+    seoTag: "egitim-yonetmeligi-2026-card",
+  },
   {
     id: "insaat",
     slug: "insaatta-isg",
@@ -49,6 +59,7 @@ const cards: Card[] = [
 ];
 
 const hrefMap = {
+  "yeni-isg-egitim-yonetmeligi-2026": "/blog/yeni-isg-egitim-yonetmeligi-2026",
   "insaatta-isg": "/blog/insaatta-isg",
   "lojistikte-isg": "/blog/lojistikte-isg",
   "gida-sektorunde-isg": "/blog/gida-sektorunde-isg",
@@ -57,6 +68,8 @@ const hrefMap = {
 function Icon({ name }: { name: Card["icon"] }) {
   const common = "h-6 w-6 text-emerald-600";
   switch (name) {
+    case "scale":
+      return <Scale className={common} aria-hidden />;
     case "hard-hat":
       return <HardHat className={common} aria-hidden />;
     case "truck":
@@ -72,9 +85,10 @@ export default function SectorInsights() {
     "@type": "ItemList",
     name: "Sektörel İSG Bilgilendirmeleri",
     itemListElement: [
-      { "@type": "ListItem", position: 1, url: "/blog/insaatta-isg" },
-      { "@type": "ListItem", position: 2, url: "/blog/lojistikte-isg" },
-      { "@type": "ListItem", position: 3, url: "/blog/gida-sektorunde-isg" },
+      { "@type": "ListItem", position: 1, url: "/blog/yeni-isg-egitim-yonetmeligi-2026" },
+      { "@type": "ListItem", position: 2, url: "/blog/insaatta-isg" },
+      { "@type": "ListItem", position: 3, url: "/blog/lojistikte-isg" },
+      { "@type": "ListItem", position: 4, url: "/blog/gida-sektorunde-isg" },
     ],
   } as const;
 
@@ -86,7 +100,7 @@ export default function SectorInsights() {
           <p className="mt-2 text-sm text-slate-500">Sektöre özel İSG gereklilikleri, riskler ve pratik önlemler.</p>
         </header>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((c) => (
             <Link
               href={hrefMap[c.slug] as Route}

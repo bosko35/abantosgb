@@ -23,6 +23,8 @@ const items = [
   },
 ]
 
+const moreHref = '/hakkimizda'
+
 export default function TrustStrip() {
   return (
     <section aria-label="Güven unsurları" className="relative mt-10 md:mt-14">
@@ -43,6 +45,9 @@ export default function TrustStrip() {
             </li>
           ))}
         </ul>
+        <div className="mt-3 text-right">
+          <a href={moreHref} className="text-sm font-medium text-brand-navy hover:text-brand-gold">Hakkımızda →</a>
+        </div>
       </div>
     </section>
   )

@@ -24,11 +24,15 @@ export type ServicePageData = {
 import riskAnaliziBolu from "./risk-analizi-bolu";
 import isGuvenligiBolu from "./is-guvenligi-bolu";
 import isgEgitimleriBolu from "./isg-egitimleri-bolu";
+import isyeriHekimligiBolu from "./isyeri-hekimligi-bolu";
+import cozumOrtagiHizmetleri from "./cozum-ortagi-hizmetleri";
 
 export const servicesBySlug: Record<string, ServicePageData> = {
   [riskAnaliziBolu.slug]: riskAnaliziBolu,
   [isGuvenligiBolu.slug]: isGuvenligiBolu,
   [isgEgitimleriBolu.slug]: isgEgitimleriBolu,
+  [isyeriHekimligiBolu.slug]: isyeriHekimligiBolu,
+  [cozumOrtagiHizmetleri.slug]: cozumOrtagiHizmetleri,
 };
 
 export const allServices: ServicePageData[] = Object.values(servicesBySlug);

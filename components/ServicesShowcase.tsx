@@ -88,6 +88,31 @@ const services: Service[] = [
     linkText: "Eğitim Hizmetleri Detayları",
     linkUrl: "/hizmetler/isg-egitimleri-bolu",
   },
+  {
+    id: 4,
+    title: "İşyeri Hekimliği ve Sağlık Gözetimi",
+    description:
+      "İşyeri hekimimiz işe giriş ve periyodik muayeneleri işyerinizde yapar, sağlık gözetimi kayıtlarını tutar, meslek hastalığı ve iş kazası sonrası süreçleri yönetir. Görevlendirme İSG-KATİP üzerinden resmî olarak yapılır; laboratuvar tetkikleri akredite çözüm ortağıyla planlanır.",
+    bullets: [
+      "İşe giriş ve periyodik muayene (Ek-2)",
+      "Sağlık gözetimi ve meslek hastalığı takibi",
+      "Tetkiklerin çözüm ortağıyla koordinasyonu",
+    ],
+    faq: [
+      {
+        question: "İşyeri hekimi ayda kaç saat gelmeli?",
+        answer:
+          "Çalışan başına ayda az tehlikeli sınıfta 5, tehlikeli sınıfta 10, çok tehlikeli sınıfta 15 dakika. Süre Hesaplama sayfamızdan kendi değerinizi görebilirsiniz.",
+      },
+      {
+        question: "Periyodik muayene ne sıklıkla yapılır?",
+        answer:
+          "Az tehlikeli sınıfta 5, tehlikeli sınıfta 3, çok tehlikeli sınıfta 1 yılda bir; hekim gerekli görürse daha sık.",
+      },
+    ],
+    linkText: "İşyeri Hekimliği Detayları",
+    linkUrl: "/hizmetler/isyeri-hekimligi-bolu",
+  },
 ];
 
 export default function ServicesShowcase() {
@@ -99,14 +124,14 @@ export default function ServicesShowcase() {
           subtitle="Risk analizi, iş güvenliği uygulamaları ve İSG eğitimleri için hızlıca bilgi alın."
         />
 
-        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-3">
+        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
           {services.map((s) => (
             <article
               key={s.id}
               className="group flex h-full flex-col rounded-2xl border border-white/40 bg-white/80 p-6 backdrop-blur-md shadow-soft transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.35)]"
             >
               {/* Header + Description (fixed min height on md+ for alignment) */}
-              <div className="md:min-h-[240px] lg:min-h-[220px]">
+              <div className="md:min-h-[200px] xl:min-h-[300px]">
                 <div className="flex items-start gap-3">
                   <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-gradient text-white text-xs font-semibold shadow">
                     {s.id}
@@ -161,6 +186,18 @@ export default function ServicesShowcase() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Çözüm ortağı hizmetleri şeridi */}
+        <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-gold/40 bg-white/70 p-6 backdrop-blur-md md:flex-row md:items-center md:justify-between">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-brand-gold">Akredite çözüm ortaklarımızla</div>
+            <h3 className="mt-1 text-lg font-semibold text-brand-navy">Mobil sağlık taraması · Ortam ölçümleri · Periyodik kontroller · Patlamadan Korunma Dokümanı</h3>
+            <p className="mt-1 text-sm text-brand-text/75">
+              Bu hizmetler OSGB yetki kapsamı dışındadır; yetkili çözüm ortaklarımız tarafından verilir ve ayrıca faturalandırılır. Biz ihtiyacı belirler, planlar ve sonuçları risk değerlendirmenize işleriz.
+            </p>
+          </div>
+          <a href="/hizmetler/cozum-ortagi-hizmetleri" className="btn-outline shrink-0 justify-center">Nasıl çalışıyor?</a>
         </div>
       </div>
     </section>

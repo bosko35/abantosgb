@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function IletisimPage() {
   return (
@@ -10,6 +11,7 @@ export default function IletisimPage() {
         {/* Reuse the existing contact section as a full page */}
         <Contact />
       </div>
+      <Footer />
     </>
   );
 }

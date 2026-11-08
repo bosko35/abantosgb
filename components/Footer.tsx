@@ -40,6 +40,8 @@ export default function Footer() {
               <li><a href="/hizmetler/risk-analizi-bolu" className="hover:text-white transition-colors">Risk Analizi</a></li>
               <li><a href="/hizmetler/is-guvenligi-bolu" className="hover:text-white transition-colors">İş Güvenliği Uygulamaları</a></li>
               <li><a href="/hizmetler/isg-egitimleri-bolu" className="hover:text-white transition-colors">İSG Eğitimleri</a></li>
+              <li><a href="/hizmetler/isyeri-hekimligi-bolu" className="hover:text-white transition-colors">İşyeri Hekimliği</a></li>
+              <li><a href="/hizmetler/cozum-ortagi-hizmetleri" className="hover:text-white transition-colors">Çözüm Ortağı Hizmetleri</a></li>
             </ul>
           </div>
 
@@ -68,6 +70,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold">Hızlı Linkler</h4>
             <ul className="mt-4 space-y-2 text-white/80">
               <li><a href="/" className="hover:text-white transition-colors">Anasayfa</a></li>
+              <li><a href="/hakkimizda" className="hover:text-white transition-colors">Hakkımızda</a></li>
+              <li><a href="/hesaplama" className="hover:text-white transition-colors">Süre Hesaplama</a></li>
               <li><a href="/genel" className="hover:text-white transition-colors">Genel Bağlantılar</a></li>
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="/iletisim" className="hover:text-white transition-colors">İletişim</a></li>

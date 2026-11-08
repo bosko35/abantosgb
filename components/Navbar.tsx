@@ -5,10 +5,10 @@ import Image from 'next/image'
 
 const links = [
   { href: '#hizmetler', label: 'Hizmetler' },
-  { href: '#misyon-vizyon', label: 'Misyon & Vizyon' },
   { href: '#sector-insights', label: 'Blog' },
   { href: '#iletisim', label: 'İletişim' },
-  { href: '/genel', label: 'Genel Bağlantılar' },
+  { href: '/hakkimizda', label: 'Hakkımızda' },
+  { href: '/hesaplama', label: 'Süre Hesaplama' },
 ]
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
               />
             </span>
           </a>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {links.map((l) => (
               <a key={l.href} href={resolveHref(l.href)} className="text-sm text-brand-text/80 hover:text-brand-text transition-colors">
                 {l.label}

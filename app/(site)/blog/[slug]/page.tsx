@@ -79,7 +79,11 @@ export default function Page({ params }: Props) {
     image: post.heroImage ? new URL(post.heroImage, siteUrl).toString() : undefined,
     dateModified: updatedISO,
     keywords: post.keywords.join(", "),
-    author: { "@type": "Organization", name: "Abant OSGB" },
+    datePublished: post.structuredData?.datePublished ?? updatedISO,
+    author: post.author
+      ? { "@type": "Person", name: post.author.name, jobTitle: post.author.title, worksFor: { "@type": "Organization", name: "Abant OSGB" } }
+      : { "@type": "Organization", name: "Abant OSGB" },
+    publisher: { "@type": "Organization", name: "Abant OSGB", url: siteUrl },
   } as const;
 
   const mergedStructured = post.structuredData
@@ -149,10 +153,22 @@ export default function Page({ params }: Props) {
           {/* Hero */}
           <header className="mt-4">
             <div className="flex items-center gap-2 text-xs text-slate-500">
-              <span className="inline-flex items-center rounded-full px-2 py-0.5 ring-1 ring-inset ring-emerald-200 bg-emerald-50 text-emerald-700">Sektörel İSG</span>
+              <span className="inline-flex items-center rounded-full px-2 py-0.5 ring-1 ring-inset ring-emerald-200 bg-emerald-50 text-emerald-700">{post.category ?? "Sektörel İSG"}</span>
+              <span aria-hidden>·</span>
+              <span>{readTime}</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mt-2">{post.title}</h1>
             {subtitle && <p className="mt-2 text-slate-600 max-w-3xl">{subtitle}</p>}
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-xs font-semibold text-white" aria-hidden>
+                {(post.author?.name ?? "Abant OSGB").split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
+              </span>
+              <span>
+                <span className="font-semibold text-slate-900">{post.author?.name ?? "Abant OSGB"}</span>
+                {post.author?.title && <span className="text-slate-500"> · {post.author.title}</span>}
+                <span className="block text-xs text-slate-500">Güncelleme: {updatedHuman}</span>
+              </span>
+            </div>
 
             {post.heroImage && (
               <div className="mt-6 overflow-hidden rounded-2xl ring-1 ring-black/5">

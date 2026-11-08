@@ -25,12 +25,95 @@ export type BlogPost = {
   faq?: { q: string; a: string }[];
   structuredData?: Record<string, any>;
   updatedAt?: string; // optional override
+  category?: string; // rozet metni (varsayılan: Sektörel İSG)
+  author?: { name: string; title?: string }; // yazar (varsayılan: Abant OSGB)
   readTime?: string; // optional override
   blocks?: ContentBlock[]; // optional rich blocks
 };
 
 const raw = {
   posts: [
+    {
+      slug: "yeni-isg-egitim-yonetmeligi-2026",
+      locale: "tr",
+      category: "Mevzuat",
+      author: { name: "Ayhan Milli", title: "İş güvenliği uzmanı · Öğretim görevlisi · Abant OSGB" },
+      title: "Yeni İSG Eğitim Yönetmeliği 2026: İşverenler İçin Ne Değişti?",
+      subtitle: "2 Nisan 2026'da yürürlüğe giren yönetmelik eğitim sürelerini, tekrar sıklığını ve uzaktan eğitim kurallarını baştan yazdı. Bolu'daki işletmeler için sade bir özet.",
+      metaTitle: "Yeni İSG Eğitim Yönetmeliği 2026: Süreler, Tekrar, Uzaktan Eğitim",
+      metaDescription:
+        "2 Nisan 2026 tarihli Çalışanların İSG Eğitimleri Yönetmeliği: işe başlama eğitimi, temel eğitim süreleri (8/12/16 saat), tekrar eğitimi (en az 8 saat), uzaktan eğitim kuralları ve geçiş hükümleri. İşveren için kontrol listesi.",
+      heroImage: "/images/blog/isg-egitim-yonetmeligi-2026.jpg",
+      readTime: "6 dk",
+      updatedAt: "2026-11-08",
+      excerpt:
+        "2013 yönetmeliği yürürlükten kalktı. İşe başlama eğitimi zorunlu ve yüz yüze; tekrar eğitimi her sınıfta en az 8 saat; uzaktan eğitimde konu ve tehlike sınıfına göre sınırlar var.",
+      keywords: ["isg eğitim yönetmeliği 2026", "çalışanların isg eğitimleri", "uzaktan isg eğitimi", "işe başlama eğitimi", "temel isg eğitimi süresi", "Bolu isg eğitimi"],
+      sections: [
+        { h2: "Ne değişti?", bullets: ["İşe başlama eğitimi ayrı ve yüz yüze", "Tekrar eğitimi en az 8 saat", "Uzaktan eğitim konu bazlı sınırlandı"] },
+        { h2: "Süreler ve sıklık", bullets: ["Temel eğitim 8 / 12 / 16 saat", "Tekrar: 3 / 2 / 1 yılda bir"] },
+        { h2: "İşveren için kontrol listesi" },
+      ],
+      blocks: [
+        { type: "lead", html: "<p>Çalışanların İş Sağlığı ve Güvenliği Eğitimlerinin Usul ve Esasları Hakkında Yönetmelik, 2 Nisan 2026 tarihli ve 33212 sayılı Resmî Gazete'de yayımlanarak aynı gün yürürlüğe girdi. 2013'ten beri uyguladığımız eski yönetmelik tamamen kaldırıldı. Bu yazıda, sahada işverenlerden en çok duyduğum soruları esas alarak değişiklikleri özetliyorum.</p>" },
+        { type: "callout", variant: "info", title: "Kısa özet", text: "İşe başlama eğitimi artık ayrı bir zorunluluk ve yüz yüze yapılır. Temel eğitim süreleri 8 / 12 / 16 saat olarak korundu, ama tekrar eğitimi tüm tehlike sınıflarında en az 8 saat oldu. Uzaktan eğitim serbest, fakat işyerine özgü riskler konusu tehlikeli ve çok tehlikeli sınıfta yüz yüze verilmek zorunda." },
+        { type: "h2", text: "1. İşe başlama eğitimi: işe başlamadan önce, yüz yüze, en az 2 saat" },
+        { type: "paragraph", html: "<p>Eski uygulamada çoğu işyeri yeni çalışanı doğrudan temel eğitime alıyordu. Yeni yönetmelik (md. 7) <strong>işe başlama eğitimini</strong> ayrı bir basamak olarak tanımlıyor: çalışan, çırak ve stajyerler dahil herkes işe başlamadan önce bu eğitimi alır. Eğitim <strong>uygulamalı ve yüz yüze</strong> yapılır, <strong>en az 2 saat</strong> sürer, belgelenir ve özlük dosyasında saklanır.</p><p>Pratikte bu, işe alım günü yapılan kısa bir saha turunun yeterli olmadığı anlamına geliyor: makine, kimyasal, acil çıkış ve KKD konuları işyerinde gösterilerek anlatılmalı ve tutanağa bağlanmalı.</p>" },
+        { type: "h2", text: "2. Temel eğitim: süreler aynı, takvim netleşti" },
+        { type: "paragraph", html: "<p>Temel eğitim süreleri (md. 13) tehlike sınıfına göre korundu:</p>" },
+        { type: "list", style: "ul", items: [
+          "Az tehlikeli sınıf: en az 8 saat",
+          "Tehlikeli sınıf: en az 12 saat",
+          "Çok tehlikeli sınıf: en az 16 saat",
+        ] },
+        { type: "paragraph", html: "<p>Yeni olan iki şey var. Birincisi, temel eğitimin <strong>işe girişten sonra en geç 3 ay içinde</strong> tamamlanması gerekiyor (md. 8). İkincisi, dördüncü konu başlığı olan <strong>\"işe ve işyerine özgü riskler\"</strong> için ayrı asgari süre tanımlandı: az tehlikelide 2, tehlikelide 3, çok tehlikelide 4 saat. Yani genel İSG anlatımıyla süreyi doldurup işyerine özgü kısmı geçiştirmek artık mümkün değil.</p>" },
+        { type: "h2", text: "3. Tekrar eğitimi: sıklık aynı, süre tek tip 8 saat" },
+        { type: "paragraph", html: "<p>Tekrar sıklığı (md. 14) değişmedi: çok tehlikeli sınıfta <strong>yılda bir</strong>, tehlikeli sınıfta <strong>iki yılda bir</strong>, az tehlikeli sınıfta <strong>üç yılda bir</strong>. Değişen, tekrar eğitiminin süresi: eskiden temel eğitimle aynı saat kadar tekrarlanıyordu; şimdi <strong>tüm sınıflarda en az 8 saat</strong>. Çok tehlikeli sınıf için bu, yıllık yük açısından bir rahatlama; az tehlikeli sınıf için süre aynı kaldı.</p><p>Ayrıca işyeri, iş, ekipman veya teknoloji değiştiğinde ek eğitim; <strong>altı aydan uzun</strong> işten uzak kalma sonrasında (md. 18) ve <strong>iş kazası veya meslek hastalığı</strong> sonrasında işe dönmeden önce (md. 19) ayrıca eğitim gerekiyor.</p>" },
+        { type: "h2", text: "4. Uzaktan eğitim: serbest ama konu ve sınıfa göre sınırlı" },
+        { type: "paragraph", html: "<p>En çok soru alan başlık bu. Yönetmelik (md. 12) eğitimleri <strong>uzaktan, yüz yüze veya karma</strong> yöntemle vermeye izin veriyor. Sınır şu şekilde çiziliyor:</p>" },
+        { type: "list", style: "ul", items: [
+          "Genel konular, sağlık konuları ve teknik konular (1-3. başlıklar): her tehlike sınıfında uzaktan verilebilir.",
+          "İşe ve işyerine özgü riskler (4. başlık): az tehlikeli sınıfta uzaktan veya karma olabilir; tehlikeli ve çok tehlikeli sınıfta yüz yüze zorunlu.",
+          "İşe başlama eğitimi: her zaman yüz yüze ve uygulamalı.",
+        ] },
+        { type: "paragraph", html: "<p>Uzaktan eğitim sistemi için de şartlar var: giriş-çıkış kayıtları, tamamlama oranı ve sınav sonuçları raporlanabilmeli; videoyu ileri sarma gibi eğitimi verimsizleştiren uygulamalar engellenmeli. \"Linki gönderdik, çalışan izledi\" kayıt olarak yeterli değil.</p>" },
+        { type: "h2", text: "5. Ölçme-değerlendirme ve belgeler" },
+        { type: "paragraph", html: "<p>Temel eğitim sonunda sınav yapılır; <strong>100 üzerinden 60</strong> geçer not (md. 16). Başarısız çalışana iki ek hak tanınır, yine başarısız olursa temel eğitim tekrarlanır. Eğitim belgeleri <strong>e-imza ile imzalanıp dijital arşivlenebilir</strong>; ıslak imza zorunluluğu kalktı.</p>" },
+        { type: "h2", text: "6. Geçiş hükümleri: eski eğitimler geçerli mi?" },
+        { type: "paragraph", html: "<p>Evet. Geçici 1. maddeye göre 2013 yönetmeliğine göre verilmiş eğitimler geçerliliğini koruyor; belgeler md. 14'teki tekrar sürelerinin sonuna kadar kullanılıyor. Daha önce verilmiş ama belgelenmemiş eğitimlerin ise yayım tarihinden itibaren <strong>bir ay içinde</strong> belgelenmesi gerekiyordu; bu süre geçti, eksik belge varsa denetimde eğitim verilmemiş sayılır.</p>" },
+        { type: "h2", text: "İşveren için kontrol listesi" },
+        { type: "checklist", items: [
+          "Yeni işe alınan herkes için işe başlama eğitimi tutanağı var mı (en az 2 saat, yüz yüze, özlük dosyasında)?",
+          "Temel eğitim işe girişten sonraki 3 ay içinde tamamlandı mı?",
+          "Temel eğitimde işyerine özgü riskler başlığına yeterli süre ayrıldı mı (2 / 3 / 4 saat)?",
+          "Tekrar eğitimi takvimi tehlike sınıfına göre güncellendi mi, süre en az 8 saat mi?",
+          "Uzaktan verilen eğitimler yalnız izin verilen konularda mı; sistem giriş-çıkış ve sınav kaydı tutuyor mu?",
+          "Sınav sonuçları (60 ve üzeri) ve ek hak kayıtları dosyada mı?",
+          "Altı aydan uzun süre ayrılan veya iş kazası geçiren çalışanlar için ek eğitim planlandı mı?",
+        ] },
+        { type: "callout", variant: "warning", title: "Bolu'daki işletmeler için not", text: "Gerede deri ve kimya tesisleri, metal imalat ve inşaat gibi tehlikeli/çok tehlikeli sınıf işyerlerinde işyerine özgü risk eğitimi artık uzaktan verilemiyor. Bu eğitimi saha ziyaretiyle birleştirmek hem mevzuata uygun hem de en ekonomik yol." },
+        { type: "faq", items: [
+          { q: "Eski yönetmeliğe göre aldığımız eğitim belgeleri geçersiz mi oldu?", a: "Hayır. Geçici madde 1 uyarınca geçerliliğini koruyor; tekrar süresi dolduğunda yeni yönetmeliğe göre yenilenir." },
+          { q: "Çok tehlikeli sınıfta temel eğitimi tamamen uzaktan verebilir miyiz?", a: "Hayır. Genel, sağlık ve teknik konular uzaktan olabilir; işe ve işyerine özgü riskler başlığı (en az 4 saat) yüz yüze verilmek zorunda. İşe başlama eğitimi de yüz yüze." },
+          { q: "Tekrar eğitimi için artık 16 saat ayırmamız gerekmiyor mu?", a: "Gerekmiyor. Tekrar eğitimi tüm sınıflarda en az 8 saat; temel eğitim süreleri (8/12/16) ise yalnız ilk eğitim için geçerli." },
+          { q: "Belgeleri e-imzayla imzalayabilir miyiz?", a: "Evet, yeni yönetmelik e-imza ve dijital arşivlemeye açıkça izin veriyor." },
+        ] },
+        { type: "paragraph", html: "<p><em>Kaynak: Çalışanların İş Sağlığı ve Güvenliği Eğitimlerinin Usul ve Esasları Hakkında Yönetmelik, Resmî Gazete 02.04.2026, Sayı 33212. Bu yazı bilgilendirme amaçlıdır; işyerinize özel uygulama için yönetmelik metni ve İSG profesyonelinizin görüşü esas alınmalıdır.</em></p>" },
+        { type: "cta-inline", text: "Eğitim takviminizi yeni yönetmeliğe göre birlikte güncelleyelim.", button: { label: "İletişime Geç", href: "/iletisim" } },
+      ],
+      internalLinks: [
+        { label: "İSG Eğitimleri", href: "/hizmetler/isg-egitimleri-bolu" },
+        { label: "Süre Hesaplama", href: "/hesaplama" },
+      ],
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: "Yeni İSG Eğitim Yönetmeliği 2026: İşverenler İçin Ne Değişti?",
+        mainEntityOfPage: "/blog/yeni-isg-egitim-yonetmeligi-2026",
+        about: ["İSG eğitimi", "Mevzuat", "Uzaktan eğitim"],
+        datePublished: "2026-11-08",
+      },
+    },
     {
       slug: "insaatta-isg",
       locale: "tr",
