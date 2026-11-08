@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale, ClipboardCheck, FlaskConical } from "lucide-react";
+import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale, FlaskConical } from "lucide-react";
 
-type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "risk-degerlendirmesi-ne-zaman-yenilenir" | "kimyasal-depolarda-is-guvenligi" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
+type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "kimyasal-depolarda-is-guvenligi" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
 
 type Card = {
   id: string;
   slug: BlogSlug;
   title: string;
   excerpt: string;
-  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale" | "clipboard" | "flask";
+  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale" | "flask";
   ctaLabel: string;
   a11y: { ariaLabel: string };
   seoTag?: string;
@@ -25,16 +25,6 @@ const cards: Card[] = [
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "Yeni İSG Eğitim Yönetmeliği 2026 yazısına git" },
     seoTag: "egitim-yonetmeligi-2026-card",
-  },
-  {
-    id: "rd-yenileme",
-    slug: "risk-degerlendirmesi-ne-zaman-yenilenir",
-    title: "Risk Değerlendirmesi Ne Zaman Yenilenir?",
-    excerpt: "2 / 4 / 6 yıl üst sınırdır; süre beklenmeden güncelleme gerektiren 6 durum ve işveren kontrol listesi.",
-    icon: "clipboard",
-    ctaLabel: "Detaylı Oku",
-    a11y: { ariaLabel: "Risk değerlendirmesi yenileme yazısına git" },
-    seoTag: "rd-yenileme-card",
   },
   {
     id: "kimyasal-depo",
@@ -79,7 +69,6 @@ const cards: Card[] = [
 ];
 
 const hrefMap = {
-  "risk-degerlendirmesi-ne-zaman-yenilenir": "/blog/risk-degerlendirmesi-ne-zaman-yenilenir",
   "kimyasal-depolarda-is-guvenligi": "/blog/kimyasal-depolarda-is-guvenligi",
   "yeni-isg-egitim-yonetmeligi-2026": "/blog/yeni-isg-egitim-yonetmeligi-2026",
   "insaatta-isg": "/blog/insaatta-isg",
@@ -90,8 +79,6 @@ const hrefMap = {
 function Icon({ name }: { name: Card["icon"] }) {
   const common = "h-6 w-6 text-emerald-600";
   switch (name) {
-    case "clipboard":
-      return <ClipboardCheck className={common} aria-hidden />;
     case "flask":
       return <FlaskConical className={common} aria-hidden />;
     case "scale":
@@ -112,11 +99,10 @@ export default function SectorInsights() {
     name: "Sektörel İSG Bilgilendirmeleri",
     itemListElement: [
       { "@type": "ListItem", position: 1, url: "/blog/yeni-isg-egitim-yonetmeligi-2026" },
-      { "@type": "ListItem", position: 2, url: "/blog/risk-degerlendirmesi-ne-zaman-yenilenir" },
-      { "@type": "ListItem", position: 3, url: "/blog/kimyasal-depolarda-is-guvenligi" },
-      { "@type": "ListItem", position: 4, url: "/blog/insaatta-isg" },
-      { "@type": "ListItem", position: 5, url: "/blog/lojistikte-isg" },
-      { "@type": "ListItem", position: 6, url: "/blog/gida-sektorunde-isg" },
+      { "@type": "ListItem", position: 2, url: "/blog/kimyasal-depolarda-is-guvenligi" },
+      { "@type": "ListItem", position: 3, url: "/blog/insaatta-isg" },
+      { "@type": "ListItem", position: 4, url: "/blog/lojistikte-isg" },
+      { "@type": "ListItem", position: 5, url: "/blog/gida-sektorunde-isg" },
     ],
   } as const;
 
