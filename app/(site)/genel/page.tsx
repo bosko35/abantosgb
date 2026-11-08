@@ -70,7 +70,7 @@ const resources: Resource[] = [
   {
     title: 'Adres Bilgisi',
     description: 'Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu adresimize harita üzerinden navigasyon alın veya konum detaylarını görüntüleyin.',
-    href: 'https://maps.google.com/?q=Akta%C5%9F+Mah.+Ta%C5%9Fhanc%C4%B1lar+Cd.+No:31+B%2F22+Merkez%2FBolu',
+    href: 'https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu',
     action: 'Haritada aç',
     icon: MapPin,
     address: 'Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu',
@@ -166,7 +166,7 @@ export default function GenelPage() {
                     <dt className="text-xs uppercase tracking-wide text-brand-text/60">Harita & GBP</dt>
                     <dd className="mt-1 font-semibold text-brand-navy">
                       <a
-                        href="https://maps.google.com/?q=Akta%C5%9F+Mah.+Ta%C5%9Fhanc%C4%B1lar+Cd.+No:31+B/22+Merkez/Bolu"
+                        href="https://www.google.com/maps/search/?api=1&query=Abant+OSGB+Akta%C5%9F+Ta%C5%9Fhanc%C4%B1lar+Cd.+31B+Bolu"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline"
