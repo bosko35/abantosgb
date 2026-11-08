@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale, FlaskConical } from "lucide-react";
+import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale, FlaskConical, Laptop } from "lucide-react";
 
-type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "kimyasal-depolarda-is-guvenligi" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
+type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "isgde-yazilim-excelden-dijital-takibe" | "kimyasal-depolarda-is-guvenligi" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
 
 type Card = {
   id: string;
   slug: BlogSlug;
   title: string;
   excerpt: string;
-  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale" | "flask";
+  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale" | "flask" | "laptop";
   ctaLabel: string;
   a11y: { ariaLabel: string };
   seoTag?: string;
@@ -25,6 +25,16 @@ const cards: Card[] = [
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "Yeni İSG Eğitim Yönetmeliği 2026 yazısına git" },
     seoTag: "egitim-yonetmeligi-2026-card",
+  },
+  {
+    id: "isgde-yazilim",
+    slug: "isgde-yazilim-excelden-dijital-takibe",
+    title: "Excel'den Dijital Takibe",
+    excerpt: "Küçük bir OSGB İSG süreçlerini yazılımla nasıl yönetir? Taşıdıklarımız, bilerek taşımadıklarımız, 2026 şartları.",
+    icon: "laptop",
+    ctaLabel: "Detaylı Oku",
+    a11y: { ariaLabel: "İSG'de yazılım yazısına git" },
+    seoTag: "isgde-yazilim-card",
   },
   {
     id: "kimyasal-depo",
@@ -69,6 +79,7 @@ const cards: Card[] = [
 ];
 
 const hrefMap = {
+  "isgde-yazilim-excelden-dijital-takibe": "/blog/isgde-yazilim-excelden-dijital-takibe",
   "kimyasal-depolarda-is-guvenligi": "/blog/kimyasal-depolarda-is-guvenligi",
   "yeni-isg-egitim-yonetmeligi-2026": "/blog/yeni-isg-egitim-yonetmeligi-2026",
   "insaatta-isg": "/blog/insaatta-isg",
@@ -79,6 +90,8 @@ const hrefMap = {
 function Icon({ name }: { name: Card["icon"] }) {
   const common = "h-6 w-6 text-emerald-600";
   switch (name) {
+    case "laptop":
+      return <Laptop className={common} aria-hidden />;
     case "flask":
       return <FlaskConical className={common} aria-hidden />;
     case "scale":
@@ -99,10 +112,11 @@ export default function SectorInsights() {
     name: "Sektörel İSG Bilgilendirmeleri",
     itemListElement: [
       { "@type": "ListItem", position: 1, url: "/blog/yeni-isg-egitim-yonetmeligi-2026" },
-      { "@type": "ListItem", position: 2, url: "/blog/kimyasal-depolarda-is-guvenligi" },
-      { "@type": "ListItem", position: 3, url: "/blog/insaatta-isg" },
-      { "@type": "ListItem", position: 4, url: "/blog/lojistikte-isg" },
-      { "@type": "ListItem", position: 5, url: "/blog/gida-sektorunde-isg" },
+      { "@type": "ListItem", position: 2, url: "/blog/isgde-yazilim-excelden-dijital-takibe" },
+      { "@type": "ListItem", position: 3, url: "/blog/kimyasal-depolarda-is-guvenligi" },
+      { "@type": "ListItem", position: 4, url: "/blog/insaatta-isg" },
+      { "@type": "ListItem", position: 5, url: "/blog/lojistikte-isg" },
+      { "@type": "ListItem", position: 6, url: "/blog/gida-sektorunde-isg" },
     ],
   } as const;
 

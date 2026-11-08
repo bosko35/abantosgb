@@ -115,6 +115,216 @@ const raw = {
       },
     },
     {
+      "slug": "isgde-yazilim-excelden-dijital-takibe",
+      "locale": "tr",
+      "category": "Dijital İSG",
+      "author": {
+        "name": "Ayhan Milli",
+        "title": "İş güvenliği uzmanı · Öğretim görevlisi · Abant OSGB"
+      },
+      "title": "Excel'den Dijital Takibe: Küçük Bir OSGB İSG Süreçlerini Yazılımla Nasıl Yönetir?",
+      "subtitle": "İSG'nin yarısı sahadır, diğer yarısı kayıttır. Kaydı Excel'de tutan bir OSGB bir noktada tıkanır. Bir yılda neyi yazılıma taşıdık, neyi bilerek taşımadık, 2026 mevzuatı yazılımdan ne bekliyor?",
+      "metaTitle": "İSG'de Yazılım: Excel'den Dijital Takibe — Küçük OSGB Deneyimi",
+      "metaDescription": "Küçük bir OSGB İSG süreçlerini yazılımla nasıl yönetir? Saha takibi, İSG-KATİP ön kontrolü, belge şablonu, OCR arşiv, SDS eşleştirme; bilerek dijitalleştirilmeyenler ve 2026 eğitim yönetmeliğinin yazılım şartları.",
+      "heroImage": "/images/blog/isgde-yazilim.jpg",
+      "readTime": "7 dk",
+      "updatedAt": "2026-11-08",
+      "excerpt": "Excel hatırlatmaz, tek doğruyu tutmaz, kanıt üretmez. Bir yılda neyi yazılıma taşıdık, neyi bilerek taşımadık ve 2026 mevzuatı dijital kayıttan ne bekliyor?",
+      "keywords": [
+        "isg yazılımı",
+        "osgb yazılım",
+        "isg dijitalleşme",
+        "isg-katip takip",
+        "isg arşiv ocr",
+        "e-imza eğitim belgesi",
+        "Bolu OSGB"
+      ],
+      "sections": [
+        {
+          "h2": "Neden Excel bir noktada yetmez?"
+        },
+        {
+          "h2": "Bir yılda neyi yazılıma taşıdık?"
+        },
+        {
+          "h2": "Neyi bilerek yazılıma taşımadık?"
+        },
+        {
+          "h2": "2026 mevzuatı yazılımdan ne bekliyor?"
+        },
+        {
+          "h2": "Küçük OSGB'ler için yol haritası"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "lead",
+          "html": "<p>İki şapkam var: iş güvenliği uzmanıyım ve yıllardır yazılım ekipleri yönetiyorum. Bu ikisi uzun süre birbirine değmedi; İSG dosyaları klasörlerde, yazılım işleri başka bir dünyada durdu. Abant OSGB'yi kurduğumuzda ilk aylarda her şeyi Excel'de tuttuk ve kısa sürede şunu gördük: <strong>sorun Excel değil, Excel'in hatırlamamasıdır.</strong> Hangi firmanın periyodik muayenesi geldi, hangi uzmanın aylık süresi doldu, hangi eğitim belgesi eksik — bunları tablo size söylemez, siz tabloya sormanız gerekir. Bu yazı, küçük bir OSGB'nin bir yılda dijitalleşme adına yaptıklarını ve yapmadıklarını anlatıyor. Reklam değil, saha notu.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Neden Excel bir noktada yetmez?"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Excel üç şeyi iyi yapar: listeler, hesaplar, filtreler. Üç şeyi yapamaz:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ol",
+          "items": [
+            "Hatırlatmaz. Yenileme tarihi geçen risk değerlendirmesi, Excel'de kırmızıya dönse bile dosyayı açan olmazsa kimse görmez.",
+            "Tek doğruyu tutmaz. \"FIRMALAR GUNCEL v3 SON\" dosyasını bilen bilir. İki kişi aynı anda çalıştığında hangisi doğru?",
+            "Kanıt üretmez. Denetçi \"bu eğitim ne zaman, kime, kaç saat verildi, kim imzaladı\" diye sorduğunda cevap Excel satırı değil, imzalı tutanak ve kayıt zinciridir."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Küçük bir OSGB için kritik eşik yaklaşık 30–40 müşteri ve 3–4 saha personelidir. Bu noktadan sonra Excel, bilgi kaybetmeye başlar.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Bir yılda neyi yazılıma taşıdık?"
+        },
+        {
+          "type": "h3",
+          "text": "1. Saha ziyaret ve personel takibi"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>İlk yazdığımız şey basit bir web uygulamasıydı: hangi uzman veya hekim, hangi firmaya, hangi gün gitti; ziyarette ne yapıldı; bir sonraki ziyaret ne zaman. Uygulamanın en değerli özelliği gösterişli bir ekran değil, <strong>sabahları uzmanın telefonuna gelen \"bugün şu üç firma\"</strong> listesidir. İSG-KATİP'teki sözleşme sürelerini aylık yasal süreyle karşılaştırıyor; süre dolmadan uyarıyor.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "2. İSG-KATİP ön kontrolü"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bakanlık sistemi doğru veriyi tutar ama raporlamaz. KATİP'ten alınan dökümü okuyup \"sözleşmesi biten, atama eksik olan, kapasitesi dolan\" firmaları listeleyen küçük bir kontrol betiği yazdık. Haftada bir çalışır; eskiden yarım gün süren kontrol beş dakika sürüyor. Buradaki ders: <strong>mevcut sistemin yerine yenisini yazmaya çalışmayın; mevcut sistemin çıktısını okuyan küçük araçlar yazın.</strong></p>"
+        },
+        {
+          "type": "h3",
+          "text": "3. Belge üretimi: şablon disiplini"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Risk değerlendirmesi, acil durum planı, eğitim tutanağı gibi belgeleri her seferinde sıfırdan yazmak hem zaman kaybı hem hata kaynağıdır. Tek bir standart şablon (bizde 5×5 matris formatı) ve firma bilgilerini otomatik dolduran bir akış kurduk. Belge kalitesi arttı, çünkü uzman vaktini biçimle değil içerikle geçiriyor.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "4. Evrak ve fiş arşivi: OCR"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Saha fotoğrafları, taranmış tutanaklar, fişler. Bunları klasöre atmak arşivlemek değildir; aranabilir olmalı. Taranmış PDF'leri ve görselleri metne çeviren (OCR) bir araçla arşivi aranabilir hâle getirdik. \"Şu firmanın 2025 Eylül eğitim tutanağı\" sorusunun cevabı artık dosya adını hatırlamaya bağlı değil.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "5. Kimyasal ve SDS takibi"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Deri ve kimya tesislerinde yüzlerce kimyasal var; her birinin güvenlik bilgi formu olmalı ve güncel kalmalı. Ürün listesi ile SDS arşivini eşleştiren basit bir tablo-otomasyonu, \"137 var, 98 eksik\" gibi net bir sayı verdi. Sayı olmadan tedarikçiyle konuşamazsınız.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Neyi bilerek yazılıma taşımadık?"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Risk puanlamasını. Olasılık ve şiddet değerini bir algoritmaya bırakmadık. Puanı veren, sahayı gören uzmandır; yazılım yalnızca formu ve matrisi tutar.",
+            "Eğitimin kendisini. Uzaktan eğitim altyapısı kurmak kolay; ama 2026 yönetmeliği işe başlama eğitimini ve tehlikeli/çok tehlikeli sınıfta işyerine özgü risk eğitimini yüz yüze istiyor. Yazılım kaydı tutar, eğitimi vermez.",
+            "Müşteriyle iletişimi. Otomatik mesaj sistemleri cazip görünüyor; biz hatırlatmaları yazılımdan alıp telefonu elimize alıyoruz. İSG bir güven ilişkisidir."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "2026 mevzuatı yazılımdan ne bekliyor?"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Nisan 2026'da yürürlüğe giren eğitim yönetmeliği, yazılım tarafını ilk kez bu kadar açık tarif etti:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Eğitim belgeleri e-imza ile imzalanıp dijital arşivlenebilir. Islak imza ve klasör zorunluluğu kalktı; ama dijital arşivin erişilebilir ve bütünlüğü korunmuş olması gerekiyor.",
+            "Uzaktan eğitim sistemi giriş-çıkış kayıtlarını, tamamlama oranını ve sınav sonuçlarını raporlayabilmeli; ileri sarmayı engellemeli. \"Video linki gönderdik\" kayıt sayılmıyor.",
+            "Sınav notu, ek haklar ve tekrar eğitimi takvimi izlenebilir olmalı."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bunların hiçbiri büyük bir yazılım gerektirmiyor; ama hiçbiri de Excel'le güvenilir biçimde yapılamıyor.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Küçük OSGB'ler için yol haritası"
+        },
+        {
+          "type": "list",
+          "style": "ol",
+          "items": [
+            "Önce tek doğru kaynak: firma listesi, sözleşme süreleri ve kişi atamaları tek yerde, tek sürüm.",
+            "Sonra hatırlatma: yenileme tarihleri (RD, ADEP, eğitim, periyodik muayene) kendiliğinden uyarsın.",
+            "Sonra belge şablonu: her uzman aynı formatı kullansın, firma bilgisi otomatik gelsin.",
+            "Sonra arşiv: taranan her belge aranabilir olsun.",
+            "En son otomasyon: KATİP kontrolü, SDS eşleştirme gibi tekrarlayan işler."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "Sıra önemli",
+          "text": "Arşivi düzenlemeden otomasyon yazan, karışıklığı hızlandırmış olur."
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Hazır İSG yazılımı mı almalı, kendimiz mi yazmalıyız?",
+              "a": "Beş uzmanın altındaysanız hazır bir takip yazılımı çoğu ihtiyacı karşılar. Kendi yazdığımız araçlar, hazır yazılımların kapsamadığı dar işler için: KATİP dökümü okuma, SDS eşleştirme, OCR arşiv. İkisi birbirinin alternatifi değil."
+            },
+            {
+              "q": "Kişisel sağlık verileri bu sistemlerde tutulabilir mi?",
+              "a": "Sağlık gözetimi verisi özel nitelikli kişisel veridir; erişim yalnızca işyeri hekimi ve yetkili sağlık personelinde olmalı, şifreli saklanmalı, işveren göremez. Yazılım seçerken ilk soru bu olmalı."
+            },
+            {
+              "q": "Yapay zekâ İSG'de ne işe yarar?",
+              "a": "Bugün için en işe yarar yer belge okuma (OCR, fiş ve tutanak sınıflandırma) ve mevzuat metinlerinde arama. Risk puanlaması ve saha kararı için değil. Bu görüşümüz sahada değişirse yazarız."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p><em>Bu yazı Abant OSGB'nin kendi deneyimini anlatır; yazılım ürünü tavsiyesi içermez.</em></p>"
+        },
+        {
+          "type": "cta-inline",
+          "text": "Takip süreçlerinizi birlikte gözden geçirelim.",
+          "button": {
+            "label": "Teklif Al",
+            "href": "/iletisim"
+          }
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Excel'den Dijital Takibe: Küçük Bir OSGB İSG Süreçlerini Yazılımla Nasıl Yönetir?",
+        "mainEntityOfPage": "/blog/isgde-yazilim-excelden-dijital-takibe",
+        "about": [
+          "Dijital İSG",
+          "OSGB yazılımı",
+          "İSG-KATİP"
+        ],
+        "datePublished": "2026-11-08"
+      }
+    },
+    {
       "slug": "kimyasal-depolarda-is-guvenligi",
       "locale": "tr",
       "category": "Kimyasal Güvenlik",
