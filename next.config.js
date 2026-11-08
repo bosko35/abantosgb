@@ -4,6 +4,18 @@ const nextConfig = {
   experimental: {
     typedRoutes: true
   },
+  async headers() {
+    return [
+      {
+        source: '/images/:path*',
+        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
+      },
+      {
+        source: '/brand/:path*',
+        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
+      },
+    ]
+  },
   async rewrites() {
     return [
       {
