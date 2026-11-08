@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale } from "lucide-react";
+import { HardHat, Truck, UtensilsCrossed, ArrowRight, Scale, ClipboardCheck, FlaskConical } from "lucide-react";
 
-type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
+type BlogSlug = "yeni-isg-egitim-yonetmeligi-2026" | "risk-degerlendirmesi-ne-zaman-yenilenir" | "kimyasal-depolarda-is-guvenligi" | "insaatta-isg" | "lojistikte-isg" | "gida-sektorunde-isg";
 
 type Card = {
   id: string;
   slug: BlogSlug;
   title: string;
   excerpt: string;
-  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale";
+  icon: "hard-hat" | "truck" | "utensils-crossed" | "scale" | "clipboard" | "flask";
   ctaLabel: string;
   a11y: { ariaLabel: string };
   seoTag?: string;
@@ -25,6 +25,26 @@ const cards: Card[] = [
     ctaLabel: "Detaylı Oku",
     a11y: { ariaLabel: "Yeni İSG Eğitim Yönetmeliği 2026 yazısına git" },
     seoTag: "egitim-yonetmeligi-2026-card",
+  },
+  {
+    id: "rd-yenileme",
+    slug: "risk-degerlendirmesi-ne-zaman-yenilenir",
+    title: "Risk Değerlendirmesi Ne Zaman Yenilenir?",
+    excerpt: "2 / 4 / 6 yıl üst sınırdır; süre beklenmeden güncelleme gerektiren 6 durum ve işveren kontrol listesi.",
+    icon: "clipboard",
+    ctaLabel: "Detaylı Oku",
+    a11y: { ariaLabel: "Risk değerlendirmesi yenileme yazısına git" },
+    seoTag: "rd-yenileme-card",
+  },
+  {
+    id: "kimyasal-depo",
+    slug: "kimyasal-depolarda-is-guvenligi",
+    title: "Kimyasal Depolarda İş Güvenliği",
+    excerpt: "Envanter, Türkçe SDS, ayrıştırma, dökülme kiti ve eğitim: 8 adım, 10 maddelik kontrol listesi.",
+    icon: "flask",
+    ctaLabel: "Detaylı Oku",
+    a11y: { ariaLabel: "Kimyasal depolarda iş güvenliği yazısına git" },
+    seoTag: "kimyasal-depo-card",
   },
   {
     id: "insaat",
@@ -59,6 +79,8 @@ const cards: Card[] = [
 ];
 
 const hrefMap = {
+  "risk-degerlendirmesi-ne-zaman-yenilenir": "/blog/risk-degerlendirmesi-ne-zaman-yenilenir",
+  "kimyasal-depolarda-is-guvenligi": "/blog/kimyasal-depolarda-is-guvenligi",
   "yeni-isg-egitim-yonetmeligi-2026": "/blog/yeni-isg-egitim-yonetmeligi-2026",
   "insaatta-isg": "/blog/insaatta-isg",
   "lojistikte-isg": "/blog/lojistikte-isg",
@@ -68,6 +90,10 @@ const hrefMap = {
 function Icon({ name }: { name: Card["icon"] }) {
   const common = "h-6 w-6 text-emerald-600";
   switch (name) {
+    case "clipboard":
+      return <ClipboardCheck className={common} aria-hidden />;
+    case "flask":
+      return <FlaskConical className={common} aria-hidden />;
     case "scale":
       return <Scale className={common} aria-hidden />;
     case "hard-hat":
@@ -86,9 +112,11 @@ export default function SectorInsights() {
     name: "Sektörel İSG Bilgilendirmeleri",
     itemListElement: [
       { "@type": "ListItem", position: 1, url: "/blog/yeni-isg-egitim-yonetmeligi-2026" },
-      { "@type": "ListItem", position: 2, url: "/blog/insaatta-isg" },
-      { "@type": "ListItem", position: 3, url: "/blog/lojistikte-isg" },
-      { "@type": "ListItem", position: 4, url: "/blog/gida-sektorunde-isg" },
+      { "@type": "ListItem", position: 2, url: "/blog/risk-degerlendirmesi-ne-zaman-yenilenir" },
+      { "@type": "ListItem", position: 3, url: "/blog/kimyasal-depolarda-is-guvenligi" },
+      { "@type": "ListItem", position: 4, url: "/blog/insaatta-isg" },
+      { "@type": "ListItem", position: 5, url: "/blog/lojistikte-isg" },
+      { "@type": "ListItem", position: 6, url: "/blog/gida-sektorunde-isg" },
     ],
   } as const;
 
@@ -100,7 +128,7 @@ export default function SectorInsights() {
           <p className="mt-2 text-sm text-slate-500">Sektöre özel İSG gereklilikleri, riskler ve pratik önlemler.</p>
         </header>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((c) => (
             <Link
               href={hrefMap[c.slug] as Route}

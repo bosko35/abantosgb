@@ -115,6 +115,359 @@ const raw = {
       },
     },
     {
+      "slug": "risk-degerlendirmesi-ne-zaman-yenilenir",
+      "locale": "tr",
+      "category": "Risk Değerlendirmesi",
+      "author": {
+        "name": "Çiğdem Milli",
+        "title": "A sınıfı İş Güvenliği Uzmanı · Abant OSGB"
+      },
+      "title": "Risk Değerlendirmesi Ne Zaman Yenilenir? İşverenin Gözden Kaçırdığı 6 Durum",
+      "subtitle": "\"Raporumuz var, süresi dolmadı\" cümlesi denetimde yeterli değil. 2 / 4 / 6 yıllık takvim yalnızca üst sınır; altı durumda süre beklenmeden güncelleme gerekir.",
+      "metaTitle": "Risk Değerlendirmesi Ne Zaman Yenilenir? 6 Tetikleyici Durum",
+      "metaDescription": "Risk değerlendirmesi yenileme süreleri (2/4/6 yıl) ve süre beklenmeden güncelleme gerektiren 6 durum: taşınma, yeni makine, yeni kimyasal, iş kazası, mevzuat değişikliği, ölçüm sonuçları. İşveren kontrol listesi.",
+      "heroImage": "/images/blog/risk-degerlendirmesi-yenileme.jpg",
+      "readTime": "5 dk",
+      "updatedAt": "2026-11-08",
+      "excerpt": "Tehlike sınıfına göre 2 / 4 / 6 yıllık takvim üst sınırdır. Taşınma, yeni makine, yeni kimyasal, iş kazası, mevzuat değişikliği ve ölçüm sonuçları süre beklenmeden güncelleme gerektirir.",
+      "keywords": [
+        "risk değerlendirmesi yenileme",
+        "risk analizi kaç yılda bir",
+        "risk değerlendirmesi güncelleme",
+        "iş kazası sonrası risk analizi",
+        "Bolu risk analizi"
+      ],
+      "sections": [
+        {
+          "h2": "Takvim: üst sınır, hedef değil"
+        },
+        {
+          "h2": "Süre beklenmeden yenileme gerektiren 6 durum"
+        },
+        {
+          "h2": "İşveren için kısa kontrol listesi"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "lead",
+          "html": "<p>Sahada en sık duyduğum cümle şu: \"Risk analizimiz var, iki yıl önce yaptırdık.\" Dosyayı açıyoruz; rapor tarihinden bu yana iki yeni makine alınmış, depo başka bir binaya taşınmış, bir çalışan parmağını kaptırmış. Raporun süresi dolmamış ama <strong>rapor işyerini artık anlatmıyor.</strong> Bu yazıda, İş Sağlığı ve Güvenliği Risk Değerlendirmesi Yönetmeliği'nin öngördüğü yenileme takvimini ve çoğu işverenin atladığı altı tetikleyici durumu özetliyorum.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Takvim: üst sınır, hedef değil"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Yönetmeliğe göre risk değerlendirmesi tehlike sınıfına göre en geç şu sürelerde yenilenir:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Çok tehlikeli sınıf: en geç 2 yılda bir",
+            "Tehlikeli sınıf: en geç 4 yılda bir",
+            "Az tehlikeli sınıf: en geç 6 yılda bir"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bu süreler \"bu kadar zaman geçmeden dokunma\" anlamına gelmez; \"bu kadar zaman geçtiyse mutlaka yenile\" anlamına gelir. Aradaki fark denetimde ve bir kaza sonrasında çok belirleyici oluyor.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Süre beklenmeden yenileme gerektiren 6 durum"
+        },
+        {
+          "type": "h3",
+          "text": "1. İşyerinin taşınması veya yerleşim planının değişmesi"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Yeni bina, yeni kat, üretim hattının yer değiştirmesi, deponun büyümesi. Kaçış yolları, yangın yükü, forklift güzergâhı ve elektrik tesisatı değişmişse eski rapordaki risklerin yarısı artık geçersizdir.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "2. Yeni makine, ekipman veya teknoloji"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Alınan her makine kendi tehlikesini getirir: hareketli parça, basınç, gürültü, kimyasal. Satıcının CE belgesi risk değerlendirmesinin yerine geçmez; makinenin işyerindeki kullanımı değerlendirilmelidir.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "3. Üretim yönteminin veya kullanılan maddelerin değişmesi"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Yeni bir kimyasal, farklı bir hammadde, yeni bir proses. Özellikle güvenlik bilgi formu (SDS) değişen kimyasallarda maruziyet değerlendirmesi yeniden yapılmalıdır.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "4. İş kazası, meslek hastalığı veya ramak kala olayı"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bir olay yaşandıysa, mevcut değerlendirme o riski ya hiç görmemiş ya da düşük puanlamış demektir. Kazanın kök nedeni bulunup ilgili bölüm güncellenmeden dosya kapatılmamalıdır. Ramak kala olaylarını da bu kapsamda değerlendiriyoruz; kaza olmaması şans eseridir.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "5. Mevzuat değişikliği"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>2026'da eğitim yönetmeliği baştan yazıldı; sınır değerler ve periyodik kontrol kuralları da zaman zaman değişiyor. Değerlendirmenin dayandığı mevzuat değiştiyse ilgili maddeler güncellenmelidir.</p>"
+        },
+        {
+          "type": "h3",
+          "text": "6. Dış denetim, müşteri denetimi veya ortam ölçümü sonuçları"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bakanlık denetimi, müşteri tedarikçi denetimi ya da yeni bir gürültü/toz ölçümü, rapordaki olasılık ve şiddet puanlarını değiştirebilir. Ölçüm sonucu sınır değeri aşıyorsa ilgili risk \"kabul edilebilir\" kalamaz.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "\"Güncelleme\" ile \"yenileme\" aynı şey mi?"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Değil. Yukarıdaki durumlarda çoğu zaman raporun tamamını baştan yazmak gerekmez; <strong>etkilenen bölüm</strong> yeniden değerlendirilir, revizyon tarihi ve gerekçesi işlenir, ekip imzalar. Takvim dolduğunda ise değerlendirme bütün olarak yenilenir. İkisi de belgelenmeli; denetçi \"ne zaman, neden, kim\" sorularının cevabını dosyada görmek ister.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "İşveren için kısa kontrol listesi"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "Son değerlendirme tarihi ve tehlike sınıfına göre yenileme tarihi takvimde mi?",
+            "Son bir yılda yeni makine, taşınma veya yeni kimyasal oldu mu? Olduysa revizyon var mı?",
+            "İş kazası / ramak kala kayıtları ile risk değerlendirmesi birbirine bağlanmış mı?",
+            "Ortam ölçümü sonuçları rapora işlenmiş mi?",
+            "Revizyonlarda tarih, gerekçe ve ekip imzası var mı?",
+            "Aksiyon planındaki maddeler kapatıldıkça risk puanı yeniden hesaplanıyor mu?"
+          ]
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Risk değerlendirmesini işveren kendisi yapabilir mi?",
+              "a": "Değerlendirme işveren veya vekilinin başkanlığında, iş güvenliği uzmanı, işyeri hekimi, çalışan temsilcisi ve destek elemanlarından oluşan ekiple yapılır. Elliden az çalışanı olan az tehlikeli işyerlerinde işveren gerekli eğitimi alarak uzman görevini üstlenebilir; ekip zorunluluğu yine geçerlidir."
+            },
+            {
+              "q": "Her aksiyon kapandığında rapor yenilenir mi?",
+              "a": "Hayır; aksiyon planı güncellenir, ilgili riskin kalan puanı yeniden hesaplanır. Rapor bütününün yenilenmesi takvimle veya yukarıdaki tetikleyicilerle olur."
+            },
+            {
+              "q": "Eski rapor saklanmalı mı?",
+              "a": "Evet. Önceki değerlendirmeler, kaza incelemesinde ve denetimde \"ne biliyordunuz, ne yaptınız\" sorusunun cevabıdır; arşivde kalmalıdır."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p><em>Bu yazı bilgilendirme amaçlıdır. İşyerinize özel değerlendirme için iş güvenliği uzmanınızla görüşün.</em></p>"
+        },
+        {
+          "type": "cta-inline",
+          "text": "Risk değerlendirmenizin güncel olup olmadığını birlikte kontrol edelim.",
+          "button": {
+            "label": "Teklif Al",
+            "href": "/iletisim"
+          }
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Risk Değerlendirmesi Ne Zaman Yenilenir? İşverenin Gözden Kaçırdığı 6 Durum",
+        "mainEntityOfPage": "/blog/risk-degerlendirmesi-ne-zaman-yenilenir",
+        "about": [
+          "Risk değerlendirmesi",
+          "Yenileme süresi",
+          "İSG mevzuatı"
+        ],
+        "datePublished": "2026-11-08"
+      }
+    },
+    {
+      "slug": "kimyasal-depolarda-is-guvenligi",
+      "locale": "tr",
+      "category": "Kimyasal Güvenlik",
+      "author": {
+        "name": "Ali Ayyarkın",
+        "title": "A sınıfı İş Güvenliği Uzmanı · Abant OSGB"
+      },
+      "title": "Kimyasal Depolarda İş Güvenliği: SDS'den Dökülme Planına 8 Adım",
+      "subtitle": "Deri, tekstil, boya ve temizlik kimyasalı depolarında en büyük risk \"bilinmeyen varil\"dir. Güvenlik bilgi formundan acil durum ekibine, sahada işe yarayan sekiz adım.",
+      "metaTitle": "Kimyasal Depolarda İş Güvenliği: SDS, Ayrıştırma, Dökülme Planı",
+      "metaDescription": "Kimyasal depo güvenliği 8 adımda: envanter, Türkçe SDS, uyumsuz kimyasal ayrıştırma, etiketleme, havalandırma, KKD, dökülme kiti ve eğitim. 10 maddelik depo kontrol listesi.",
+      "heroImage": "/images/blog/kimyasal-depo-is-guvenligi.jpg",
+      "readTime": "6 dk",
+      "updatedAt": "2026-11-08",
+      "excerpt": "Envanter, Türkçe SDS, ayrıştırma, etiket, havalandırma, KKD, dökülme kiti ve eğitim: çok tehlikeli sınıf kimyasal depolarında saha deneyimine dayanan 8 adım ve 10 maddelik kontrol listesi.",
+      "keywords": [
+        "kimyasal depo iş güvenliği",
+        "güvenlik bilgi formu SDS",
+        "kimyasal ayrıştırma",
+        "dökülme kiti",
+        "deri kimyasalları depo",
+        "Bolu iş güvenliği"
+      ],
+      "sections": [
+        {
+          "h2": "Kimyasal envanteri"
+        },
+        {
+          "h2": "Güvenlik bilgi formu (SDS)"
+        },
+        {
+          "h2": "Depo için 10 maddelik hızlı kontrol"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "lead",
+          "html": "<p>Kimyasal deposuna ilk girdiğimde üç şeye bakarım: etiketler okunuyor mu, asitlerle bazlar yan yana mı, dökülme olursa ne yapılacağını depocu biliyor mu? Bu üç sorunun cevabı deponun gerçek durumunu, dosyadaki risk raporundan daha iyi anlatır. Bu yazıda, çok tehlikeli sınıftaki kimyasal depolarında edindiğimiz saha deneyimini sekiz uygulanabilir adımda topluyorum.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "1. Kimyasal envanteri: ne var, ne kadar var, nerede?"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Her şey listeyle başlar. Ürün adı, tedarikçi, miktar, ambalaj türü, depo konumu ve tehlike sınıfı (GHS piktogramı) tek tabloda olmalı. Envanteri olmayan depoda ne SDS takibi yapılabilir ne de dökülme planı. Pratik kural: depoya giren her yeni ürün, raf yerine konmadan önce listeye girer.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "2. Güvenlik bilgi formu (SDS): Türkçe, güncel, ulaşılabilir"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Her kimyasal için Türkçe SDS zorunludur; tedarikçi vermekle yükümlüdür. Üç kontrol:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Güncel mi? Formül veya mevzuat değiştikçe SDS yenilenir; 5 yaşından eski formlar tedarikçiden tekrar istenmelidir.",
+            "Ulaşılabilir mi? Klasör ofiste kilitli dolaptaysa işe yaramaz. Depoda ve ilk yardım noktasında basılı veya karekodla erişilen bir kopya bulunmalıdır.",
+            "Okunmuş mu? SDS'nin 2. (tehlike), 4. (ilk yardım), 6. (kazara yayılma) ve 8. (maruziyet / KKD) bölümleri depocuya ayrıca anlatılmalıdır."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "3. Ayrıştırma: uyumsuz kimyasallar aynı rafta duramaz"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>En sık gördüğümüz hata asit ile bazın, oksitleyici ile yanıcının yan yana istiflenmesi. Basit bir uyumluluk tablosu depo duvarına asılmalı, raflar renk veya bölge koduyla ayrılmalıdır. Taşma havuzu (ikincil kap) her sıvı kimyasal için zorunlu sayılmalıdır: bir varil delinirse içerik zemine değil havuza gider.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "4. Etiketleme: küçük kaba aktarılan kimyasal da etiketlenir"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Orijinal ambalajdaki etiket genelde tamamdır; sorun aktarma kaplarında başlar. Adı olmayan bir bidon, deponun en tehlikeli nesnesidir. Kural: aktarılan her kaba ürün adı ve tehlike piktogramı yazılır; gıda kabı (su şişesi, kavanoz) asla kullanılmaz.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "5. Havalandırma, zemin ve elektrik"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Çözücü buharları ağırdır, zeminde birikir. Alt seviyeden havalandırma, kimyasala dayanıklı ve eğimli zemin, toplama kanalı ve yanıcı buhar olan bölümlerde uygun elektrik ekipmanı gerekir. Yanıcı toz veya gaz oluşabilen depolar için <strong>Patlamadan Korunma Dokümanı</strong> ayrıca hazırlanmalıdır; bu çalışma akredite çözüm ortağıyla yapılır.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "6. Kişisel koruyucu donanım: SDS ne diyorsa o"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>\"Eldiven var\" yeterli değil; hangi eldiven? Nitril mi, bütil mi, neopren mi? SDS 8. bölüm bunu söyler. Göz duşu ve acil vücut duşu, kimyasalla temas noktasına en fazla 10 saniyelik yürüme mesafesinde, önü açık ve çalışır durumda olmalıdır. Haftada bir çalıştırılıp kaydedilmesini öneriyoruz.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "7. Dökülme planı ve dökülme kiti"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Dökülme planı tek sayfa olmalı ve depocu bunu ezbere bilmeli: kimi arar, hangi emiciyi kullanır, atığı nereye koyar, ne zaman tahliye eder. Dökülme kiti (emici, nötralizan, uygun eldiven, atık torbası) depoda görünür yerde, içeriği aylık kontrol edilir. Yılda en az bir kez dökülme tatbikatı yapılmalıdır.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "8. Eğitim ve acil durum ekibi"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Kimyasal depoda çalışan herkes işe başlama eğitiminde deponun kurallarını uygulamalı olarak öğrenmelidir; 2026 yönetmeliğiyle bu eğitim yüz yüze zorunlu hale geldi. Acil durum ekiplerinde (söndürme, kurtarma, koruma, ilk yardım) depoyu bilen en az bir kişi bulunmalı; vardiyalı çalışmada her vardiya için ayrı planlanmalıdır.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Depo için 10 maddelik hızlı kontrol"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "Güncel kimyasal envanteri var ve depodaki ürünlerle eşleşiyor",
+            "Her kimyasalın Türkçe SDS'si depoda ulaşılabilir",
+            "Uyumsuz kimyasallar ayrı rafta / bölgede",
+            "Tüm sıvılar taşma havuzunda",
+            "Aktarma kapları etiketli, gıda kabı yok",
+            "Havalandırma çalışıyor, zemin kimyasala dayanıklı",
+            "Göz ve vücut duşu 10 saniye mesafede, haftalık kontrol kaydı var",
+            "KKD SDS'ye uygun ve zimmetli",
+            "Dökülme kiti tam, planı duvarda, yılda bir tatbikat",
+            "Depocu işe başlama eğitimini depoda uygulamalı aldı"
+          ]
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Tedarikçi SDS göndermiyor, ne yapmalıyım?",
+              "a": "Yazılı talep edin ve kaydını tutun. Kimyasalın piyasaya arzından sorumlu taraf SDS sağlamakla yükümlüdür; ısrarla vermiyorsa ürünü kullanmamak en güvenli yoldur."
+            },
+            {
+              "q": "Az miktarda kimyasal kullanıyoruz, bu kurallar bize de geçerli mi?",
+              "a": "Evet. Miktar riski küçültür ama ortadan kaldırmaz; bir litre asit de göz kaybına yol açabilir. Envanter, SDS, etiket ve KKD her ölçekte geçerlidir."
+            },
+            {
+              "q": "Dökülme kitinde ne olmalı?",
+              "a": "Kimyasal türüne uygun emici (üniversal veya asit/baz nötralizan), kimyasala dayanıklı eldiven ve gözlük, atık torbası ve etiketi, uyarı şeridi, küçük kürek. İçerik SDS'lere göre belirlenir."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p><em>Bu yazı bilgilendirme amaçlıdır. İşyerinize özel değerlendirme için iş güvenliği uzmanınızla görüşün.</em></p>"
+        },
+        {
+          "type": "cta-inline",
+          "text": "Kimyasal deponuz için envanter ve SDS kontrolünü birlikte yapalım.",
+          "button": {
+            "label": "Teklif Al",
+            "href": "/iletisim"
+          }
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Kimyasal Depolarda İş Güvenliği: SDS'den Dökülme Planına 8 Adım",
+        "mainEntityOfPage": "/blog/kimyasal-depolarda-is-guvenligi",
+        "about": [
+          "Kimyasal güvenlik",
+          "SDS",
+          "Dökülme planı"
+        ],
+        "datePublished": "2026-11-08"
+      }
+    },
+    {
       slug: "insaatta-isg",
       locale: "tr",
       title: "İnşaatta İş Sağlığı ve Güvenliği: Temel Riskler ve Önlemler",

@@ -34,7 +34,7 @@ const services: Service[] = [
           "Gıda, inşaat, metal, lojistik ve eğitim gibi tüm sektörlerde uygulanır.",
       },
     ],
-    linkText: "Risk Analizi Detayları",
+    linkText: "Detaylar",
     linkUrl: "/hizmetler/risk-analizi-bolu",
   },
   {
@@ -60,7 +60,7 @@ const services: Service[] = [
           "Risk analizleri, eğitim kayıtları, acil durum planı ve KKD kullanımı denetlenir.",
       },
     ],
-    linkText: "İş Güvenliği Hizmeti Detayları",
+    linkText: "Detaylar",
     linkUrl: "/hizmetler/is-guvenligi-bolu",
   },
   {
@@ -85,7 +85,7 @@ const services: Service[] = [
           "Çok tehlikeli sınıfta yılda bir, tehlikeli sınıfta iki yılda bir, az tehlikeli sınıfta üç yılda bir tekrarlanır; tekrar eğitimi en az 8 saattir. Temel eğitim ise sınıfa göre en az 8 / 12 / 16 saattir ve işe girişten sonra en geç 3 ay içinde tamamlanır.",
       },
     ],
-    linkText: "Eğitim Hizmetleri Detayları",
+    linkText: "Detaylar",
     linkUrl: "/hizmetler/isg-egitimleri-bolu",
   },
   {
@@ -110,7 +110,7 @@ const services: Service[] = [
           "Az tehlikeli sınıfta 5, tehlikeli sınıfta 3, çok tehlikeli sınıfta 1 yılda bir; hekim gerekli görürse daha sık.",
       },
     ],
-    linkText: "İşyeri Hekimliği Detayları",
+    linkText: "Detaylar",
     linkUrl: "/hizmetler/isyeri-hekimligi-bolu",
   },
 ];
@@ -124,14 +124,14 @@ export default function ServicesShowcase() {
           subtitle="Risk analizi, iş güvenliği uygulamaları ve İSG eğitimleri için hızlıca bilgi alın."
         />
 
-        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2">
           {services.map((s) => (
             <article
               key={s.id}
               className="group flex h-full flex-col rounded-2xl border border-white/40 bg-white/80 p-6 backdrop-blur-md shadow-soft transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.35)]"
             >
               {/* Header + Description (fixed min height on md+ for alignment) */}
-              <div className="md:min-h-[200px] xl:min-h-[300px]">
+              <div className="md:min-h-[220px]">
                 <div className="flex items-start gap-3">
                   <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-gradient text-white text-xs font-semibold shadow">
                     {s.id}
@@ -176,10 +176,10 @@ export default function ServicesShowcase() {
               <div className="mt-auto">
                 <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-brand-navy/10 to-transparent" />
                 <div className="mt-4 grid grid-cols-2 gap-3">
-                  <a href={s.linkUrl} className="btn-outline w-full justify-center text-sm">
+                  <a href={s.linkUrl} className="btn-outline w-full justify-center whitespace-nowrap text-sm">
                     {s.linkText}
                   </a>
-                  <a href="/iletisim" className="btn-primary btn-cta w-full justify-center text-sm">
+                  <a href="/iletisim" className="btn-primary btn-cta w-full justify-center whitespace-nowrap text-sm">
                     Teklif Al
                   </a>
                 </div>
