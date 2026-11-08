@@ -3,7 +3,7 @@ import SafetyIntro from './SafetyIntro'
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 md:pt-36">
+    <section className="relative pt-24 md:pt-36">
       <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-8 items-stretch px-4 sm:px-6 lg:px-8">
         {/* Left: SafetyIntro replaces previous text block */}
         <div className="relative overflow-hidden rounded-2xl p-0 bg-white/80 backdrop-blur-md border border-white/40 shadow-soft">
@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="relative">
             <SafetyIntro
               variant="inline"
-              className="[&>div]:py-12"
+              className="[&>div]:py-6 md:[&>div]:py-12"
               optimize={false} // use original PNG to avoid re-encode artifacts
               sizePx={160}
             />

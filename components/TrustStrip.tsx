@@ -27,7 +27,7 @@ const moreHref = '/hakkimizda'
 
 export default function TrustStrip() {
   return (
-    <section aria-label="Güven unsurları" className="relative mt-10 md:mt-14">
+    <section aria-label="Güven unsurları" className="relative mt-6 md:mt-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ icon: Icon, title, text }) => (

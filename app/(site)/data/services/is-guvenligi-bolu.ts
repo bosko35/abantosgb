@@ -7,7 +7,7 @@ const data: ServicePageData = {
     subtitle: "Abant OSGB",
     tagline:
       "Abant OSGB, Bolu iş sağlığı ve güvenliği süreçlerinde mevzuata uygun, ölçülebilir ve sürdürülebilir koruyucu sistemler kuruyor.",
-    primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
+    primaryCta: { label: "Teklif Al", href: "/iletisim" },
   },
   highlights: [
     { label: "Yasal Dayanak", value: "6331 sayılı kanun" },

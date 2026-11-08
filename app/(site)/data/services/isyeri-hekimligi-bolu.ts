@@ -7,7 +7,7 @@ const data: ServicePageData = {
     subtitle: "Abant OSGB",
     tagline:
       "İşyeri hekimi görevlendirmesi, işe giriş ve periyodik muayeneler, sağlık gözetimi kayıtları ve meslek hastalığı takibi — Bolu ve ilçelerinde kendi hekim kadromuzla.",
-    primaryCta: { label: "Hekim Görevlendirmesi İçin Teklif Al", href: "/iletisim" },
+    primaryCta: { label: "Teklif Al", href: "/iletisim" },
     secondaryCta: { label: "Yasal Süreyi Hesapla", href: "/hesaplama" },
   },
   highlights: [

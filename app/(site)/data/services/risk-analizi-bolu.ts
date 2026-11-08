@@ -7,7 +7,7 @@ const data: ServicePageData = {
     subtitle: "Abant OSGB",
     tagline:
       "Abant OSGB olarak Bolu iş sağlığı ve güvenliği risk analizlerinde fiziksel, kimyasal, biyolojik ve ergonomik tehlikeleri mevzuata uygun aksiyon planlarıyla yönetiyoruz.",
-    primaryCta: { label: "Hızlı Keşif Talebi", href: "/iletisim#kesif" },
+    primaryCta: { label: "Teklif Al", href: "/iletisim" },
   },
   highlights: [
     { label: "Yasal Dayanak", value: "6331 sayılı kanun" },

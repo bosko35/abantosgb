@@ -7,7 +7,7 @@ const data: ServicePageData = {
     subtitle: "Abant OSGB",
     tagline:
       "Abant OSGB'nin Bolu iş sağlığı ve güvenliği eğitimleri online ve yerinde çözümlerle kalıcı güvenlik kültürü oluşturur.",
-    primaryCta: { label: "Eğitim Takvimi Sor", href: "/iletisim#egitim" },
+    primaryCta: { label: "Teklif Al", href: "/iletisim" },
     secondaryCta: { label: "Eğitim Hizmetleri", href: "/hizmetler/isg-egitimleri-bolu" },
   },
   highlights: [

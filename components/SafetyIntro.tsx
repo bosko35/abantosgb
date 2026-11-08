@@ -34,7 +34,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
 
   return (
     <Wrapper className={`${wrapperClasses} ${className}`.trim()}>
-      <div className="mx-auto flex min-h-[380px] max-w-5xl flex-col items-center justify-center px-6 py-16 text-center">
+      <div className="mx-auto flex min-h-[260px] md:min-h-[380px] max-w-5xl flex-col items-center justify-center px-6 py-8 md:py-16 text-center">
         {/* Falling helmet */}
         <motion.div
           initial={{ y: -160, opacity: 0 }}
@@ -50,7 +50,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
             transition={{ delay: bounceDelay, duration: 0.35, ease: "easeOut" }}
           >
             {/* PNG helmet icon */}
-            <div className="relative bg-transparent" style={{ width: sizePx, height: sizePx }}>
+            <div className="relative bg-transparent h-[96px] w-[96px] md:h-[var(--helmet)] md:w-[var(--helmet)]" style={{ ["--helmet" as any]: `${sizePx}px` }}>
               <Image
                 src={helmetSrc}
                 alt={altText}
@@ -70,7 +70,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
           initial={{ x: -40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: textDelay, duration: 0.6, ease: "easeOut" }}
-          className="mt-6 text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:mt-8 md:text-5xl"
+          className="mt-4 text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:mt-8 md:text-5xl"
         >
           Bolu'da İşletmenize Özel İş Sağlığı ve Güvenliği Hizmeti
         </motion.h1>
@@ -90,9 +90,9 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: textDelay + 0.3, duration: 0.4 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-4"
+          className="mt-5 flex flex-wrap items-center justify-center gap-3"
         >
-          <a href="/iletisim" className="btn-primary btn-cta">Hizmet Talebi</a>
+          <a href="/iletisim" className="btn-primary btn-cta">Teklif Al</a>
           <a href="#hizmetler" className="btn-outline">Hizmetlerimizi Keşfedin</a>
         </motion.div>
       </div>

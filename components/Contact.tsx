@@ -9,7 +9,32 @@ export default function Contact() {
         <div className="grid gap-6 md:grid-cols-2">
           {/* Map + photo */}
           <div className="overflow-hidden rounded-2xl border border-brand-navy/10 bg-white shadow-soft">
-            <div className="aspect-[16/10]">
+            <div className="space-y-4 p-5 text-sm text-brand-text/70">
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Adres</div>
+                <p className="mt-1 text-base text-brand-navy">Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu</p>
+                <p className="mt-0.5 text-xs">Randevu ile ziyaret edebilirsiniz.</p>
+                <a
+                  href="https://maps.google.com/?q=Akta%C5%9F+Mah.+Ta%C5%9Fhanc%C4%B1lar+Cd.+No:31+B/22+Merkez/Bolu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand-navy underline-offset-2 hover:underline"
+                >
+                  Yol tarifi al →
+                </a>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Telefon</div>
+                  <a href="tel:05323373814" className="mt-1 inline-block text-base text-brand-navy hover:underline">0532 337 38 14</a>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">E-posta</div>
+                  <a href="mailto:info@abantosgb.com" className="mt-1 inline-block text-base text-brand-navy hover:underline">info@abantosgb.com</a>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-[16/9] md:aspect-[16/8] bg-brand-navy/5">
               <iframe
                 title="Harita"
                 width="100%"
@@ -20,24 +45,6 @@ export default function Contact() {
                 src="https://www.google.com/maps?q=Akta%C5%9F%20Mah.%20Ta%C5%9Fhanc%C4%B1lar%20Cd.%20No:31%20B/22%20Merkez/Bolu&output=embed"
               />
             </div>
-            <div className="space-y-4 p-4 text-sm text-brand-text/70">
-              <p>
-                Ofis: Aktaş Mah. Taşhancılar Cd. No:31 B/22 Merkez/Bolu — Randevu ile ziyaret
-                edebilirsiniz.
-              </p>
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Telefon</div>
-                <div className="mt-1 flex flex-col gap-1 text-base text-brand-navy">
-                  <a href="tel:05323373814" className="hover:underline">0532 337 38 14</a>
-                </div>
-              </div>
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">E-posta</div>
-                <a href="mailto:info@abantosgb.com" className="mt-1 inline-block text-base text-brand-navy hover:underline">
-                  info@abantosgb.com
-                </a>
-              </div>
-            </div>
           </div>
           {/* Form */}
           <div className="rounded-2xl border border-white/20 glass p-6 md:p-8">
@@ -46,35 +53,25 @@ export default function Contact() {
               method="POST"
               className="grid grid-cols-1 gap-4"
             >
-              <input type="hidden" name="_subject" value="Abant OSGB iletişim formu" />
+              <input type="hidden" name="_subject" value="Abant OSGB teklif talebi" />
               <input type="hidden" name="_captcha" value="false" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">Ad</label>
-                  <input name="name" required className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Ad Soyad <span className="text-brand-gold">*</span></label>
+                  <input name="name" required autoComplete="name" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">Soyad</label>
-                  <input name="surname" required className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">Telefon</label>
-                  <input type="tel" name="phone" required placeholder="05xx xxx xx xx" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
-                </div>
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">E-posta</label>
-                  <input type="email" name="email" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Telefon <span className="text-brand-gold">*</span></label>
+                  <input type="tel" name="phone" required autoComplete="tel" placeholder="05xx xxx xx xx" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">Firma adı</label>
-                  <input name="company" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Firma adı <span className="text-xs font-normal text-brand-text/50">(isteğe bağlı)</span></label>
+                  <input name="company" autoComplete="organization" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-brand-navy">Çalışan sayısı</label>
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Çalışan sayısı <span className="text-xs font-normal text-brand-text/50">(isteğe bağlı)</span></label>
                   <select name="employees" defaultValue="" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy">
                     <option value="" disabled>Seçiniz</option>
                     <option>1-9</option>
@@ -85,9 +82,16 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-brand-navy">Mesaj</label>
-                <textarea name="message" rows={4} placeholder="Faaliyet alanınız ve ihtiyacınız (risk analizi, uzman/hekim görevlendirmesi, eğitim vb.)" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                <label className="mb-1 block text-sm font-medium text-brand-navy">Kısa mesaj <span className="text-xs font-normal text-brand-text/50">(isteğe bağlı)</span></label>
+                <textarea name="message" rows={3} placeholder="Faaliyet alanınız ve ihtiyacınız (risk analizi, uzman/hekim, eğitim vb.)" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
               </div>
+              <details className="text-sm">
+                <summary className="cursor-pointer text-brand-navy/80 hover:text-brand-navy">E-posta ile de dönüş istiyorum</summary>
+                <div className="mt-2">
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">E-posta</label>
+                  <input type="email" name="email" autoComplete="email" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                </div>
+              </details>
               <label className="flex items-start gap-2 text-xs text-brand-text/70">
                 <input type="checkbox" name="kvkk" required className="mt-0.5 h-4 w-4" />
                 <span>
@@ -96,7 +100,8 @@ export default function Contact() {
                 </span>
               </label>
               <div className="mt-2 flex flex-wrap items-center gap-3">
-                <button type="submit" className="btn-primary">Bilgi Talep Et</button>
+                <button type="submit" className="btn-primary">Teklif Al</button>
+                <span className="text-xs text-brand-text/60">1 iş günü içinde dönüş yaparız.</span>
               </div>
             </form>
           </div>

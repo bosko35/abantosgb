@@ -46,7 +46,7 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href={resolveHref('#iletisim')} className="btn-primary btn-cta whitespace-nowrap">Hizmet Talebi</a>
+            <a href={resolveHref('#iletisim')} className="btn-primary btn-cta whitespace-nowrap">Teklif Al</a>
           </div>
           <button
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-navy/20 text-brand-navy"
@@ -74,7 +74,7 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href={resolveHref('#iletisim')} onClick={() => setOpen(false)} className="btn-primary btn-cta">Hizmet Talebi</a>
+              <a href={resolveHref('#iletisim')} onClick={() => setOpen(false)} className="btn-primary btn-cta">Teklif Al</a>
             </div>
           </div>
         )}

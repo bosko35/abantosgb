@@ -180,7 +180,7 @@ export default function ServicesShowcase() {
                     {s.linkText}
                   </a>
                   <a href="/iletisim" className="btn-primary btn-cta w-full justify-center text-sm">
-                    Hizmet Talebi
+                    Teklif Al
                   </a>
                 </div>
               </div>

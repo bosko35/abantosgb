@@ -7,7 +7,7 @@ const data: ServicePageData = {
     subtitle: "Akredite çözüm ortaklarımızla",
     tagline:
       "OSGB yetki belgesi kapsamı dışında kalan ama işyerinizin ihtiyaç duyduğu teknik hizmetleri, yetkili ve akredite çözüm ortaklarımızla planlar, koordine eder ve sonuçlarını risk değerlendirmenize işleriz. Bu hizmetler çözüm ortağı tarafından verilir ve ayrıca faturalandırılır.",
-    primaryCta: { label: "İhtiyacınızı Birlikte Planlayalım", href: "/iletisim" },
+    primaryCta: { label: "Teklif Al", href: "/iletisim" },
   },
   highlights: [
     { label: "Kim yapar?", value: "Yetkili / akredite çözüm ortağı" },

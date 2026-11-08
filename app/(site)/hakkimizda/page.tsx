@@ -136,7 +136,7 @@ export default function HakkimizdaPage() {
               ))}
             </ol>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/iletisim" className="btn-primary btn-cta">Hizmet Talebi</Link>
+              <Link href="/iletisim" className="btn-primary btn-cta">Teklif Al</Link>
               <Link href="/hesaplama" className="inline-flex items-center justify-center rounded-md border border-white/30 px-5 py-3 text-white hover:bg-white/10">
                 Yasal süreyi hesapla
               </Link>
