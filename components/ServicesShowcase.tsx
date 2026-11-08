@@ -20,13 +20,13 @@ const services: Service[] = [
     bullets: [
       "Tehlike tanımlama ve risk puanlama",
       "Aksiyon planı ve sorumlu atama",
-      "Yıllık periyodik güncelleme",
+      "Tehlike sınıfına göre periyodik yenileme (2 / 4 / 6 yıl)",
     ],
     faq: [
       {
         question: "Risk analizi kaç yılda bir yenilenir?",
         answer:
-          "Tehlike sınıfına göre 2, 4 veya 6 yılda bir yenilenir.",
+          "Çok tehlikeli sınıfta 2, tehlikeli sınıfta 4, az tehlikeli sınıfta 6 yılda bir yenilenir. İş kazası, yeni makine, yeni kimyasal veya yerleşim değişikliği gibi durumlarda süre beklenmeden güncellenir.",
       },
       {
         question: "Risk analizi Bolu’da hangi sektörlere uygulanıyor?",
@@ -69,20 +69,20 @@ const services: Service[] = [
     description:
       "Online ve yüz yüze eğitimlerle çalışanların iş güvenliği bilincini artırır, kurum içinde kalıcı bir güvenlik kültürü oluştururuz. Eğitimlerimiz mevzuata uygun, anlaşılır ve pratik örneklerle desteklenir.",
     bullets: [
-      "Temel İSG eğitimi",
-      "Yangın ve acil durum eğitimi",
-      "Yüksekte çalışma ve ilk yardım eğitimleri",
+      "İşe başlama eğitimi (yüz yüze, uygulamalı)",
+      "Temel İSG eğitimi ve tekrar eğitimleri",
+      "Yangın, acil durum ve işyerine özgü risk eğitimleri",
     ],
     faq: [
       {
         question: "Eğitimler online yapılabilir mi?",
         answer:
-          "Evet, Temel İSG dahil birçok eğitim online yapılabilir ve katılım kayıtları tutulur.",
+          "Genel, sağlık ve teknik konular her tehlike sınıfında uzaktan veya karma yöntemle verilebilir. İşe ve işyerine özgü riskler konusu tehlikeli ve çok tehlikeli sınıfta yüz yüze verilir; işe başlama eğitimi ise her zaman yüz yüze ve uygulamalıdır (2 Nisan 2026 tarihli yönetmelik).",
       },
       {
         question: "Eğitimler hangi sıklıkta tekrar edilir?",
         answer:
-          "Tehlike sınıfına göre yılda en az bir kez tekrarlanması gerekir.",
+          "Çok tehlikeli sınıfta yılda bir, tehlikeli sınıfta iki yılda bir, az tehlikeli sınıfta üç yılda bir tekrarlanır; tekrar eğitimi en az 8 saattir. Temel eğitim ise sınıfa göre en az 8 / 12 / 16 saattir ve işe girişten sonra en geç 3 ay içinde tamamlanır.",
       },
     ],
     linkText: "Eğitim Hizmetleri Detayları",

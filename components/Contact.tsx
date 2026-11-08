@@ -29,7 +29,6 @@ export default function Contact() {
                 <div className="text-xs font-semibold uppercase tracking-wide text-brand-navy">Telefon</div>
                 <div className="mt-1 flex flex-col gap-1 text-base text-brand-navy">
                   <a href="tel:05323373814" className="hover:underline">0532 337 38 14</a>
-                  <a href="tel:05428017857" className="hover:underline">0542 801 78 57</a>
                 </div>
               </div>
               <div>
@@ -59,16 +58,45 @@ export default function Contact() {
                   <input name="surname" required className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
                 </div>
               </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-brand-navy">E-posta</label>
-                <input type="email" name="email" required className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Telefon</label>
+                  <input type="tel" name="phone" required placeholder="05xx xxx xx xx" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">E-posta</label>
+                  <input type="email" name="email" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Firma adı</label>
+                  <input name="company" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-brand-navy">Çalışan sayısı</label>
+                  <select name="employees" defaultValue="" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy">
+                    <option value="" disabled>Seçiniz</option>
+                    <option>1-9</option>
+                    <option>10-49</option>
+                    <option>50-249</option>
+                    <option>250 ve üzeri</option>
+                  </select>
+                </div>
               </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-brand-navy">Mesaj</label>
-                <textarea name="message" rows={5} className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
+                <textarea name="message" rows={4} placeholder="Faaliyet alanınız ve ihtiyacınız (risk analizi, uzman/hekim görevlendirmesi, eğitim vb.)" className="w-full rounded-md border border-brand-navy/20 bg-white/80 px-3 py-2 outline-none focus:border-brand-navy" />
               </div>
+              <label className="flex items-start gap-2 text-xs text-brand-text/70">
+                <input type="checkbox" name="kvkk" required className="mt-0.5 h-4 w-4" />
+                <span>
+                  Paylaştığım bilgilerin talebime dönüş yapılması amacıyla işlenmesini kabul ediyorum.{' '}
+                  <a href="/kvkk" className="underline hover:text-brand-navy">Aydınlatma metni</a>
+                </span>
+              </label>
               <div className="mt-2 flex flex-wrap items-center gap-3">
-                <button type="submit" className="btn-primary">Gönder</button>
+                <button type="submit" className="btn-primary">Bilgi Talep Et</button>
               </div>
             </form>
           </div>

@@ -141,7 +141,6 @@ export default function GenelPage() {
                       <dt className="text-xs uppercase tracking-wide text-brand-text/60">Telefon</dt>
                       <dd className="mt-1 flex flex-col font-semibold text-brand-navy">
                         <a href="tel:05323373814" className="hover:underline">0532 337 38 14</a>
-                        <a href="tel:05428017857" className="hover:underline">0542 801 78 57</a>
                       </dd>
                     </div>
                   </div>

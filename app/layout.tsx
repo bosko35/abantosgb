@@ -19,7 +19,7 @@ const organizationJsonLd = {
   image: `${siteUrl}/brand/logo-horizontal.png`,
   logo: `${siteUrl}/brand/logo-mark.png`,
   email: 'info@abantosgb.com',
-  telephone: ['+905323373814', '+905428017857'],
+  telephone: '+905323373814',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Aktaş Mah. Taşhancılar Cd. No:31 B/22',
@@ -34,6 +34,14 @@ const organizationJsonLd = {
   ],
   areaServed: ['Bolu', 'Düzce', 'Zonguldak', 'Sakarya'],
   priceRange: '$$',
+  foundingDate: '2025-09-18',
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'OSGB Yetki Belgesi OSGB-5019',
+    credentialCategory: 'Yetki Belgesi',
+    recognizedBy: { '@type': 'GovernmentOrganization', name: 'T.C. Çalışma ve Sosyal Güvenlik Bakanlığı' },
+    dateCreated: '2025-10-31',
+  },
   hasMap: 'https://maps.google.com/?q=Akta%C5%9F+Mah.+Ta%C5%9Fhanc%C4%B1lar+Cd.+No:31+B/22+Merkez/Bolu',
 } as const
 

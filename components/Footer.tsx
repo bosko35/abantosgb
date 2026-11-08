@@ -1,4 +1,4 @@
-import { Mail, MapPin, Instagram, Phone } from 'lucide-react'
+import { Mail, MapPin, Instagram, Phone, ShieldCheck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -19,6 +19,13 @@ export default function Footer() {
             <p className="mt-3 text-sm text-white/80 leading-relaxed">
               Güven, şeffaflık ve uzmanlıkla iş sağlığı ve güvenliği çözümleri.
             </p>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs text-white/90">
+              <ShieldCheck className="h-4 w-4 text-brand-gold" aria-hidden />
+              <span>
+                <span className="font-semibold">Yetki Belgesi: OSGB-5019</span>
+                <span className="block text-white/70">T.C. Çalışma ve Sosyal Güvenlik Bakanlığı · 31.10.2025</span>
+              </span>
+            </div>
             <div className="mt-5 flex items-center gap-3 text-white/80">
               <a aria-label="Instagram" href="https://www.instagram.com/abantosgb" rel="noopener noreferrer" target="_blank" className="hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
@@ -30,9 +37,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold">Hizmetler</h4>
             <ul className="mt-4 space-y-2 text-white/80">
-              <li><a href="#hizmetler" className="hover:text-white transition-colors">Risk Analizi</a></li>
-              <li><a href="#hizmetler" className="hover:text-white transition-colors">İş Güvenliği Danışmanlığı</a></li>
-              <li><a href="#egitimler" className="hover:text-white transition-colors">Eğitim Programları</a></li>
+              <li><a href="/hizmetler/risk-analizi-bolu" className="hover:text-white transition-colors">Risk Analizi</a></li>
+              <li><a href="/hizmetler/is-guvenligi-bolu" className="hover:text-white transition-colors">İş Güvenliği Uygulamaları</a></li>
+              <li><a href="/hizmetler/isg-egitimleri-bolu" className="hover:text-white transition-colors">İSG Eğitimleri</a></li>
             </ul>
           </div>
 
@@ -47,7 +54,6 @@ export default function Footer() {
                 <Phone className="h-4 w-4" />
                 <div className="flex flex-col">
                   <a href="tel:05323373814" className="hover:text-white transition-colors">0532 337 38 14</a>
-                  <a href="tel:05428017857" className="hover:text-white transition-colors">0542 801 78 57</a>
                 </div>
               </li>
               <li>
@@ -65,6 +71,7 @@ export default function Footer() {
               <li><a href="/genel" className="hover:text-white transition-colors">Genel Bağlantılar</a></li>
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="/iletisim" className="hover:text-white transition-colors">İletişim</a></li>
+              <li><a href="/kvkk" className="hover:text-white transition-colors">KVKK Aydınlatma Metni</a></li>
               <li>
                 <a href="https://maps.google.com/?q=Akta%C5%9F+Mah.+Ta%C5%9Fhanc%C4%B1lar+Cd.+No:31+B/22+Merkez/Bolu" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Google Harita
@@ -74,7 +81,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* Alt satır (Gizlilik/Şartlar) kaldırıldı */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-2 md:flex-row md:items-center md:justify-between text-xs text-white/60">
+          <p>Abant Ortak Sağlık ve Güvenlik Birimi Limited Şirketi · Bolu</p>
+          <p>© {new Date().getFullYear()} Abant OSGB · <a href="/kvkk" className="hover:text-white">KVKK Aydınlatma Metni</a></p>
+        </div>
+      </div>
     </footer>
   )
 }

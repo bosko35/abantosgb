@@ -63,8 +63,8 @@ const data: ServicePageData = {
   ],
   cta: {
     banner: "Bolu’da işletmeniz için İSG uygulamalarını birlikte planlayalım.",
-    primary: { label: "Teklif Al", href: "/teklif" },
-    secondary: { label: "Telefon", href: "tel:+90XXXXXXXXXX" },
+    primary: { label: "Teklif Al", href: "/iletisim" },
+    secondary: { label: "Telefon", href: "tel:05323373814" },
   },
   seo: {
     title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Uygulamaları",

@@ -27,7 +27,8 @@ const data: ServicePageData = {
     intro:
       "İşletmenizin tehlike sınıfına ve çalışma koşullarına uygun İSG eğitim programları tasarlarız. İçerikler etkileşimli ve ölçülebilir yapıda sunulur.",
     bullets: [
-      "Temel İSG eğitimi",
+      "İşe başlama eğitimi (en az 2 saat, yüz yüze ve uygulamalı)",
+      "Temel İSG eğitimi (sınıfa göre en az 8 / 12 / 16 saat) ve tekrar eğitimleri",
       "Yangın ve acil durum eğitimi",
       "Yüksekte çalışma ve ilk yardım (çözüm ortağı ile)",
     ],
@@ -61,13 +62,13 @@ const data: ServicePageData = {
     "Depolama & soğuk zincir",
   ],
   faq: [
-    { q: "Eğitimler online yapılabilir mi?", a: "Evet. Temel İSG dahil birçok eğitim online yapılabilir ve katılım ile sınav kayıtları dijital olarak saklanır." },
-    { q: "Eğitimler hangi sıklıkta tekrar edilir?", a: "Tehlike sınıfına göre yılda en az bir kez; yeni çalışan girişi veya önemli proses değişikliğinde ayrıca tekrarlanır." },
+    { q: "Eğitimler online yapılabilir mi?", a: "Genel, sağlık ve teknik konular her tehlike sınıfında uzaktan veya karma yöntemle verilebilir. İşe ve işyerine özgü riskler konusu tehlikeli ve çok tehlikeli sınıfta yüz yüze verilir; işe başlama eğitimi ise her zaman yüz yüze ve uygulamalıdır (2 Nisan 2026 tarihli yönetmelik). Uzaktan eğitim sistemi giriş-çıkış, tamamlama ve sınav sonuçlarını kayıt altına alır." },
+    { q: "Eğitimler hangi sıklıkta tekrar edilir?", a: "Çok tehlikeli sınıfta yılda bir, tehlikeli sınıfta iki yılda bir, az tehlikeli sınıfta üç yılda bir tekrarlanır; tekrar eğitimi en az 8 saattir. Temel eğitim ise sınıfa göre en az 8 / 12 / 16 saattir ve işe girişten sonra en geç 3 ay içinde tamamlanır. Altı aydan uzun işten uzak kalma, iş kazası veya meslek hastalığı sonrasında ayrıca eğitim verilir." },
   ],
   cta: {
     banner: "Ekibiniz için hızlı eğitim planlayalım.",
-    primary: { label: "Teklif Al", href: "/teklif" },
-    secondary: { label: "Telefon", href: "tel:+90XXXXXXXXXX" },
+    primary: { label: "Teklif Al", href: "/iletisim" },
+    secondary: { label: "Telefon", href: "tel:05323373814" },
   },
   seo: {
     title: "Abant OSGB Bolu İş Sağlığı ve Güvenliği Eğitimleri",

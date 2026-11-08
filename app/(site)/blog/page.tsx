@@ -27,13 +27,13 @@ const breadcrumbJsonLd = {
 } as const;
 
 export const metadata: Metadata = {
-  title: "İş Güvenliği Blogu | Abant OSGB",
+  title: "İş Güvenliği Blogu",
   description: "Abant OSGB uzmanlarının hazırladığı sektör bazlı iş sağlığı ve güvenliği rehberleri, kontrol listeleri ve mevzuat yorumları.",
   alternates: {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "İş Güvenliği Blogu | Abant OSGB",
+    title: "İş Güvenliği Blogu",
     description: "Risk analizi, İSG uygulamaları ve sektörel güvenlik trendleri hakkında rehber içerikler.",
     url: `${siteUrl}/blog`,
     siteName: "Abant OSGB",

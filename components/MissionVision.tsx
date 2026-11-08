@@ -11,7 +11,7 @@ export default function MissionVision() {
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-navy-gradient blur-3xl opacity-30" />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="Misyon & Vizyon" subtitle="Ciddiyet ve güveni altın vurgularla pekiştiriyoruz" />
+        <SectionHeader title="Misyon & Vizyon" subtitle="Bolu'da güvenli ve sağlıklı işyerleri için çalışıyoruz" />
         <div className="grid items-stretch gap-6 md:grid-cols-2">
           {/* Mission card */}
           <Reveal className="group relative h-full" delay={0}>

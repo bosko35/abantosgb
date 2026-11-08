@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import ServicesShowcase from '@/components/ServicesShowcase'
+import TrustStrip from '@/components/TrustStrip'
 import MissionVision from '@/components/MissionVision'
 import SectorInsights from '@/components/SectorInsights'
 import Contact from '@/components/Contact'
@@ -12,6 +13,7 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
+        <TrustStrip />
         <ServicesShowcase />
         <MissionVision />
         <SectorInsights />
