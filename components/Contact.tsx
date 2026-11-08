@@ -42,7 +42,7 @@ export default function Contact() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=40.7293945,31.6101212&z=17&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.4830857987677!2d31.610121199999995!3d40.729394500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d3fab35e94c11%3A0x67c5dc4e7129f104!2sAbant%20OSGB!5e0!3m2!1str!2str!4v1794158602113!5m2!1str!2str"
               />
             </div>
           </div>
