@@ -47,7 +47,7 @@ const raw = {
       "subtitle": "Güvenlik görevlisi tesisi korur; peki görevliyi kim korur? Görev noktası riskleri, vardiya devri, acil durum rolü ve tesis ile güvenlik şirketi arasındaki yasal koordinasyon.",
       "metaTitle": "Özel Güvenlik Sektöründe İSG: Riskler, Vardiya Devri ve Koordinasyon",
       "metaDescription": "Özel güvenlik görevlilerinin iş sağlığı ve güvenliği: görev noktası riskleri, vardiya devir teslimi, acil durum rolü, 6331 sayılı Kanun'a göre tesis ile güvenlik şirketi koordinasyonu ve 8 maddelik kontrol listesi.",
-      "heroImage": "/images/blog/ozel-guvenlik-isg.jpg",
+      "heroImage": "/images/blog/ozel-guvenlik-foto.jpg",
       "readTime": "6 dk",
       "updatedAt": "2026-11-14",
       "excerpt": "Görev noktası riskleri, vardiya devri, acil durum rolü ve 6331 sayılı Kanun'a göre tesis ile güvenlik şirketi koordinasyonu: özel güvenlik sektöründe İSG için 8 maddelik kontrol listesi.",
@@ -257,7 +257,7 @@ const raw = {
       metaTitle: "Yeni İSG Eğitim Yönetmeliği 2026: Süreler, Tekrar, Uzaktan Eğitim",
       metaDescription:
         "2 Nisan 2026 tarihli Çalışanların İSG Eğitimleri Yönetmeliği: işe başlama eğitimi, temel eğitim süreleri (8/12/16 saat), tekrar eğitimi (en az 8 saat), uzaktan eğitim kuralları ve geçiş hükümleri. İşveren için kontrol listesi.",
-      heroImage: "/images/blog/isg-egitim-yonetmeligi-2026.jpg",
+      heroImage: "/images/blog/isg-egitim-2026-foto.jpg",
       readTime: "6 dk",
       updatedAt: "2026-11-08",
       excerpt:
@@ -340,7 +340,7 @@ const raw = {
       "subtitle": "İSG'nin yarısı sahadır, diğer yarısı kayıttır. Kaydı Excel'de tutan bir OSGB bir noktada tıkanır. Bir yılda neyi yazılıma taşıdık, neyi bilerek taşımadık, 2026 mevzuatı yazılımdan ne bekliyor?",
       "metaTitle": "İSG'de Yazılım: Excel'den Dijital Takibe — Küçük OSGB Deneyimi",
       "metaDescription": "Küçük bir OSGB İSG süreçlerini yazılımla nasıl yönetir? Saha takibi, İSG-KATİP ön kontrolü, belge şablonu, OCR arşiv, SDS eşleştirme; bilerek dijitalleştirilmeyenler ve 2026 eğitim yönetmeliğinin yazılım şartları.",
-      "heroImage": "/images/blog/isgde-yazilim.jpg",
+      "heroImage": "/images/blog/isgde-yazilim-foto.jpg",
       "readTime": "7 dk",
       "updatedAt": "2026-11-08",
       "excerpt": "Excel hatırlatmaz, tek doğruyu tutmaz, kanıt üretmez. Bir yılda neyi yazılıma taşıdık, neyi bilerek taşımadık ve 2026 mevzuatı dijital kayıttan ne bekliyor?",
@@ -378,6 +378,12 @@ const raw = {
         {
           "type": "h2",
           "text": "Neden Excel bir noktada yetmez?"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/isgde-yazilim-klasor-ekran.jpg",
+          "alt": "Masada üst üste yığılmış İSG klasörlerinin yanında, ekranında İSG takip paneli açık bir dizüstü bilgisayar",
+          "caption": "Klasörden ekrana: aynı bilgi, farklı hafıza."
         },
         {
           "type": "paragraph",
@@ -550,7 +556,7 @@ const raw = {
       "subtitle": "Deri, tekstil, boya ve temizlik kimyasalı depolarında en büyük risk \"bilinmeyen varil\"dir. Güvenlik bilgi formundan acil durum ekibine, sahada işe yarayan sekiz adım.",
       "metaTitle": "Kimyasal Depolarda İş Güvenliği: SDS, Ayrıştırma, Dökülme Planı",
       "metaDescription": "Kimyasal depo güvenliği 8 adımda: envanter, Türkçe SDS, uyumsuz kimyasal ayrıştırma, etiketleme, havalandırma, KKD, dökülme kiti ve eğitim. 10 maddelik depo kontrol listesi.",
-      "heroImage": "/images/blog/kimyasal-depo-is-guvenligi.jpg",
+      "heroImage": "/images/blog/kimyasal-depo-foto.jpg",
       "readTime": "6 dk",
       "updatedAt": "2026-11-08",
       "excerpt": "Envanter, Türkçe SDS, ayrıştırma, etiket, havalandırma, KKD, dökülme kiti ve eğitim: çok tehlikeli sınıf kimyasal depolarında saha deneyimine dayanan 8 adım ve 10 maddelik kontrol listesi.",
