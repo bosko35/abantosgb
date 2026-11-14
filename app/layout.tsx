@@ -32,7 +32,13 @@ const organizationJsonLd = {
     'https://www.instagram.com/abantosgb',
     'https://maps.google.com/?cid=7477624985782710532',
   ],
-  areaServed: ['Bolu', 'Düzce', 'Zonguldak', 'Sakarya'],
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Bolu' },
+    ...['Bolu Merkez', 'Gerede', 'Mudurnu', 'Mengen', 'Göynük', 'Yeniçağa', 'Dörtdivan', 'Seben', 'Kıbrıscık'].map(
+      (name) => ({ '@type': 'City', name, containedInPlace: { '@type': 'AdministrativeArea', name: 'Bolu' } }),
+    ),
+  ],
+  knowsAbout: ['İş sağlığı ve güvenliği', 'İş güvenliği uzmanlığı', 'İşyeri hekimliği', 'Risk değerlendirmesi', 'Acil durum eylem planı', 'İSG eğitimleri'],
   priceRange: '$$',
   foundingDate: '2025-09-18',
   hasCredential: {
@@ -48,14 +54,14 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Abant OSGB | Bolu İş Sağlığı ve Güvenliği Hizmetleri',
+    default: 'Bolu Abant OSGB | İş Güvenliği Uzmanı ve İşyeri Hekimi',
     template: '%s | Abant OSGB',
   },
   description:
-    'Abant OSGB, Bolu İş Sağlığı ve Güvenliği (İSG) süreçlerinde risk analizi, iş güvenliği uzmanlığı, İSG eğitimleri ve danışmanlık sunar. Yerinde keşif, mevzuata uygun doküman yönetimi ve kapsamlı saha desteği.',
+    "Abant OSGB, Bolu'da Bakanlık yetkili ortak sağlık ve güvenlik birimidir (OSGB-5019). Bolu Merkez, Gerede, Mudurnu, Mengen ve diğer ilçelerde iş güvenliği uzmanı, işyeri hekimi, risk değerlendirmesi ve İSG eğitimleri.",
   keywords: [
     'Abant OSGB',
-    'Bolu OSGB',
+    'Bolu Abant OSGB',
     'iş sağlığı ve güvenliği',
     'risk analizi Bolu',
     'İSG eğitimleri',

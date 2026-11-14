@@ -26,6 +26,10 @@ import isGuvenligiBolu from "./is-guvenligi-bolu";
 import isgEgitimleriBolu from "./isg-egitimleri-bolu";
 import isyeriHekimligiBolu from "./isyeri-hekimligi-bolu";
 import cozumOrtagiHizmetleri from "./cozum-ortagi-hizmetleri";
+import boluOsgb from "./bolu-abant-osgb";
+import geredeOsgb from "./abant-osgb-gerede";
+import mudurnuOsgb from "./abant-osgb-mudurnu";
+import mengenOsgb from "./abant-osgb-mengen";
 
 export const servicesBySlug: Record<string, ServicePageData> = {
   [riskAnaliziBolu.slug]: riskAnaliziBolu,
@@ -33,6 +37,10 @@ export const servicesBySlug: Record<string, ServicePageData> = {
   [isgEgitimleriBolu.slug]: isgEgitimleriBolu,
   [isyeriHekimligiBolu.slug]: isyeriHekimligiBolu,
   [cozumOrtagiHizmetleri.slug]: cozumOrtagiHizmetleri,
+  [boluOsgb.slug]: boluOsgb,
+  [geredeOsgb.slug]: geredeOsgb,
+  [mudurnuOsgb.slug]: mudurnuOsgb,
+  [mengenOsgb.slug]: mengenOsgb,
 };
 
 export const allServices: ServicePageData[] = Object.values(servicesBySlug);

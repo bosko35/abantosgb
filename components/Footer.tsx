@@ -43,6 +43,13 @@ export default function Footer() {
               <li><a href="/hizmetler/isyeri-hekimligi-bolu" className="hover:text-white transition-colors">İşyeri Hekimliği</a></li>
               <li><a href="/hizmetler/cozum-ortagi-hizmetleri" className="hover:text-white transition-colors">Çözüm Ortağı Hizmetleri</a></li>
             </ul>
+            <h4 className="mt-6 text-lg font-semibold">Hizmet Bölgeleri</h4>
+            <ul className="mt-4 space-y-2 text-white/80">
+              <li><a href="/hizmetler/bolu-abant-osgb" className="hover:text-white transition-colors">Bolu Abant OSGB: Merkez ve İlçeler</a></li>
+              <li><a href="/hizmetler/abant-osgb-gerede" className="hover:text-white transition-colors">Abant OSGB Gerede</a></li>
+              <li><a href="/hizmetler/abant-osgb-mudurnu" className="hover:text-white transition-colors">Abant OSGB Mudurnu</a></li>
+              <li><a href="/hizmetler/abant-osgb-mengen" className="hover:text-white transition-colors">Abant OSGB Mengen</a></li>
+            </ul>
           </div>
 
           {/* Contact */}
