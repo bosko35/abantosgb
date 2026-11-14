@@ -26,13 +26,227 @@ export type BlogPost = {
   structuredData?: Record<string, any>;
   updatedAt?: string; // optional override
   category?: string; // rozet metni (varsayılan: Sektörel İSG)
-  author?: { name: string; title?: string }; // yazar (varsayılan: Abant OSGB)
+  author?: { name: string; title?: string; organization?: string; guest?: boolean }; // yazar (varsayılan: Abant OSGB); guest = misafir yazar, organization = kendi kuruluşu
   readTime?: string; // optional override
   blocks?: ContentBlock[]; // optional rich blocks
 };
 
 const raw = {
   posts: [
+    {
+      "slug": "ozel-guvenlik-sektorunde-is-sagligi-ve-guvenligi",
+      "locale": "tr",
+      "category": "Misafir Yazar",
+      "author": {
+        "name": "İhsan Ateş",
+        "title": "A Sınıfı İş Güvenliği Uzmanı ve Özel Güvenlik Yöneticisi",
+        "organization": "Özgün Hizmetler Grubu",
+        "guest": true
+      },
+      "title": "Özel Güvenlik Sektöründe İş Sağlığı ve Güvenliği",
+      "subtitle": "Güvenlik görevlisi tesisi korur; peki görevliyi kim korur? Görev noktası riskleri, vardiya devri, acil durum rolü ve tesis ile güvenlik şirketi arasındaki yasal koordinasyon.",
+      "metaTitle": "Özel Güvenlik Sektöründe İSG: Riskler, Vardiya Devri ve Koordinasyon",
+      "metaDescription": "Özel güvenlik görevlilerinin iş sağlığı ve güvenliği: görev noktası riskleri, vardiya devir teslimi, acil durum rolü, 6331 sayılı Kanun'a göre tesis ile güvenlik şirketi koordinasyonu ve 8 maddelik kontrol listesi.",
+      "heroImage": "/images/blog/ozel-guvenlik-isg.jpg",
+      "readTime": "6 dk",
+      "updatedAt": "2026-11-14",
+      "excerpt": "Görev noktası riskleri, vardiya devri, acil durum rolü ve 6331 sayılı Kanun'a göre tesis ile güvenlik şirketi koordinasyonu: özel güvenlik sektöründe İSG için 8 maddelik kontrol listesi.",
+      "keywords": [
+        "özel güvenlik iş güvenliği",
+        "güvenlik görevlisi İSG",
+        "vardiya devir teslim",
+        "6331 madde 23 koordinasyon",
+        "güvenlik hizmeti alımı İSG",
+        "Bolu iş güvenliği"
+      ],
+      "sections": [
+        {
+          "h2": "Her görev noktasının riskleri farklıdır"
+        },
+        {
+          "h2": "Tesis ile güvenlik şirketi arasında bilgi akışı bir yükümlülüktür"
+        },
+        {
+          "h2": "Görev noktası için 8 maddelik kontrol"
+        }
+      ],
+      "internalLinks": [
+        {
+          "label": "Risk analizi hizmeti",
+          "href": "/hizmetler/risk-analizi-bolu"
+        },
+        {
+          "label": "İş güvenliği hizmeti",
+          "href": "/hizmetler/is-guvenligi-bolu"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "lead",
+          "html": "<p>Bir üretim tesisinin girişinde, bir konut sitesinin danışmasında veya bir kurumun gece vardiyasında çalışan özel güvenlik görevlisi, bulunduğu yerin güvenliğine katkı sağlar. Bu görevi yerine getirirken kendisinin hangi risklerle karşılaştığı da aynı dikkatle ele alınmalıdır.</p><p>Özel güvenlik yönetimi ile iş sağlığı ve güvenliğini birlikte değerlendirmek, çalışanı koruyan ve hizmetin sürekliliğini destekleyen bir çalışma düzeni kurulmasına yardımcı olur. Bunun başlangıç noktası, görev yapılan tesisi ve güvenlik personelinin günlük işini doğru tanımaktır.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Her görev noktasının riskleri farklıdır"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bir enerji tesisindeki güvenlik hizmeti ile bir okulun, deponun veya konut sitesinin güvenlik ihtiyacı aynı değildir. Giriş çıkış yoğunluğu, araç hareketleri, çalışma saatleri ve acil durum koşulları değişir. Bu nedenle güvenlik personelinin karşılaşabileceği tehlikeler, görev noktasına ve yürüttüğü işe göre değerlendirilmelidir.</p>"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Görev noktasına göre değerlendirilmesi gereken başlıca riskler şunlardır:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Devriye güzergâhında yetersiz aydınlatma, kaygan veya düzensiz zemin",
+            "Araç ve yaya yollarının kesiştiği giriş noktaları, bariyer ve kapı çevresi",
+            "Açık alanda soğuk, sıcak, yağış gibi olumsuz hava koşulları",
+            "Uzun süre ayakta kalma, kulübede veya ekran başında hareketsiz çalışma",
+            "Gece vardiyası, uykusuzluk ve tek başına çalışma",
+            "Ziyaretçi, sürücü veya kalabalıkla zorlayıcı ilişkiler, sözlü ya da fiziksel saldırı riski"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Sahada işe yarayan bir risk değerlendirmesi, tespit edilen her eksik için uygulanabilir bir önlem belirler. Önlemi kimin yerine getireceği ve sonucunun ne zaman kontrol edileceği de açık olmalıdır.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Vardiya devri güvenlik hizmetinin önemli bir parçasıdır"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Vardiya değişiminde aktarılan bilgi, sonraki ekibin çalışma koşullarını doğrudan etkileyebilir. Arızalı bir aydınlatma, kapatılmış bir geçiş, devam eden bakım çalışması veya gün içinde yaşanan bir olay, yeni vardiyanın bilmesi gereken konulardır. Bu nedenle devir teslim kaydı yalnızca personel değişimini değil, şunları da göstermelidir:</p>"
+        },
+        {
+          "type": "list",
+          "style": "ul",
+          "items": [
+            "Görev noktasında gün içinde değişen durumlar (kapatılan alan, bakım, arıza)",
+            "Takipte kalan işler ve kime iletildiği",
+            "Yaşanan olaylar ve ramak kala durumlar",
+            "Telsiz, fener, kamera gibi ekipmanın çalışma durumu, varsa arızası ve eksikleri"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Çalışanın bir sorunu fark ettiğinde kime ulaşacağı, nasıl kayıt oluşturacağı ve geri bildirimi nasıl alacağı önceden belirlenmelidir.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Acil durumlarda görevler önceden netleşmelidir"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Güvenlik personeli, tesis girişini ve çevresini yakından tanıdığı için bir acil durumu ilk fark eden kişiler arasında yer alabilir. Böyle bir durumda haberleşme, yönlendirme ve ilgili ekiplerle koordinasyon önem kazanır.</p>"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Güvenlik ekibinin acil durum planındaki rolü; aldığı eğitim, kendisine verilen görev ve tesisin koşullarıyla uyumlu olmalıdır. Hangi durumda kime haber vereceği ve hangi sorumlulukları üstleneceği planda açıkça yazılmalıdır. Tatbikatlar da bu düzenin sahada işleyip işlemediğini görme fırsatı sunar; güvenlik ekibinin tatbikatlara katılması bu yüzden önemlidir.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Tesis ile güvenlik şirketi arasında bilgi akışı bir yükümlülüktür"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Güvenlik hizmetinin başka bir firmadan alındığı tesislerde aynı çalışma alanını iki işveren paylaşır: güvenlik görevlisini istihdam eden güvenlik şirketi ve hizmetin verildiği tesis. Tesiste başlayan bir bakım faaliyeti, değişen araç güzergâhı veya kullanıma kapatılan bir alan, güvenlik ekibinin günlük görevini doğrudan etkiler.</p>"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>6331 sayılı İş Sağlığı ve Güvenliği Kanunu bu bilgi akışını iki maddeyle düzenler. <strong>16. maddeye</strong> göre işveren, başka işyerlerinden çalışmak üzere kendi işyerine gelen çalışanların risk ve önlem bilgilerini almasını sağlamak üzere bu çalışanların işverenine gerekli bilgileri verir. <strong>23. maddeye</strong> göre aynı çalışma alanını paylaşan işverenler iş birliği yapar, risklerin önlenmesi çalışmalarını koordinasyon içinde yürütür ve birbirlerini bilgilendirir. Birden fazla işyerinin bulunduğu iş merkezleri, iş hanları, sanayi bölgeleri veya siteleri gibi yerlerde İSG koordinasyonu yönetim tarafından sağlanır. (<a href=\"https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6331&MevzuatTur=1&MevzuatTertip=5\" target=\"_blank\" rel=\"noopener noreferrer\">6331 sayılı Kanun</a>)</p>"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Bu bilgi akışının yazılı ve düzenli olması, örneğin aylık koordinasyon toplantısı veya ortak bir bildirim kanalı, koordinasyonun sahada gerçekten işlemesini sağlar.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Eğitim görev yapılan sahayla ilişkilendirilmelidir"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Özel güvenlik çalışanına verilen iş sağlığı ve güvenliği eğitiminin, kişinin karşılaşacağı durumlarla bağlantısı kurulmalıdır. Bir depoda araç trafiğini, okulda yoğun giriş çıkış saatlerini, konut sitesinde ise gece devriyesinin koşullarını konuşmak eğitimi somutlaştırır.</p>"
+        },
+        {
+          "type": "paragraph",
+          "html": "<p>Çalışanın tehlikeyi fark edebilmesi kadar, bunu bildirebilmesi ve bildiriminin karşılığını görebilmesi de önemlidir. Düzenli saha gözlemleri, çalışan geri bildirimleri ve olay kayıtları, alınan önlemlerin geliştirilmesine yardımcı olur.</p>"
+        },
+        {
+          "type": "h2",
+          "text": "Görev noktası için 8 maddelik kontrol"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "Görev noktasına özgü riskler risk değerlendirmesinde yer alıyor",
+            "Devriye güzergâhı yeterince aydınlatılmış, zemin düzgün",
+            "Araç ve yaya geçişleri ayrılmış, giriş noktası işaretli",
+            "Tek başına çalışmada düzenli haberleşme kontrolü tanımlı",
+            "Devir teslim kaydında değişiklikler, olaylar ve ekipman durumu yazılıyor",
+            "Güvenlik ekibinin acil durum planındaki görevi yazılı ve tatbikata katılıyor",
+            "Tesis ile güvenlik şirketi arasında yazılı bir bilgilendirme düzeni var",
+            "Eğitimler görev noktasının gerçek koşullarına göre veriliyor"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "neutral",
+          "title": "Yazar hakkında",
+          "text": "İhsan Ateş, A sınıfı iş güvenliği uzmanıdır. Özel güvenlik şirketi, ortak sağlık ve güvenlik birimi (OSGB) ve danışmanlık şirketinden oluşan Özgün Hizmetler Grubu'nun Yönetim Kurulu Başkanıdır. Adres Güvenlik A.Ş.'de genel müdür olarak görev yapmaktadır. Diplomatik misyonlar, enerji, sanayi, eğitim ve konut projelerine yönelik güvenlik hizmetlerinin yönetiminde görev almıştır. Çalışmaları arasında Kinney yöntemiyle risk değerlendirmesi, acil durum planlaması, güvenlik eğitimleri ve personel yönetimi bulunmaktadır. Marmara Üniversitesi İş Güvenliği doktora programının ders aşamasını tamamlamıştır."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "Abant OSGB notu",
+          "text": "Bolu'da tesisiniz, siteniz veya kurumunuz için güvenlik hizmetini dışarıdan alıyorsanız, güvenlik personelinin görev noktası da risk değerlendirmesinde ve acil durum planında yer almalıdır; güvenlik firması ile tesis arasındaki koordinasyon da bu belgelere yansıtılmalıdır."
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Güvenlik görevlisinin iş sağlığı ve güvenliğinden kim sorumludur?",
+              "a": "Görevliyi istihdam eden güvenlik şirketi onun işverenidir. Hizmetin verildiği tesis de aynı çalışma alanını paylaşan işveren olarak iş birliği yapmak, riskler hakkında bilgi vermek ve koordinasyona katılmakla yükümlüdür (6331 sayılı Kanun, madde 16 ve 23)."
+            },
+            {
+              "q": "Güvenlik görevlisi acil durum planında görev alabilir mi?",
+              "a": "Evet. Ancak görevi planda açıkça tanımlanmalı, buna uygun eğitimi almalı ve tatbikatlara katılmalıdır. Görev tanımı, kişinin eğitimi ve tesisin koşullarıyla uyumlu olmalıdır."
+            },
+            {
+              "q": "Gece tek başına devriye yapan görevli için ne önerilir?",
+              "a": "Düzenli aralıklarla haberleşme kontrolü (telsiz veya telefon), aydınlatılmış güzergâh, fener ve yansıtıcı yelek gibi ekipman ve acil durumda kime ulaşacağının net olması önerilir. Bu önlemlerin kapsamı, görev noktasının risk değerlendirmesine göre belirlenir."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "html": "<p><em>Bu yazı bilgilendirme amaçlıdır ve yazarın kişisel görüşlerini yansıtır. İşyerinize özel değerlendirme için iş güvenliği uzmanınızla görüşün.</em></p>"
+        },
+        {
+          "type": "cta-inline",
+          "text": "Güvenlik hizmeti aldığınız tesiste İSG koordinasyonunu birlikte planlayalım.",
+          "button": {
+            "label": "Teklif Al",
+            "href": "/iletisim"
+          }
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Özel Güvenlik Sektöründe İş Sağlığı ve Güvenliği",
+        "mainEntityOfPage": "/blog/ozel-guvenlik-sektorunde-is-sagligi-ve-guvenligi",
+        "about": [
+          "Özel güvenlik",
+          "İş sağlığı ve güvenliği",
+          "Koordinasyon"
+        ],
+        "datePublished": "2026-11-14"
+      }
+    },
     {
       slug: "yeni-isg-egitim-yonetmeligi-2026",
       locale: "tr",

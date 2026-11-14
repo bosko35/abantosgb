@@ -85,7 +85,7 @@ export default function BlogIndex() {
                   <span className="inline-flex items-center rounded-full px-2 py-0.5 ring-1 ring-inset ring-emerald-200 bg-emerald-50 text-emerald-700 text-xs">{p.category ?? "Sektörel İSG"}</span>
                   <h2 className="mt-2 text-base font-semibold text-slate-900 group-hover:text-emerald-700">{p.title}</h2>
                   <p className="mt-1 text-sm text-slate-600 line-clamp-3">{p.excerpt}</p>
-                  <p className="mt-2 text-xs text-slate-500">{p.author?.name ?? "Abant OSGB"}{p.updatedAt ? ` · ${new Intl.DateTimeFormat("tr-TR", { dateStyle: "medium" }).format(new Date(p.updatedAt))}` : ""}</p>
+                  <p className="mt-2 text-xs text-slate-500">{p.author?.name ?? "Abant OSGB"}{p.author?.guest ? " · Misafir yazar" : ""}{p.updatedAt ? ` · ${new Intl.DateTimeFormat("tr-TR", { dateStyle: "medium" }).format(new Date(p.updatedAt))}` : ""}</p>
                 </div>
               </Link>
             ))}

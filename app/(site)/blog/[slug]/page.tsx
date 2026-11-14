@@ -81,7 +81,7 @@ export default function Page({ params }: Props) {
     keywords: post.keywords.join(", "),
     datePublished: post.structuredData?.datePublished ?? updatedISO,
     author: post.author
-      ? { "@type": "Person", name: post.author.name, jobTitle: post.author.title, worksFor: { "@type": "Organization", name: "Abant OSGB" } }
+      ? { "@type": "Person", name: post.author.name, jobTitle: post.author.title, worksFor: { "@type": "Organization", name: post.author.organization ?? "Abant OSGB" } }
       : { "@type": "Organization", name: "Abant OSGB" },
     publisher: { "@type": "Organization", name: "Abant OSGB", url: siteUrl },
   } as const;
@@ -166,6 +166,9 @@ export default function Page({ params }: Props) {
               <span>
                 <span className="font-semibold text-slate-900">{post.author?.name ?? "Abant OSGB"}</span>
                 {post.author?.title && <span className="text-slate-500"> · {post.author.title}</span>}
+                {post.author?.guest && (
+                  <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ring-inset ring-amber-200 bg-amber-50 text-amber-800">Misafir yazar</span>
+                )}
                 <span className="block text-xs text-slate-500">Güncelleme: {updatedHuman}</span>
               </span>
             </div>
