@@ -79,6 +79,7 @@ const data: ServicePageData = {
   ],
   related: [
     { title: "Bolu Abant OSGB: Merkez ve İlçeler", href: "/hizmetler/bolu-abant-osgb" },
+    { title: "Deri ve Kimya Sektöründe İSG", href: "/hizmetler/deri-ve-kimya-sektorunde-isg" },
     { title: "Bolu Risk Analizi", href: "/hizmetler/risk-analizi-bolu" },
     { title: "Bolu İşyeri Hekimliği", href: "/hizmetler/isyeri-hekimligi-bolu" },
     { title: "Çözüm Ortağı Hizmetleri (ölçüm, tetkik)", href: "/hizmetler/cozum-ortagi-hizmetleri" },

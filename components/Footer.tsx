@@ -42,6 +42,7 @@ export default function Footer() {
               <li><a href="/hizmetler/isg-egitimleri-bolu" className="hover:text-white transition-colors">İSG Eğitimleri</a></li>
               <li><a href="/hizmetler/isyeri-hekimligi-bolu" className="hover:text-white transition-colors">İşyeri Hekimliği</a></li>
               <li><a href="/hizmetler/cozum-ortagi-hizmetleri" className="hover:text-white transition-colors">Çözüm Ortağı Hizmetleri</a></li>
+              <li><a href="/hizmetler/deri-ve-kimya-sektorunde-isg" className="hover:text-white transition-colors">Deri ve Kimya Sektörü</a></li>
             </ul>
             <h4 className="mt-6 text-lg font-semibold">Hizmet Bölgeleri</h4>
             <ul className="mt-4 space-y-2 text-white/80">
