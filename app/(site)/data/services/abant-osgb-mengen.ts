@@ -71,6 +71,7 @@ const data: ServicePageData = {
     },
   ],
   related: [
+    { title: "Bolu'daki OSGB hizmetlerimiz (ana sayfa)", href: "/" },
     { title: "Bolu Abant OSGB: Merkez ve İlçeler", href: "/hizmetler/bolu-abant-osgb" },
     { title: "Bolu Risk Analizi", href: "/hizmetler/risk-analizi-bolu" },
     { title: "Bolu İşyeri Hekimliği", href: "/hizmetler/isyeri-hekimligi-bolu" },

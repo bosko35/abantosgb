@@ -72,7 +72,7 @@ const SafetyIntro: React.FC<SafetyIntroProps> = ({
           transition={{ delay: textDelay, duration: 0.6, ease: "easeOut" }}
           className="mt-4 text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:mt-8 md:text-5xl"
         >
-          Bolu'da İşletmenize Özel İş Sağlığı ve Güvenliği Hizmeti
+          Bolu'da Yetkili OSGB: İş Güvenliği Uzmanı ve İşyeri Hekimi
         </motion.h1>
 
         {/* Subtext */}

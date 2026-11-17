@@ -83,6 +83,7 @@ const data: ServicePageData = {
     },
   ],
   related: [
+    { title: "Bolu'daki OSGB hizmetlerimiz (ana sayfa)", href: "/" },
     { title: "Abant OSGB Gerede: Deri İhtisas OSB", href: "/hizmetler/abant-osgb-gerede" },
     { title: "Abant OSGB Mudurnu", href: "/hizmetler/abant-osgb-mudurnu" },
     { title: "Abant OSGB Mengen", href: "/hizmetler/abant-osgb-mengen" },
