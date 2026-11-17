@@ -80,7 +80,7 @@ export default function Footer() {
               <li><a href="/" className="hover:text-white transition-colors">Anasayfa</a></li>
               <li><a href="/hakkimizda" className="hover:text-white transition-colors">Hakkımızda</a></li>
               <li><a href="/hesaplama" className="hover:text-white transition-colors">Süre Hesaplama</a></li>
-              <li><a href="/genel" className="hover:text-white transition-colors">Genel Bağlantılar</a></li>
+              <li><a href="/genel" className="hover:text-white transition-colors">Bağlantılarımız</a></li>
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="/iletisim" className="hover:text-white transition-colors">İletişim</a></li>
               <li><a href="/kvkk" className="hover:text-white transition-colors">KVKK Aydınlatma Metni</a></li>

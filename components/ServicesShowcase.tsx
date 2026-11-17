@@ -121,7 +121,7 @@ export default function ServicesShowcase() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Abant OSGB Bolu İş Sağlığı ve Güvenliği Hizmetleri"
-          subtitle="Risk analizi, iş güvenliği uygulamaları ve İSG eğitimleri için hızlıca bilgi alın."
+          subtitle="İş güvenliği uzmanı, işyeri hekimi, risk analizi ve İSG eğitimleri için hızlıca bilgi alın."
         />
 
         <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2">

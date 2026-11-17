@@ -21,14 +21,14 @@ const breadcrumbJsonLd = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Genel Bağlantılar',
+      name: 'Bağlantılarımız',
       item: pageUrl,
     },
   ],
 } as const
 
 export const metadata: Metadata = {
-  title: 'Abant OSGB Bolu İş Sağlığı ve Güvenliği | Genel Bağlantılar',
+  title: 'Abant OSGB Bolu İş Sağlığı ve Güvenliği | Bağlantılarımız',
   description: "Abant OSGB'nin Bolu iş sağlığı ve güvenliği iletişim bilgileri, resmi kanalları ve harita bağlantıları tek sayfada.",
   alternates: {
     canonical: pageUrl,
@@ -107,7 +107,7 @@ export default function GenelPage() {
                 <li aria-hidden>
                   <ChevronRight className="h-4 w-4 text-brand-text/50" />
                 </li>
-                <li className="font-semibold text-brand-navy">Genel Bağlantılar</li>
+                <li className="font-semibold text-brand-navy">Bağlantılarımız</li>
               </ol>
             </nav>
             <div className="mb-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
