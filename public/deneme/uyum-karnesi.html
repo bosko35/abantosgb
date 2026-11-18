@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="İSG Uyum Karnesi | Abant OSGB">
+  <meta property="og:description" content="İşyeriniz İSG mevzuatına ne kadar uygun? 2 dakikada öğrenin. Ücretsiz, kişisel veri istenmez.">
+  <meta property="og:image" content="https://abantosgb.com/deneme/uyum-karnesi-paylasim.jpg">
+  <meta property="og:url" content="https://abantosgb.com/deneme/uyum-karnesi">
+  <link rel="icon" href="/brand/logo-mark.png">
+  <title>İSG Uyum Karnesi | Abant OSGB</title>
+  <meta name="description" content="İşyeriniz İSG mevzuatına ne kadar uygun? 2 dakikada öğrenin. Abant OSGB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces (User Brand & Palette) */
+      --background: #F8F9FA;
+      --surface-container-low: #FFFFFF;
+      --surface-container: #F1F3F5;
+      --surface-container-high: #E4E8EC;
+
+      /* Ink */
+      --on-surface: #212121;
+      --on-surface-variant: #4F5660;
+
+      /* Rules & Gold Accent */
+      --outline: #D9A441;
+      --outline-variant: #D5DCE2;
+
+      /* Brand & Semantic Accents */
+      --primary: #1B3A57;
+      --primary-dark: #0F2333;
+      --on-primary: #FFFFFF;
+      --primary-container: #E6ECF2;
+      --on-primary-container: #1B3A57;
+
+      --secondary: #2E7D32;
+      --secondary-dark: #205A23;
+      --on-secondary: #FFFFFF;
+      --secondary-container: #E8F5E9;
+      --on-secondary-container: #1B5E20;
+
+      --tertiary: #8A6114;
+      --gold-container: #FDF6E7;
+      --on-gold-container: #6E4C0E;
+
+      --positive: #2E7D32;
+      --warning: #D9A441;
+      --error: #C62828;
+      --error-container: #FDECEA;
+      --on-error-container: #8E1B1B;
+      --on-error: #FFFFFF;
+
+      /* Data series */
+      --data-1: #1B3A57;
+      --data-2: #D9A441;
+      --data-3: #2E7D32;
+      --data-4: #C62828;
+      --data-context: #D5DCE2;
+
+      /* Focus */
+      --focus: #1B3A57;
+
+      /* Fonts (User requested Inter) */
+      --font-headline: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-label: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Shape */
+      --rounded: 0.25rem;
+      --rounded-lg: 0.375rem;
+      --rounded-full: 0.25rem;
+
+      /* Style effects */
+      --brass-rule: 3px solid var(--outline);
+      --brass-thin: 2px solid var(--outline);
+      --hairline: 1px solid var(--outline-variant);
+      --card-shadow: 0 1px 3px rgba(15, 35, 51, 0.08);
+
+      /* Type scale (Focused Tool) */
+      --display-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.125rem);
+      --headline-size: clamp(1.1875rem, 1.05rem + 0.45vw, 1.4375rem);
+      --subhead-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+      --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+      --label-size: 0.75rem;
+
+      /* Spacing scale (4pt base) */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .page-grid {
+      display: grid;
+      gap: var(--space-lg);
+      padding-block: var(--space-lg);
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+      max-width: 1040px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Focus rings */
+    :focus-visible {
+      outline: 3px solid var(--outline);
+      outline-offset: 2px;
+    }
+
+    /* Top Title Band */
+    .title-band {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--on-primary);
+      border-bottom: var(--brass-rule);
+      padding: var(--space-md) var(--space-lg);
+    }
+    .title-band-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      min-width: 0;
+    }
+    /* Logo area in white box, 44px height */
+    .logo-box {
+      background-color: var(--surface-container-low);
+      color: var(--primary);
+      height: 48px;
+      padding: 0 var(--space-sm) 0 4px;
+      border-radius: var(--rounded);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-shrink: 0;
+      border: 1px solid var(--outline);
+      box-shadow: var(--card-shadow);
+    }
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .logo-mark-bg { fill: var(--primary); }
+    .logo-mark-gold { fill: var(--outline); }
+    .logo-mark-white { fill: var(--surface-container-low); }
+    .logo-mark-green { fill: var(--secondary); }
+    .logo-text-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-brand {
+      font-weight: 800;
+      font-size: 0.9375rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+    .logo-sub {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--tertiary);
+      letter-spacing: 0.04em;
+    }
+
+    .title-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .title-band h1 {
+      margin: 0;
+      font-family: var(--font-headline);
+      font-size: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--on-primary);
+      letter-spacing: -0.015em;
+    }
+    .title-band .lede {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--primary-container);
+      line-height: 1.35;
+    }
+
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .auth-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-sm);
+      border: 1px solid var(--outline);
+      border-radius: var(--rounded);
+      background-color: var(--primary-dark);
+      color: var(--outline);
+      font-size: var(--label-size);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    /* Stepper / Section Head */
+    .step-nav {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-sm);
+      background-color: var(--surface-container-low);
+      border: var(--hairline);
+      border-top: var(--brass-thin);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-sm);
+      box-shadow: var(--card-shadow);
+    }
+    .step-pill {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--on-surface-variant);
+      background-color: transparent;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .step-pill.is-active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+    }
+    .step-pill.is-done {
+      background-color: var(--secondary-container);
+      color: var(--on-secondary-container);
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: var(--rounded);
+      font-size: var(--label-size);
+      font-weight: 700;
+      background-color: var(--surface-container);
+      color: var(--on-surface);
+      flex-shrink: 0;
+    }
+    .step-pill.is-active .step-num {
+      background-color: var(--outline);
+      color: var(--primary-dark);
+    }
+    .step-pill.is-done .step-num {
+      background-color: var(--secondary);
+      color: var(--on-secondary);
+    }
+
+    /* Surface Panels */
+    .panel {
+      background-color: var(--surface-container-low);
+      border: var(--hairline);
+      border-top: var(--brass-thin);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--card-shadow);
+    }
+    .panel-header {
+      border-bottom: var(--hairline);
+      padding-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .kicker {
+      display: block;
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--tertiary);
+      margin-bottom: var(--space-xs);
+    }
+    .panel-title {
+      margin: 0;
+      font-family: var(--font-headline);
+      font-size: var(--headline-size);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--primary);
+    }
+    .panel-desc {
+      margin: var(--space-sm) 0 0;
+      color: var(--on-surface-variant);
+      max-width: 68ch;
+    }
+
+    /* Notice Callout */
+    .nace-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      background-color: var(--gold-container);
+      border-left: 4px solid var(--outline);
+      border-radius: var(--rounded);
+      color: var(--on-gold-container);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      margin-bottom: var(--space-md);
+    }
+    .nace-notice svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--tertiary);
+    }
+
+    /* Hazard Class Cards */
+    .hazard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    .hazard-card {
+      font: inherit;
+      appearance: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      min-height: 112px;
+      background-color: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-top: 3px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      color: var(--on-surface);
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out),
+                  box-shadow var(--dur-micro) var(--ease-out),
+                  transform var(--dur-micro) var(--ease-out);
+    }
+    .hazard-card:hover {
+      background-color: var(--surface-container);
+      box-shadow: 0 3px 8px rgba(15, 35, 51, 0.08);
+    }
+    .hazard-card.is-selected {
+      background-color: var(--primary-container);
+      border-color: var(--primary);
+      border-top: 3px solid var(--primary);
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    .hazard-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .hazard-name {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hazard-badge {
+      font-size: var(--label-size);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--rounded);
+      white-space: nowrap;
+    }
+    .badge-az {
+      background-color: var(--secondary-container);
+      color: var(--on-secondary-container);
+    }
+    .badge-tehlikeli {
+      background-color: var(--gold-container);
+      color: var(--on-gold-container);
+    }
+    .badge-cok {
+      background-color: var(--error-container);
+      color: var(--on-error-container);
+    }
+    .hazard-nace-note {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--on-surface-variant);
+      line-height: 1.45;
+    }
+    .hazard-periods {
+      margin-top: auto;
+      padding-top: var(--space-sm);
+      border-top: var(--hairline);
+      font-size: 0.8125rem;
+      color: var(--on-surface);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Employee Count Section */
+    .emp-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+      gap: var(--space-lg);
+      align-items: end;
+      padding-top: var(--space-lg);
+      border-top: var(--hairline);
+      margin-bottom: var(--space-lg);
+    }
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .field-label {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .field-hint {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+    .emp-input-row {
+      display: flex;
+      gap: var(--space-sm);
+      align-items: center;
+      margin-top: var(--space-xs);
+    }
+    .emp-number {
+      width: 120px;
+      height: 48px;
+      padding: 0 var(--space-md);
+      border: 1px solid var(--primary);
+      border-radius: var(--rounded);
+      background-color: var(--surface-container-low);
+      color: var(--on-surface);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .preset-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .preset-btn {
+      min-height: 48px;
+      padding: 0 var(--space-md);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      background-color: var(--surface-container);
+      color: var(--on-surface);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .preset-btn:hover {
+      background-color: var(--surface-container-high);
+    }
+    .preset-btn.is-active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    /* Profile Statutory Preview Strip */
+    .profile-preview {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-sm);
+      background-color: var(--surface-container);
+      border: var(--hairline);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .preview-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .preview-lbl {
+      font-size: var(--label-size);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--on-surface-variant);
+    }
+    .preview-val {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Buttons (Min height 48px, accessible contrast) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      min-height: 48px;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--rounded);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.25;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color var(--dur-micro) var(--ease-out),
+                  transform var(--dur-micro) var(--ease-out),
+                  box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .btn:active {
+      transform: translateY(1px);
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background-color: var(--primary-dark);
+    }
+    .btn-whatsapp {
+      background-color: var(--secondary);
+      color: var(--on-secondary);
+    }
+    .btn-whatsapp:hover:not(:disabled) {
+      background-color: var(--secondary-dark);
+    }
+    .btn-outline {
+      background-color: var(--surface-container-low);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+    .btn-outline:hover:not(:disabled) {
+      background-color: var(--primary-container);
+    }
+    .btn-ghost {
+      background-color: var(--surface-container);
+      color: var(--on-surface);
+      border-color: var(--outline-variant);
+    }
+    .btn-ghost:hover:not(:disabled) {
+      background-color: var(--surface-container-high);
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Progress Bar (Gold) */
+    .quiz-progress-wrap {
+      margin-bottom: var(--space-lg);
+    }
+    .quiz-progress-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+    .progress-counter {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .profile-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 4px 10px;
+      border-radius: var(--rounded);
+      background-color: var(--primary-container);
+      color: var(--on-primary-container);
+      font-size: var(--label-size);
+      font-weight: 600;
+    }
+    .progress-track {
+      width: 100%;
+      height: 10px;
+      background-color: var(--surface-container-high);
+      border-radius: var(--rounded);
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--outline);
+      transition: width var(--dur-short) var(--ease-out);
+    }
+
+    /* Single Question Card */
+    .question-box {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .question-category {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      align-self: flex-start;
+      padding: 3px 10px;
+      border-radius: var(--rounded);
+      background-color: var(--gold-container);
+      color: var(--on-gold-container);
+      border: 1px solid var(--outline);
+      font-size: var(--label-size);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .question-title {
+      margin: 0;
+      font-size: clamp(1.125rem, 1.02rem + 0.4vw, 1.375rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--on-surface);
+    }
+    .question-hint {
+      margin: 0;
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--surface-container);
+      border-left: 3px solid var(--primary);
+      border-radius: var(--rounded);
+      font-size: 0.9rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Answer Option Buttons */
+    .options-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      margin: var(--space-sm) 0 var(--space-md);
+    }
+    .option-btn {
+      width: 100%;
+      min-height: 56px;
+      padding: var(--space-sm) var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      text-align: left;
+      background-color: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      color: var(--on-surface);
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out),
+                  box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .option-btn:hover {
+      background-color: var(--surface-container);
+    }
+    .option-btn.is-selected-yes {
+      background-color: var(--secondary-container);
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 2px var(--secondary);
+    }
+    .option-btn.is-selected-unsure {
+      background-color: var(--gold-container);
+      border-color: var(--tertiary);
+      box-shadow: 0 0 0 2px var(--outline);
+    }
+    .option-btn.is-selected-no {
+      background-color: var(--error-container);
+      border-color: var(--error);
+      box-shadow: 0 0 0 2px var(--error);
+    }
+    .option-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .option-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .option-sub {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+    .option-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .badge-yes { background-color: var(--secondary-container); color: var(--on-secondary-container); }
+    .badge-unsure { background-color: var(--gold-container); color: var(--on-gold-container); }
+    .badge-no { background-color: var(--error-container); color: var(--on-error-container); }
+
+    /* Results Screen */
+    .results-top-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+      gap: var(--space-lg);
+      align-items: stretch;
+    }
+
+    /* Ring Chart Card */
+    .score-card {
+      background-color: var(--surface-container-low);
+      border: var(--hairline);
+      border-top: var(--brass-rule);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-sm);
+    }
+    .ring-wrapper {
+      position: relative;
+      width: 196px;
+      height: 196px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ring-svg {
+      width: 196px;
+      height: 196px;
+      transform: rotate(-90deg);
+    }
+    .ring-track {
+      fill: none;
+      stroke: var(--surface-container-high);
+      stroke-width: 16;
+    }
+    .ring-arc {
+      fill: none;
+      stroke-width: 16;
+      stroke-linecap: butt;
+      transition: stroke-dashoffset var(--dur-long) var(--ease-out);
+    }
+    .ring-arc.tier-green { stroke: var(--positive); }
+    .ring-arc.tier-gold { stroke: var(--outline); }
+    .ring-arc.tier-red { stroke: var(--error); }
+
+    .ring-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .ring-score {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      color: var(--primary);
+    }
+    .ring-unit {
+      font-size: var(--label-size);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--on-surface-variant);
+      margin-top: 4px;
+    }
+    .score-tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 4px 12px;
+      border-radius: var(--rounded);
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .tier-badge-green { background-color: var(--secondary-container); color: var(--on-secondary-container); }
+    .tier-badge-gold { background-color: var(--gold-container); color: var(--on-gold-container); }
+    .tier-badge-red { background-color: var(--error-container); color: var(--on-error-container); }
+
+    .formula-note {
+      margin: var(--space-xs) 0 0;
+      font-size: 0.75rem;
+      line-height: 1.45;
+      color: var(--on-surface-variant);
+      max-width: 34ch;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Summary & CTA Card */
+    .summary-card {
+      background-color: var(--surface-container-low);
+      border: var(--hairline);
+      border-top: var(--brass-rule);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .tally-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-sm);
+    }
+    .tally-box {
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      border: var(--hairline);
+      background-color: var(--surface-container);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .tally-box.t-yes { border-left: 3px solid var(--positive); }
+    .tally-box.t-unsure { border-left: 3px solid var(--outline); }
+    .tally-box.t-no { border-left: 3px solid var(--error); }
+    .tally-num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+      color: var(--on-surface);
+    }
+    .tally-lbl {
+      font-size: var(--label-size);
+      font-weight: 600;
+      color: var(--on-surface-variant);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-sm);
+    }
+    .cta-phone { max-width: none; margin: 0; }
+    .cta-restart-row {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    /* Inline Anonymous Contact / Summary Panel */
+    .contact-drawer {
+      background-color: var(--surface-container-low);
+      border: 1px solid var(--primary);
+      border-left: 5px solid var(--primary);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--card-shadow);
+    }
+    .contact-drawer.is-whatsapp {
+      border-color: var(--secondary);
+      border-left-color: var(--secondary);
+    }
+    .contact-drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+    .contact-drawer h3 {
+      margin: 0;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .contact-drawer.is-whatsapp h3 {
+      color: var(--on-secondary-container);
+    }
+    .summary-pre {
+      margin: var(--space-sm) 0 var(--space-md);
+      padding: var(--space-md);
+      background-color: var(--surface-container);
+      border: var(--hairline);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      color: var(--on-surface);
+    }
+    .btn-compact {
+      min-height: 48px;
+      padding: var(--space-xs) var(--space-md);
+    }
+    .emp-err-text {
+      color: var(--error);
+    }
+    .drawer-mt {
+      margin-top: var(--space-lg);
+    }
+    .desc-flush {
+      margin-top: 0;
+    }
+    .action-row-start {
+      justify-content: flex-start;
+    }
+    .empty-filter-msg {
+      margin: 0;
+    }
+    .copy-feedback {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--positive);
+      margin-left: var(--space-sm);
+    }
+
+    /* Gaps (Eksikler) List */
+    .gaps-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      border-bottom: var(--hairline);
+      padding-bottom: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .filter-btn {
+      min-height: 44px;
+      padding: 0 var(--space-md);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      background-color: var(--surface-container);
+      color: var(--on-surface);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .filter-btn.is-active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    .gap-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .gap-item {
+      padding: var(--space-md);
+      border: var(--hairline);
+      border-radius: var(--rounded);
+      background-color: var(--surface-container-low);
+      border-left: 4px solid var(--error);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .gap-item.is-unsure {
+      border-left-color: var(--outline);
+    }
+    .gap-item-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .gap-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .gap-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: var(--rounded);
+      font-size: var(--label-size);
+      font-weight: 700;
+    }
+    .tag-no { background-color: var(--error-container); color: var(--on-error-container); }
+    .tag-unsure { background-color: var(--gold-container); color: var(--on-gold-container); }
+    .tag-prio-kritik { background-color: var(--primary); color: var(--on-primary); }
+    .tag-prio-yuksek { background-color: var(--primary-container); color: var(--on-primary-container); }
+    .tag-prio-orta { background-color: var(--surface-container-high); color: var(--on-surface); }
+
+    .gap-rec {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--on-surface);
+      line-height: 1.5;
+    }
+    .gap-basis {
+      margin: 0;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--on-surface-variant);
+    }
+
+    .perfect-box {
+      padding: var(--space-lg);
+      background-color: var(--secondary-container);
+      border-left: 4px solid var(--positive);
+      border-radius: var(--rounded);
+      color: var(--on-secondary-container);
+    }
+    .perfect-box h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1.0625rem;
+    }
+    .perfect-box p {
+      margin: 0;
+      font-size: 0.9375rem;
+    }
+
+    /* Compliant items details */
+    details.compliant-details {
+      margin-top: var(--space-lg);
+      border-top: var(--hairline);
+      padding-top: var(--space-md);
+    }
+    details.compliant-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .compliant-list {
+      margin: var(--space-sm) 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .compliant-list li {
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--surface-container);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: var(--brass-thin);
+      background-color: var(--primary-dark);
+      color: var(--on-primary);
+      padding: var(--space-xl) var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      gap: var(--space-lg);
+    }
+    .footer-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0 0 var(--space-xs);
+      color: var(--on-primary);
+    }
+    .footer-auth {
+      display: inline-block;
+      margin-bottom: var(--space-sm);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--outline);
+    }
+    .footer-note {
+      margin: 0 0 var(--space-sm);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: var(--primary-container);
+    }
+    .footer-sources {
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--outline-variant);
+    }
+
+    .is-hidden { display: none !important; }
+
+    /* Mobile Responsive (375px+) */
+    @media (max-width: 640px) {
+      .page-grid {
+        padding-block: var(--space-md);
+        gap: var(--space-md);
+      }
+      .title-band {
+        padding: var(--space-md);
+      }
+      .step-nav {
+        grid-template-columns: 1fr;
+      }
+      .panel, .score-card, .summary-card, .contact-drawer {
+        padding: var(--space-md);
+      }
+      .hazard-grid {
+        grid-template-columns: 1fr;
+      }
+      .emp-section {
+        grid-template-columns: 1fr;
+      }
+      .emp-number {
+        width: 100%;
+      }
+      .profile-preview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .results-top-grid {
+        grid-template-columns: 1fr;
+      }
+      .tally-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+      .btn, .preset-btn, .filter-btn {
+        width: 100%;
+        min-height: 48px;
+      }
+      .action-row {
+        flex-direction: column-reverse;
+        align-items: stretch;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="title-band">
+    <div class="title-band-inner">
+      <div class="brand-cluster">
+        <div class="logo-box">
+          <img class="logo-img" src="data:image/png;base64,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" alt="Abant OSGB logosu" width="40" height="40">
+          <div class="logo-text-wrap">
+            <span class="logo-brand">ABANT OSGB</span>
+            <span class="logo-sub">OSGB-5019</span>
+          </div>
+        </div>
+        <div class="title-text-group">
+          <h1>İSG Uyum Karnesi</h1>
+          <p class="lede">6331 sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında interaktif öz-değerlendirme</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="auth-badge">
+          <i data-lucide="shield-check" width="14" height="14" aria-hidden="true"></i>
+          Bakanlık Yetki No: OSGB-5019
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-grid">
+    <!-- 3-Step Indicator -->
+    <nav class="step-nav" aria-label="Değerlendirme adımları">
+      <div class="step-pill is-active" id="step-pill-1">
+        <span class="step-num">1</span>
+        <span>İşyeri Profili</span>
+      </div>
+      <div class="step-pill" id="step-pill-2">
+        <span class="step-num">2</span>
+        <span id="step-pill-2-label">Uyum Soruları</span>
+      </div>
+      <div class="step-pill" id="step-pill-3">
+        <span class="step-num">3</span>
+        <span>Uyum Karnesi</span>
+      </div>
+    </nav>
+
+    <!-- VIEW 1: WORKPLACE PROFILE SETUP -->
+    <section id="view-setup" class="panel" aria-labelledby="setup-heading">
+      <div class="panel-header">
+        <span class="kicker">Adım 1 — İşyeri Profili</span>
+        <h2 class="panel-title" id="setup-heading">Tehlike sınıfınızı ve çalışan sayınızı seçin</h2>
+        <p class="panel-desc">Yükümlülükleriniz tehlike sınıfınıza ve çalışan sayınıza göre değişir. Bu seçimlere göre size sorulacak soru sayısı (10, 11 veya 12) otomatik belirlenir. Kişisel veri istenmez.</p>
+      </div>
+
+      <div class="nace-notice" role="note">
+        <i data-lucide="info" width="18" height="18" aria-hidden="true"></i>
+        <span><strong>Tehlike sınıfınız SGK işyeri tescilindeki NACE kodunuza göre belirlenir.</strong> Asıl işinize karşılık gelen NACE kodu grubunu aşağıdan seçiniz.</span>
+      </div>
+
+      <div class="hazard-grid" role="radiogroup" aria-label="Tehlike sınıfı seçimi">
+        <button type="button" class="hazard-card" id="card-az_tehlikeli" onclick="selectHazard('az_tehlikeli')" aria-pressed="false">
+          <div>
+            <div class="hazard-card-top">
+              <span class="hazard-name">Az Tehlikeli</span>
+            </div>
+          </div>
+          <div class="hazard-periods">Risk Değ.: 6 yıl · Muayene: 5 yıl · Uzman: min. C</div>
+        </button>
+
+        <button type="button" class="hazard-card is-selected" id="card-tehlikeli" onclick="selectHazard('tehlikeli')" aria-pressed="true">
+          <div>
+            <div class="hazard-card-top">
+              <span class="hazard-name">Tehlikeli</span>
+            </div>
+          </div>
+          <div class="hazard-periods">Risk Değ.: 4 yıl · Muayene: 3 yıl · Uzman: min. B</div>
+        </button>
+
+        <button type="button" class="hazard-card" id="card-cok_tehlikeli" onclick="selectHazard('cok_tehlikeli')" aria-pressed="false">
+          <div>
+            <div class="hazard-card-top">
+              <span class="hazard-name">Çok Tehlikeli</span>
+            </div>
+          </div>
+          <div class="hazard-periods">Risk Değ.: 2 yıl · Muayene: 1 yıl · Uzman: A</div>
+        </button>
+      </div>
+
+      <div class="emp-section">
+        <div class="field-group">
+          <label class="field-label" for="input-employees">Toplam Çalışan Sayısı</label>
+          <span class="field-hint">Çırak ve stajyerler hizmet süresi hesabına dahil edilmez (6331 s.K. m.6/4).</span>
+          <div class="emp-input-row">
+            <input type="number" id="input-employees" class="emp-number" min="1" max="10000" value="25" oninput="setEmployeeCount(this.value)">
+          </div>
+          <span id="emp-error" class="field-hint emp-err-text" role="alert"></span>
+        </div>
+
+        <div class="field-group">
+          <span class="field-label">Hızlı Çalışan Aralığı Seçimi</span>
+          <div class="preset-row">
+            <button type="button" class="preset-btn" data-preset="5" onclick="applyEmployeePreset(5)">1–9</button>
+            <button type="button" class="preset-btn is-active" data-preset="25" onclick="applyEmployeePreset(25)">10–49</button>
+            <button type="button" class="preset-btn" data-preset="65" onclick="applyEmployeePreset(65)">50–249</button>
+            <button type="button" class="preset-btn" data-preset="300" onclick="applyEmployeePreset(300)">250+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-preview" aria-live="polite">
+        <div class="preview-item">
+          <span class="preview-lbl">Çalışan Temsilcisi</span>
+          <span class="preview-val" id="prev-rep">1 Temsilci</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-lbl">İSG Kurulu (50+)</span>
+          <span class="preview-val" id="prev-board">Zorunlu Değil</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-lbl">Diğer Sağlık Pers.</span>
+          <span class="preview-val" id="prev-dsp">Zorunlu Değil</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-lbl">Sorulacak Soru</span>
+          <span class="preview-val" id="prev-qcount">10 Soru</span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span class="field-hint">Tüm yanıtlarınız yalnızca tarayıcı oturumunuzda saklanır, dışarı aktarılmaz.</span>
+        <button type="button" class="btn btn-primary" onclick="startAssessment()">
+          <span>Değerlendirmeye Başla</span>
+          <i data-lucide="arrow-right" width="18" height="18" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 2: QUESTION STEP-BY-STEP -->
+    <section id="view-quiz" class="panel is-hidden" aria-labelledby="q-title">
+      <div class="quiz-progress-wrap">
+        <div class="quiz-progress-meta">
+          <span class="progress-counter" id="q-counter">Soru 1 / 10</span>
+          <span class="profile-chip" id="q-profile-chip">Tehlikeli · 25 Çalışan</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" id="q-progress-track">
+          <div class="progress-fill" id="q-progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="question-box">
+        <span class="question-category" id="q-category">İSG Hizmetleri</span>
+        <h2 class="question-title" id="q-title">Soru başlığı</h2>
+        <p class="question-hint" id="q-hint">Mevzuat açıklaması</p>
+
+        <div class="options-stack" role="group" aria-label="Soru yanıt seçenekleri">
+          <button type="button" class="option-btn" id="opt-yes" onclick="answerQuestion('yes')">
+            <div class="option-main">
+              <span class="option-label">Evet</span>
+              <span class="option-sub">Yükümlülük mevzuata uygun şekilde yerine getirildi ve belgeli.</span>
+            </div>
+            <span class="option-badge badge-yes" aria-hidden="true">✓</span>
+          </button>
+
+          <button type="button" class="option-btn" id="opt-unsure" onclick="answerQuestion('unsure')">
+            <div class="option-main">
+              <span class="option-label">Emin değilim</span>
+              <span class="option-sub">Kısmen uygulandı veya güncelliği / belgesi kontrol edilmeli.</span>
+            </div>
+            <span class="option-badge badge-unsure" aria-hidden="true">?</span>
+          </button>
+
+          <button type="button" class="option-btn" id="opt-no" onclick="answerQuestion('no')">
+            <div class="option-main">
+              <span class="option-label">Hayır</span>
+              <span class="option-sub">Henüz tamamlanmadı veya eksik durumda.</span>
+            </div>
+            <span class="option-badge badge-no" aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="action-row">
+          <button type="button" class="btn btn-ghost" id="btn-prev-q" onclick="goPrevQuestion()">
+            <i data-lucide="arrow-left" width="18" height="18" aria-hidden="true"></i>
+            <span id="btn-prev-label">Profili Düzenle</span>
+          </button>
+          <button type="button" class="btn btn-primary is-hidden" id="btn-next-q" onclick="goNextQuestion()">
+            <span id="btn-next-label">Sonraki Soru</span>
+            <i data-lucide="arrow-right" width="18" height="18" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: RESULTS SCORECARD -->
+    <section id="view-results" class="is-hidden" aria-labelledby="res-heading">
+      <div class="results-top-grid">
+        <!-- Ring Chart & Formula -->
+        <div class="score-card">
+          <span class="kicker">Genel Uyum Puanı</span>
+          <div class="ring-wrapper" role="img" id="ring-aria" aria-label="İSG Uyum Puanı halkası">
+            <svg class="ring-svg" viewBox="0 0 180 180" aria-hidden="true">
+              <circle class="ring-track" cx="90" cy="90" r="74"></circle>
+              <circle class="ring-arc tier-gold" id="ring-arc" cx="90" cy="90" r="74" stroke-dasharray="464.96" stroke-dashoffset="464.96"></circle>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-score" id="res-score">0</span>
+              <span class="ring-unit">/ 100 Puan</span>
+            </div>
+          </div>
+
+          <span class="score-tier-badge tier-badge-gold" id="res-tier-badge">Değerlendiriliyor</span>
+
+          <p class="formula-note" id="res-formula-text">
+            Puan Formülü: yuvarla(((Evet + 0,5 × Emin değilim) / sorulan soru sayısı) × 100)
+          </p>
+        </div>
+
+        <!-- Summary Tallies & Actions -->
+        <div class="summary-card">
+          <div>
+            <span class="kicker">Adım 3 — İSG Uyum Karnesi</span>
+            <h2 class="panel-title" id="res-heading">İşyeri Öz-Değerlendirme Özeti</h2>
+            <p class="panel-desc" id="res-profile-summary">Tehlikeli · 25 Çalışan · 10 soru değerlendirildi</p>
+          </div>
+
+          <div class="tally-grid">
+            <div class="tally-box t-yes">
+              <span class="tally-num" id="tally-yes">0</span>
+              <span class="tally-lbl">Evet (Tam)</span>
+            </div>
+            <div class="tally-box t-unsure">
+              <span class="tally-num" id="tally-unsure">0</span>
+              <span class="tally-lbl">Emin değilim</span>
+            </div>
+            <div class="tally-box t-no">
+              <span class="tally-num" id="tally-no">0</span>
+              <span class="tally-lbl">Hayır (Eksik)</span>
+            </div>
+          </div>
+
+          <div class="cta-grid">
+            <a class="btn btn-primary" href="https://abantosgb.com/iletisim" target="_blank" rel="noopener">
+              <i data-lucide="file-text" width="18" height="18" aria-hidden="true"></i>
+              <span>Teklif Al</span>
+            </a>
+            <a class="btn btn-whatsapp" id="wa-link" href="https://wa.me/905323373814" target="_blank" rel="noopener">
+              <i data-lucide="message-circle" width="18" height="18" aria-hidden="true"></i>
+              <span>WhatsApp ile Danış</span>
+            </a>
+          </div>
+
+          <p class="formula-note cta-phone">WhatsApp ve telefon: <strong>0532 337 38 14</strong> · Sonucunuz WhatsApp mesajına anonim olarak eklenir.</p>
+          <div class="cta-restart-row">
+            <button type="button" class="btn btn-outline" onclick="restartTest()">
+              <i data-lucide="rotate-ccw" width="18" height="18" aria-hidden="true"></i>
+              <span>Testi Yeniden Başlat</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Zero-PII Contact / Export Panel -->
+      <div id="contact-drawer" class="contact-drawer drawer-mt is-hidden">
+        <div class="contact-drawer-head">
+          <h3 id="contact-title">Abant OSGB — Teklif ve Ön Görüşme Özeti</h3>
+          <button type="button" class="btn btn-ghost btn-compact" onclick="closeContactPanel()" aria-label="Paneli kapat">Kapat</button>
+        </div>
+        <p class="panel-desc desc-flush" id="contact-desc">
+          Kişisel veriniz toplanmaz. Aşağıdaki anonim karne özetini kopyalayarak veya indirerek Abant OSGB kurumsal iletişim kanalları üzerinden paylaşabilirsiniz.
+        </p>
+        <pre class="summary-pre" id="contact-summary-text"></pre>
+        <div class="action-row action-row-start">
+          <button type="button" class="btn btn-primary" id="btn-copy-summary" onclick="copyContactSummary()">
+            <i data-lucide="copy" width="18" height="18" aria-hidden="true"></i>
+            <span>Özeti Kopyala</span>
+          </button>
+          <span class="copy-feedback" id="copy-feedback" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- Deficiencies / Gaps List -->
+      <div class="panel drawer-mt">
+        <div class="gaps-header">
+          <div>
+            <span class="kicker">Aksiyon Listesi</span>
+            <h2 class="panel-title">Tespit Edilen Eksikler ve Doğrulanacak Alanlar</h2>
+          </div>
+          <div class="filter-pills" id="gap-filters" role="group" aria-label="Eksik listesi filtresi">
+            <button type="button" class="filter-btn is-active" data-filter="all" onclick="setGapFilter('all')">Tümü</button>
+            <button type="button" class="filter-btn" data-filter="no" onclick="setGapFilter('no')">Eksikler (Hayır)</button>
+            <button type="button" class="filter-btn" data-filter="unsure" onclick="setGapFilter('unsure')">Emin Değilim</button>
+          </div>
+        </div>
+
+        <div id="gaps-container" class="gap-list"></div>
+
+        <details class="compliant-details" id="compliant-details">
+          <summary id="compliant-summary">Uyumlu Beyan Edilen Başlıklar (0)</summary>
+          <ul class="compliant-list" id="compliant-list"></ul>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Abant OSGB — İSG Uyum Karnesi</p>
+        <span class="footer-auth">Çalışma ve Sosyal Güvenlik Bakanlığı Yetki Belgesi No: OSGB-5019</span>
+        <p class="footer-note">
+          <strong>Gizlilik Güvencesi:</strong> Bu öz-değerlendirme aracı hiçbir kişisel veri (ad, soyad, e-posta, telefon, vergi/SGK numarası) toplamaz ve harici sunuculara veri aktarmaz.
+        </p>
+      </div>
+      <div>
+        <p class="footer-note">
+          <strong>Bilgilendirme Notu:</strong> Bu karne, 6331 sayılı İş Sağlığı ve Güvenliği Kanunu ve bağlı yönetmelikler esas alınarak hazırlanmış bilgilendirme amaçlı bir ön kontrol aracıdır; resmi teftiş, hukuki mütalaa veya tam İSG denetimi yerine geçmez. İdari para cezası riski 6331 sayılı Kanun 26. madde kapsamındadır; tutarlar çalışan sayısı ve tehlike sınıfına göre artırılır ve her yıl yeniden değerleme oranıyla güncellenir.
+        </p>
+        <p class="footer-sources">
+          <strong>Dayanak Mevzuat:</strong> 6331 sayılı İş Sağlığı ve Güvenliği Kanunu; İSG Hizmetleri Yönetmeliği; İSG Risk Değerlendirmesi Yönetmeliği; İşyerlerinde Acil Durumlar Hakkında Yönetmelik; Çalışanların İSG Eğitimlerinin Usul ve Esasları Hakkında Yönetmelik; İSG Kurulları Hakkında Yönetmelik; İşyeri Hekimi ve Diğer Sağlık Personelinin Görev, Yetki, Sorumluluk ve Eğitimleri Hakkında Yönetmelik; Çalışanların Sağlık Gözetimine Yönelik Tıbbi Tetkiklerin Usul ve Esasları Hakkında Yönetmelik.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const QUESTION_BANK = [
+      {
+        id: 'uzman',
+        category: 'İSG Profesyonelleri',
+        title: `İşyerinizin tehlike sınıfına uygun sınıfta İş Güvenliği Uzmanı görevlendirildi mi?`,
+        hint: `6331 s.K. Madde 8/5 uyarınca Çok Tehlikeli sınıfta (A), Tehlikeli sınıfta en az (B), Az Tehlikeli sınıfta en az (C) sınıfı uzman görevlendirilir; 50'den az çalışanlı az tehlikeli işyerlerinde Bakanlık eğitimini tamamlayan işveren/vekili de bu hizmeti (muayeneler hariç) üstlenebilir.`,
+        priority: 'Kritik',
+        priorityRank: 1,
+        recommendation: `Tehlike sınıfınıza uygun belge sınıfına sahip iş güvenliği uzmanını İSG-KÂTİP üzerinden derhal görevlendirerek aylık zorunlu hizmet süresini başlatın.`,
+        basis: `6331 s.K. m.6/1-a, m.8/5, m.26/1-b; İSG Hizmetleri Yön. m.5`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'hekim',
+        category: 'İSG Profesyonelleri',
+        title: `Çalışanlarınızın sağlık gözetimi için İSG-KÂTİP onaylı İşyeri Hekimi görevlendirildi mi?`,
+        hint: `6331 s.K. Madde 6/1-a gereğince çalışan sayısına bakılmaksızın tüm işyerlerinde İSG-KÂTİP üzerinden işyeri hekimi görevlendirilmesi veya OSGB/ÇASMER'den hizmet alınması zorunludur.`,
+        priority: 'Kritik',
+        priorityRank: 1,
+        recommendation: `Çalışanlarınızın işe giriş ve periyodik sağlık gözetimini yürütmek üzere İSG-KÂTİP onaylı bir işyeri hekimi görevlendirmesi sağlayın.`,
+        basis: `6331 s.K. m.6/1-a, m.8, m.26/1-b; İSG Hizmetleri Yön. m.5, m.12`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'risk',
+        category: 'Risk Yönetimi',
+        title: `Risk Değerlendirmesi ekibi tarafından hazırlanıp tehlike sınıfı süresi içinde güncellendi mi?`,
+        hint: `Risk Değerlendirmesi Yönetmeliği Madde 6 ve 12 uyarınca ekipçe hazırlanan doküman çok tehlikeli sınıfta 2, tehlikeli sınıfta 4, az tehlikeli sınıfta 6 yılda bir; taşınma, kaza veya yöntem değişikliğinde ise derhal yenilenir.`,
+        priority: 'Kritik',
+        priorityRank: 1,
+        recommendation: `Risk değerlendirmesi ekibini toplayıp tehlike sınıfınıza uygun periyot ve kontrol tedbirlerini içeren imzalı risk değerlendirmesi dokümanını onaylayın.`,
+        basis: `6331 s.K. m.10, m.25/1, m.26/1-ç; İSG Risk Değerlendirmesi Yön. m.6–12`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'acil_plan',
+        category: 'Acil Durum Yönetimi',
+        title: `Acil Durum Planı ve tahliye krokileri hazırlanarak görünür alanlara asıldı mı?`,
+        hint: `İşyerlerinde Acil Durumlar Hakkında Yönetmelik Madde 12 ve 14 uyarınca kaçış yolları, toplanma yeri, ekipman ve kesim noktalarını gösteren tahliye planı görünür yüksekliğe asılmalı; plan 2/4/6 yılda bir yenilenmelidir.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `Acil durum planınızı kaçış yolları, toplanma yeri ve kesim noktalarını içeren güncel tahliye krokisiyle tamamlayıp kat ve girişlere asın.`,
+        basis: `6331 s.K. m.11, m.12, m.26/1-d; İşyerlerinde Acil Durumlar Hakkında Yön. m.5, m.12, m.14`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'tatbikat',
+        category: 'Acil Durum Yönetimi',
+        title: `Acil durum ekipleri görevlendirilip yılda en az bir kez tatbikat yapıldı mı?`,
+        hint: `Yönetmelik Madde 11 ve 13 uyarınca söndürme, kurtarma, koruma (çok tehlikeli 30, tehlikeli 40, az tehlikeli 50 çalışana 1; 10'dan az çalışanda ilk yardım hariç en az 1 kişi) ve ilk yardım ekipleri kurulup yılda en az bir tatbikat form ile belgelenir.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `Söndürme, kurtarma, koruma ve ilk yardım destek elemanlarını görevlendirerek yılda en az bir kez tatbikat gerçekleştirip tatbikat formunu düzenleyin.`,
+        basis: `6331 s.K. m.11/1-c, m.26/1-d; İşyerlerinde Acil Durumlar Hakkında Yön. m.11, m.13`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'egitim_2026',
+        category: 'Eğitim ve Bilgilendirme',
+        title: `2026 yönetmelik esaslarına göre işe başlama, temel ve yenileme İSG eğitimleri tamamlandı mı?`,
+        hint: `6331 s.K. Madde 17 ve Çalışanların İSG Eğitimleri Yönetmeliği uyarınca işe başlamadan önce yüz yüze uygulamalı işe başlama eğitimi, en geç 3 ay içinde güncel temel eğitim (tehlikeli ve çok tehlikeli sınıfta 4. konu başlığı yüz yüze) ve yıllık program dahilinde yenileme eğitimleri belgelendirilmelidir.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `Yıllık İSG eğitim programınızı 2026 güncel eğitim esaslarına göre onaylayıp işe başlama ve temel eğitimleri ölçme-değerlendirme kayıtlarıyla belgeleyin.`,
+        basis: `6331 s.K. m.17, m.26/1-ğ; Çalışanların İSG Eğitimlerinin Usul ve Esasları Hakkında Yön. m.4, m.8–12`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'muayene',
+        category: 'Sağlık Gözetimi',
+        title: `Çalışanların işe giriş ve periyodik sağlık muayeneleri ile tıbbi tetkikleri zamanında yapılıyor mu?`,
+        hint: `6331 s.K. Madde 15 ve İşyeri Hekimi Yönetmeliği Madde 9/2-c uyarınca tehlikeli ve çok tehlikeli işlerde sağlık raporu olmadan işe başlatılamaz; periyodik muayeneler az tehlikelide 5, tehlikelide 3, çok tehlikelide 1 yılda bir, özel gruplarda 6 ayda bir tekrarlanır.`,
+        priority: 'Kritik',
+        priorityRank: 1,
+        recommendation: `Tehlike sınıfı periyotlarına uygun işyeri hekimi muayenelerini ve yetkili kuruluşlarca yapılan tıbbi tetkikleri tamamlayıp gizlilik esasıyla dosyalayın.`,
+        basis: `6331 s.K. m.15, m.26/1-f; İşyeri Hekimi Yön. m.9/2-c; Tıbbi Tetkikler Yön. m.6–8`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'temsilci',
+        category: 'Katılım ve Temsil',
+        title: `Çalışan sayınıza uygun sayıda Çalışan Temsilcisi belirlenip özel eğitimi verildi mi?`,
+        hint: `6331 s.K. Madde 20 ve 17/2 uyarınca 2–50 çalışanda 1, 51–100'de 2, 101–500'de 3, 501–1000'de 4, 1001–2000'de 5, 2001+'da 6 çalışan temsilcisi seçim veya atama yoluyla görevlendirilir ve özel olarak eğitilir.`,
+        priority: 'Orta',
+        priorityRank: 3,
+        recommendation: `Çalışan sayınıza karşılık gelen sayıda çalışan temsilcisini seçim tutanağıyla görevlendirip özel temsilci eğitimini tamamlatarak İSG süreçlerine dahil edin.`,
+        basis: `6331 s.K. m.17/2, m.18, m.20, m.26/1-ı`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'kurul',
+        category: 'İSG Kurulu (50+ Çalışan)',
+        title: `50 ve üzeri çalışanlı işyerinizde İSG Kurulu oluşturulup düzenli toplanıyor mu?`,
+        hint: `6331 s.K. Madde 22 ve İSG Kurulları Yönetmeliği Madde 4 ve 9 uyarınca 50+ çalışanlı ve 6 aydan uzun süreli işlerde kurul oluşturulur; çok tehlikelide ayda 1, tehlikelide en geç 2 ayda 1, az tehlikelide en geç 3 ayda 1 toplanıp karar tutanağı tutulur.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `İşveren vekili başkanlığında tüm kurul üyelerini yazılı olarak atayıp tehlike sınıfınıza uygun periyotlarda toplantı yaparak imzalı karar tutanaklarını saklayın.`,
+        basis: `6331 s.K. m.22, m.26/1-i; İSG Kurulları Hakkında Yön. m.4, m.6, m.9`,
+        applies: function(profile) { return profile.employees >= 50; }
+      },
+      {
+        id: 'kaza_bildirim',
+        category: 'Kayıt ve Bildirim',
+        title: `İş kazaları 3 iş günü içinde SGK'ya bildiriliyor ve ramak kala kayıtları tutuluyor mu?`,
+        hint: `6331 s.K. Madde 14 uyarınca tüm iş kazaları ve ramak kala olaylar için inceleme raporu düzenlenmeli; iş kazaları kazadan sonraki 3 iş günü, meslek hastalıkları ise öğrenildiği tarihten itibaren 3 iş günü içinde SGK'ya bildirilmelidir.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `Ramak kala olay bildirim ve inceleme prosedürünü kurarak tüm iş kazalarını kazadan sonraki üç iş günü içinde SGK'ya bildirecek takip mekanizmasını işletin.`,
+        basis: `6331 s.K. m.14, m.26/1-e; İSG Risk Değerlendirmesi Yön. m.8/1-m`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'kkd',
+        category: 'Koruyucu Önlemler',
+        title: `Çalışanlara standartlara uygun ve CE işaretli Kişisel Koruyucu Donanım (KKD) temin ediliyor mu?`,
+        hint: `6331 s.K. Madde 4/4, 5/1-g ve 26/1-o uyarınca toplu korunma öncelikli olmak üzere gerekli KKD'ler standartlara uygun ve CE işaretli olarak ücretsiz sağlanmalı, zimmet ve kullanım eğitimi verilmelidir.`,
+        priority: 'Yüksek',
+        priorityRank: 2,
+        recommendation: `Risk değerlendirmesinde belirlenen standartlara uygun ve CE işaretli KKD'leri çalışanlara ücretsiz temin edip zimmet ve doğru kullanım eğitimi kayıtlarını tutun.`,
+        basis: `6331 s.K. m.4/4, m.5/1-g, m.19/2-b, m.26/1-o`,
+        applies: function() { return true; }
+      },
+      {
+        id: 'dsp',
+        category: 'Destek Sağlık Personeli (Çok Tehlikeli 10+)',
+        title: `Çok tehlikeli sınıfta 10+ çalışan için Diğer Sağlık Personeli (sağlık destek elemanı) görevlendirildi mi?`,
+        hint: `6331 s.K. Madde 6/1-a ve 6/3 uyarınca 10 ve daha fazla çalışanı olan çok tehlikeli işyerlerinde (tam süreli işyeri hekimi görevlendirilmemişse) İSG-KÂTİP üzerinden Diğer Sağlık Personeli görevlendirilmesi zorunludur.`,
+        priority: 'Orta',
+        priorityRank: 3,
+        recommendation: `Tam süreli işyeri hekimi görevli değilse çalışan başına belirlenen asgari aylık süreyi karşılayacak şekilde İSG-KÂTİP üzerinden diğer sağlık personeli görevlendirin.`,
+        basis: `6331 s.K. m.6/1-a, m.6/3, m.26/1-b; İşyeri Hekimi ve DSP Yön. m.14, m.19`,
+        applies: function(profile) { return profile.hazard === 'cok_tehlikeli' && profile.employees >= 10; }
+      }
+    ];
+
+    const HAZARD_LABELS = {
+      az_tehlikeli: 'Az Tehlikeli',
+      tehlikeli: 'Tehlikeli',
+      cok_tehlikeli: 'Çok Tehlikeli'
+    };
+
+    const appState = {
+      view: 'setup',
+      hazard: 'tehlikeli',
+      employees: 25,
+      currentIdx: 0,
+      answers: {},
+      gapFilter: 'all',
+      contactMode: null
+    };
+
+    function getActiveQuestions() {
+      return QUESTION_BANK.filter(function(q) {
+        return q.applies(appState);
+      });
+    }
+
+    function getRepRequirementText(emp) {
+      if (emp <= 1) return '2+ Çalışanda Zorunlu';
+      if (emp <= 50) return '1 Çalışan Temsilcisi';
+      if (emp <= 100) return '2 Çalışan Temsilcisi';
+      if (emp <= 500) return '3 Çalışan Temsilcisi';
+      if (emp <= 1000) return '4 Çalışan Temsilcisi';
+      if (emp <= 2000) return '5 Çalışan Temsilcisi';
+      return '6 Çalışan Temsilcisi';
+    }
+
+    async function persistState() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === 'function') {
+          await window.notebookAppApi.setAppState({
+            view: appState.view,
+            hazard: appState.hazard,
+            employees: appState.employees,
+            currentIdx: appState.currentIdx,
+            answers: appState.answers,
+            gapFilter: appState.gapFilter,
+            contactMode: appState.contactMode
+          });
+        }
+      } catch (err) {
+        // Ignore persistence errors silently in standalone mode
+      }
+    }
+
+    function updateSetupUI() {
+      ['az_tehlikeli', 'tehlikeli', 'cok_tehlikeli'].forEach(function(key) {
+        var card = document.getElementById('card-' + key);
+        if (!card) return;
+        var selected = appState.hazard === key;
+        card.classList.toggle('is-selected', selected);
+        card.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      });
+
+      var empInput = document.getElementById('input-employees');
+      if (empInput && Number(empInput.value) !== appState.employees) {
+        empInput.value = String(appState.employees);
+      }
+
+      var presetBtns = document.querySelectorAll('.preset-btn');
+      presetBtns.forEach(function(btn) {
+        var val = Number(btn.getAttribute('data-preset'));
+        var isActive = false;
+        if (val === 5 && appState.employees <= 9) isActive = true;
+        else if (val === 25 && appState.employees >= 10 && appState.employees <= 49) isActive = true;
+        else if (val === 65 && appState.employees >= 50 && appState.employees <= 249) isActive = true;
+        else if (val === 300 && appState.employees >= 250) isActive = true;
+        btn.classList.toggle('is-active', isActive);
+      });
+
+      var activeQs = getActiveQuestions();
+      var prevRep = document.getElementById('prev-rep');
+      var prevBoard = document.getElementById('prev-board');
+      var prevDsp = document.getElementById('prev-dsp');
+      var prevQcount = document.getElementById('prev-qcount');
+
+      if (prevRep) prevRep.textContent = getRepRequirementText(appState.employees);
+      if (prevBoard) prevBoard.textContent = appState.employees >= 50 ? 'Zorunlu (Soru 9 Aktif)' : 'Zorunlu Değil';
+      if (prevDsp) prevDsp.textContent = (appState.hazard === 'cok_tehlikeli' && appState.employees >= 10) ? 'Zorunlu (Soru 12 Aktif)' : 'Zorunlu Değil';
+      if (prevQcount) prevQcount.textContent = activeQs.length + ' Soru';
+    }
+
+    function updateStepperUI() {
+      var p1 = document.getElementById('step-pill-1');
+      var p2 = document.getElementById('step-pill-2');
+      var p3 = document.getElementById('step-pill-3');
+      var p2Label = document.getElementById('step-pill-2-label');
+      var activeQs = getActiveQuestions();
+      if (p2Label) p2Label.textContent = 'Uyum Soruları (' + activeQs.length + ')';
+
+      [p1, p2, p3].forEach(function(el) {
+        if (!el) return;
+        el.classList.remove('is-active', 'is-done');
+      });
+
+      if (appState.view === 'setup') {
+        if (p1) p1.classList.add('is-active');
+      } else if (appState.view === 'quiz') {
+        if (p1) p1.classList.add('is-done');
+        if (p2) p2.classList.add('is-active');
+      } else {
+        if (p1) p1.classList.add('is-done');
+        if (p2) p2.classList.add('is-done');
+        if (p3) p3.classList.add('is-active');
+      }
+    }
+
+    function switchView(targetView) {
+      appState.view = targetView;
+      var vSetup = document.getElementById('view-setup');
+      var vQuiz = document.getElementById('view-quiz');
+      var vResults = document.getElementById('view-results');
+
+      if (vSetup) vSetup.classList.toggle('is-hidden', targetView !== 'setup');
+      if (vQuiz) vQuiz.classList.toggle('is-hidden', targetView !== 'quiz');
+      if (vResults) vResults.classList.toggle('is-hidden', targetView !== 'results');
+
+      updateStepperUI();
+      try { window.scrollTo({ top: 0 }); } catch (e) {}
+
+      if (targetView === 'setup') updateSetupUI();
+      else if (targetView === 'quiz') renderQuestion();
+      else if (targetView === 'results') renderResults();
+    }
+
+    function selectHazard(hazardKey) {
+      appState.hazard = hazardKey;
+      updateSetupUI();
+      persistState();
+    }
+
+    function setEmployeeCount(rawVal) {
+      var errEl = document.getElementById('emp-error');
+      var num = parseInt(rawVal, 10);
+      if (isNaN(num) || num < 1) {
+        if (errEl) errEl.textContent = 'Lütfen 1 veya daha büyük bir çalışan sayısı giriniz.';
+        return;
+      }
+      if (num > 10000) num = 10000;
+      if (errEl) errEl.textContent = '';
+      appState.employees = num;
+      updateSetupUI();
+      persistState();
+    }
+
+    function applyEmployeePreset(val) {
+      var errEl = document.getElementById('emp-error');
+      if (errEl) errEl.textContent = '';
+      appState.employees = val;
+      var empInput = document.getElementById('input-employees');
+      if (empInput) empInput.value = String(val);
+      updateSetupUI();
+      persistState();
+    }
+
+    function startAssessment() {
+      var empInput = document.getElementById('input-employees');
+      var errEl = document.getElementById('emp-error');
+      var parsed = empInput ? parseInt(empInput.value, 10) : appState.employees;
+      if (isNaN(parsed) || parsed < 1) {
+        if (errEl) errEl.textContent = 'Devam etmeden önce geçerli bir çalışan sayısı (en az 1) giriniz.';
+        if (empInput) empInput.focus();
+        return;
+      }
+      appState.employees = Math.min(10000, parsed);
+      appState.currentIdx = 0;
+      appState.contactMode = null;
+      switchView('quiz');
+      persistState();
+    }
+
+    function renderQuestion() {
+      var activeQs = getActiveQuestions();
+      if (appState.currentIdx >= activeQs.length) {
+        appState.currentIdx = activeQs.length - 1;
+      }
+      if (appState.currentIdx < 0) appState.currentIdx = 0;
+
+      var q = activeQs[appState.currentIdx];
+      var total = activeQs.length;
+      var currentNum = appState.currentIdx + 1;
+      var pct = Math.round((currentNum / total) * 100);
+
+      var counterEl = document.getElementById('q-counter');
+      var chipEl = document.getElementById('q-profile-chip');
+      var trackEl = document.getElementById('q-progress-track');
+      var fillEl = document.getElementById('q-progress-fill');
+      var catEl = document.getElementById('q-category');
+      var titleEl = document.getElementById('q-title');
+      var hintEl = document.getElementById('q-hint');
+
+      if (counterEl) counterEl.textContent = 'Soru ' + currentNum + ' / ' + total;
+      if (chipEl) chipEl.textContent = HAZARD_LABELS[appState.hazard] + ' · ' + appState.employees + ' Çalışan';
+      if (trackEl) trackEl.setAttribute('aria-valuenow', String(pct));
+      if (fillEl) fillEl.style.width = pct + '%';
+      if (catEl) catEl.textContent = q.category;
+      if (titleEl) titleEl.textContent = q.title;
+      if (hintEl) hintEl.textContent = q.hint;
+
+      var ans = appState.answers[q.id];
+      var optYes = document.getElementById('opt-yes');
+      var optUnsure = document.getElementById('opt-unsure');
+      var optNo = document.getElementById('opt-no');
+
+      if (optYes) optYes.classList.toggle('is-selected-yes', ans === 'yes');
+      if (optUnsure) optUnsure.classList.toggle('is-selected-unsure', ans === 'unsure');
+      if (optNo) optNo.classList.toggle('is-selected-no', ans === 'no');
+
+      var prevLbl = document.getElementById('btn-prev-label');
+      var nextBtn = document.getElementById('btn-next-q');
+      var nextLbl = document.getElementById('btn-next-label');
+
+      if (prevLbl) prevLbl.textContent = appState.currentIdx === 0 ? 'Profili Düzenle' : 'Önceki Soru';
+      if (nextBtn) {
+        nextBtn.classList.toggle('is-hidden', !ans);
+      }
+      if (nextLbl) {
+        nextLbl.textContent = currentNum === total ? 'Karneyi Görüntüle' : 'Sonraki Soru';
+      }
+    }
+
+    function answerQuestion(val) {
+      var activeQs = getActiveQuestions();
+      var q = activeQs[appState.currentIdx];
+      if (!q) return;
+      appState.answers[q.id] = val;
+      renderQuestion();
+      persistState();
+
+      var isLast = appState.currentIdx >= activeQs.length - 1;
+      setTimeout(function() {
+        if (isLast) {
+          switchView('results');
+          persistState();
+        } else {
+          appState.currentIdx += 1;
+          renderQuestion();
+          try { document.getElementById('view-quiz').scrollIntoView({ block: 'start' }); } catch (e) {}
+          persistState();
+        }
+      }, 150);
+    }
+
+    function goPrevQuestion() {
+      if (appState.currentIdx === 0) {
+        switchView('setup');
+        persistState();
+        return;
+      }
+      appState.currentIdx -= 1;
+      renderQuestion();
+      persistState();
+    }
+
+    function goNextQuestion() {
+      var activeQs = getActiveQuestions();
+      var q = activeQs[appState.currentIdx];
+      if (!q || !appState.answers[q.id]) return;
+      if (appState.currentIdx >= activeQs.length - 1) {
+        switchView('results');
+      } else {
+        appState.currentIdx += 1;
+        renderQuestion();
+      }
+      persistState();
+    }
+
+    function computeScoreData() {
+      var activeQs = getActiveQuestions();
+      var yesCount = 0;
+      var unsureCount = 0;
+      var noCount = 0;
+      var gaps = [];
+      var compliant = [];
+
+      activeQs.forEach(function(q) {
+        var ans = appState.answers[q.id] || 'no';
+        if (ans === 'yes') {
+          yesCount += 1;
+          compliant.push(q);
+        } else if (ans === 'unsure') {
+          unsureCount += 1;
+          gaps.push({ question: q, status: 'unsure' });
+        } else {
+          noCount += 1;
+          gaps.push({ question: q, status: 'no' });
+        }
+      });
+
+      var total = activeQs.length;
+      var score = Math.round(((yesCount + 0.5 * unsureCount) / total) * 100);
+
+      gaps.sort(function(a, b) {
+        if (a.status !== b.status) return a.status === 'no' ? -1 : 1;
+        return a.question.priorityRank - b.question.priorityRank;
+      });
+
+      return {
+        total: total,
+        yesCount: yesCount,
+        unsureCount: unsureCount,
+        noCount: noCount,
+        score: score,
+        gaps: gaps,
+        compliant: compliant
+      };
+    }
+
+    function renderResults() {
+      var data = computeScoreData();
+
+      var scoreEl = document.getElementById('res-score');
+      var ringArc = document.getElementById('ring-arc');
+      var ringAria = document.getElementById('ring-aria');
+      var tierBadge = document.getElementById('res-tier-badge');
+      var formulaEl = document.getElementById('res-formula-text');
+      var profileSumEl = document.getElementById('res-profile-summary');
+
+      if (scoreEl) scoreEl.textContent = String(data.score);
+      if (ringAria) ringAria.setAttribute('aria-label', 'İSG Uyum Puanı: 100 üzerinden ' + data.score);
+
+      var circumference = 2 * Math.PI * 74;
+      var offset = circumference * (1 - data.score / 100);
+      if (ringArc) {
+        ringArc.style.strokeDasharray = circumference.toFixed(2);
+        ringArc.style.strokeDashoffset = offset.toFixed(2);
+        ringArc.classList.remove('tier-green', 'tier-gold', 'tier-red');
+        if (data.score >= 80) ringArc.classList.add('tier-green');
+        else if (data.score >= 50) ringArc.classList.add('tier-gold');
+        else ringArc.classList.add('tier-red');
+      }
+
+      if (tierBadge) {
+        tierBadge.classList.remove('tier-badge-green', 'tier-badge-gold', 'tier-badge-red');
+        if (data.score >= 80) {
+          tierBadge.classList.add('tier-badge-green');
+          tierBadge.textContent = 'Yüksek Uyum Düzeyi (80+)';
+        } else if (data.score >= 50) {
+          tierBadge.classList.add('tier-badge-gold');
+          tierBadge.textContent = 'Orta Uyum — İyileştirme Gerekli (50–79)';
+        } else {
+          tierBadge.classList.add('tier-badge-red');
+          tierBadge.textContent = 'Düşük Uyum — Öncelikli Müdahale (<50)';
+        }
+      }
+
+      if (formulaEl) {
+        formulaEl.textContent = 'Formül: yuvarla(((Evet + 0,5 × Emin değilim) / sorulan soru sayısı) × 100) → yuvarla(((' +
+          data.yesCount + ' + 0,5 × ' + data.unsureCount + ') / ' + data.total + ') × 100) = ' + data.score;
+      }
+
+      if (profileSumEl) {
+        profileSumEl.textContent = HAZARD_LABELS[appState.hazard] + ' · ' + appState.employees + ' Çalışan · ' + data.total + ' soru değerlendirildi';
+      }
+
+      var tYes = document.getElementById('tally-yes');
+      var tUnsure = document.getElementById('tally-unsure');
+      var tNo = document.getElementById('tally-no');
+      if (tYes) tYes.textContent = String(data.yesCount);
+      if (tUnsure) tUnsure.textContent = String(data.unsureCount);
+      if (tNo) tNo.textContent = String(data.noCount);
+
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(function(b) {
+        b.classList.toggle('is-active', b.getAttribute('data-filter') === appState.gapFilter);
+      });
+
+      var wa = document.getElementById('wa-link');
+      if (wa) wa.href = 'https://wa.me/905323373814?text=' + encodeURIComponent(buildAnonymousSummaryText('whatsapp'));
+
+      renderGapsList(data);
+      renderCompliantList(data);
+
+      if (appState.contactMode) {
+        openContactPanel(appState.contactMode);
+      } else {
+        closeContactPanel(true);
+      }
+    }
+
+    function setGapFilter(filterKey) {
+      appState.gapFilter = filterKey;
+      var btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(function(b) {
+        b.classList.toggle('is-active', b.getAttribute('data-filter') === filterKey);
+      });
+      var data = computeScoreData();
+      renderGapsList(data);
+      persistState();
+    }
+
+    function renderGapsList(data) {
+      var container = document.getElementById('gaps-container');
+      var filtersWrap = document.getElementById('gap-filters');
+      if (!container) return;
+
+      if (data.gaps.length === 0) {
+        if (filtersWrap) filtersWrap.classList.add('is-hidden');
+        container.innerHTML =
+          '<div class="perfect-box">' +
+            '<h3>Eksik Başlık Tespit Edilmedi</h3>' +
+            '<p>Sorulan ' + data.total + ' temel yükümlülüğün tamamında tam uyum beyan ettiniz. Belge geçerlilik tarihlerini ve periyodik yenileme sürelerini düzenli takip etmeye devam ediniz.</p>' +
+          '</div>';
+        return;
+      }
+
+      if (filtersWrap) filtersWrap.classList.remove('is-hidden');
+
+      var filtered = data.gaps.filter(function(item) {
+        if (appState.gapFilter === 'all') return true;
+        return item.status === appState.gapFilter;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML =
+          '<p class="panel-desc empty-filter-msg">Seçili filtrede listelenecek kayıt bulunmamaktadır.</p>';
+        return;
+      }
+
+      var html = '';
+      filtered.forEach(function(item) {
+        var q = item.question;
+        var isUnsure = item.status === 'unsure';
+        var statusTagClass = isUnsure ? 'tag-unsure' : 'tag-no';
+        var statusText = isUnsure ? 'Emin değilim' : 'Eksik (Hayır)';
+        var prioClass = q.priority === 'Kritik' ? 'tag-prio-kritik' : (q.priority === 'Yüksek' ? 'tag-prio-yuksek' : 'tag-prio-orta');
+
+        html +=
+          '<article class="gap-item ' + (isUnsure ? 'is-unsure' : '') + '">' +
+            '<div class="gap-item-top">' +
+              '<h3 class="gap-title">' + q.category + '</h3>' +
+              '<div class="gap-badges">' +
+                '<span class="tag ' + statusTagClass + '">' + statusText + '</span>' +
+                '<span class="tag ' + prioClass + '">Öncelik: ' + q.priority + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<p class="gap-rec"><strong>Öneri:</strong> ' + q.recommendation + '</p>' +
+            '<p class="gap-basis"><strong>Dayanak Madde:</strong> ' + q.basis + ' (6331 s.K. 26. madde idari yaptırım kapsamındadır)</p>' +
+          '</article>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    function renderCompliantList(data) {
+      var summaryEl = document.getElementById('compliant-summary');
+      var listEl = document.getElementById('compliant-list');
+      var detailsEl = document.getElementById('compliant-details');
+      if (!summaryEl || !listEl || !detailsEl) return;
+
+      summaryEl.textContent = 'Uyumlu Beyan Edilen Başlıklar (' + data.compliant.length + ')';
+      if (data.compliant.length === 0) {
+        detailsEl.classList.add('is-hidden');
+        return;
+      }
+      detailsEl.classList.remove('is-hidden');
+      var html = '';
+      data.compliant.forEach(function(q) {
+        html += '<li><span>' + q.title + '</span><span class="tag badge-az">✓ Evet</span></li>';
+      });
+      listEl.innerHTML = html;
+    }
+
+    function buildAnonymousSummaryText(mode) {
+      var data = computeScoreData();
+      var lines = [];
+      lines.push('ABANT OSGB (Yetki No: OSGB-5019) — İSG Uyum Karnesi Özeti');
+      lines.push('Talep Türü: ' + (mode === 'whatsapp' ? 'WhatsApp Uzman Danışma' : 'Hizmet Teklifi Talebi'));
+      lines.push('İşyeri Profili: ' + HAZARD_LABELS[appState.hazard] + ' | ' + appState.employees + ' Çalışan');
+      lines.push('Uyum Puanı: ' + data.score + ' / 100 (' + data.total + ' soru — Evet: ' + data.yesCount + ', Emin değilim: ' + data.unsureCount + ', Hayır: ' + data.noCount + ')');
+      if (data.gaps.length > 0) {
+        lines.push('');
+        lines.push('Öncelikli İyileştirme Başlıkları:');
+        data.gaps.forEach(function(item, i) {
+          var mark = item.status === 'no' ? 'Eksik' : 'Doğrulanacak';
+          lines.push((i + 1) + '. [' + item.question.priority + ' / ' + mark + '] ' + item.question.category + ' — ' + item.question.basis);
+        });
+      } else {
+        lines.push('Not: Sorulan tüm başlıklarda tam uyum beyan edilmiştir; periyodik yenileme takibi talep edilmektedir.');
+      }
+      lines.push('');
+      lines.push('Not: Bu özette kişisel veri yer almamaktadır.');
+      return lines.join('\n');
+    }
+
+    function openContactPanel(mode) {
+      appState.contactMode = mode;
+      var drawer = document.getElementById('contact-drawer');
+      var titleEl = document.getElementById('contact-title');
+      var descEl = document.getElementById('contact-desc');
+      var preEl = document.getElementById('contact-summary-text');
+      var copyBtn = document.getElementById('btn-copy-summary');
+      var fb = document.getElementById('copy-feedback');
+
+      if (fb) fb.textContent = '';
+      if (!drawer || !titleEl || !descEl || !preEl) return;
+
+      drawer.classList.remove('is-hidden');
+      drawer.classList.toggle('is-whatsapp', mode === 'whatsapp');
+
+      if (copyBtn) {
+        copyBtn.classList.toggle('btn-whatsapp', mode === 'whatsapp');
+        copyBtn.classList.toggle('btn-primary', mode !== 'whatsapp');
+      }
+
+      if (mode === 'whatsapp') {
+        titleEl.textContent = 'Abant OSGB — WhatsApp Danışma Mesajınız Hazır';
+        descEl.textContent = 'Kişisel veri toplanmaz. Aşağıdaki anonim özeti kopyalayıp Abant OSGB kurumsal WhatsApp hattına ileterek ücretsiz ön görüşme alabilirsiniz.';
+      } else {
+        titleEl.textContent = 'Abant OSGB — İSG Hizmet Teklifi Özeti';
+        descEl.textContent = 'Kişisel veri toplanmaz. Aşağıdaki anonim işyeri ve uyum özetini kopyalayıp veya indirerek Abant OSGB (Yetki No: OSGB-5019) üzerinden teklif talebinizde paylaşabilirsiniz.';
+      }
+
+      preEl.textContent = buildAnonymousSummaryText(mode);
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      persistState();
+    }
+
+    function closeContactPanel(skipPersist) {
+      appState.contactMode = null;
+      var drawer = document.getElementById('contact-drawer');
+      if (drawer) drawer.classList.add('is-hidden');
+      if (!skipPersist) persistState();
+    }
+
+    async function copyContactSummary() {
+      var preEl = document.getElementById('contact-summary-text');
+      var fb = document.getElementById('copy-feedback');
+      if (!preEl) return;
+      var text = preEl.textContent || '';
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          if (fb) fb.textContent = 'Özet panoya kopyalandı.';
+          return;
+        }
+      } catch (err) {
+        // Fallback below
+      }
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        if (fb) fb.textContent = 'Özet panoya kopyalandı.';
+      } catch (e) {
+        if (fb) fb.textContent = 'Lütfen metni seçerek manuel kopyalayın.';
+      }
+      document.body.removeChild(ta);
+    }
+
+    function downloadReportTxt() {
+      var text = buildAnonymousSummaryText(appState.contactMode || 'teklif');
+      if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === 'function') {
+        window.notebookAppApi.triggerFileDownload({
+          content: text,
+          contentType: 'text/plain',
+          encoding: 'UTF-8',
+          filename: 'abant-osgb-isg-uyum-karnesi.txt'
+        });
+      }
+    }
+
+    function restartTest() {
+      appState.view = 'setup';
+      appState.currentIdx = 0;
+      appState.answers = {};
+      appState.gapFilter = 'all';
+      appState.contactMode = null;
+      switchView('setup');
+      persistState();
+    }
+
+    async function initApp() {
+      try {
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+      } catch (e) {}
+
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+          var saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === 'object') {
+            if (saved.hazard && HAZARD_LABELS[saved.hazard]) appState.hazard = saved.hazard;
+            if (typeof saved.employees === 'number' && saved.employees >= 1) appState.employees = saved.employees;
+            if (typeof saved.currentIdx === 'number' && saved.currentIdx >= 0) appState.currentIdx = saved.currentIdx;
+            if (saved.answers && typeof saved.answers === 'object') appState.answers = saved.answers;
+            if (saved.gapFilter) appState.gapFilter = saved.gapFilter;
+            if (saved.contactMode) appState.contactMode = saved.contactMode;
+            if (saved.view === 'quiz' || saved.view === 'results' || saved.view === 'setup') {
+              appState.view = saved.view;
+            }
+          }
+        }
+      } catch (err) {
+        // Start fresh if getAppState unavailable
+      }
+
+      switchView(appState.view);
+
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === 'function') {
+          window.notebookAppApi.notifyAppReady();
+        }
+      } catch (e) {}
+    }
+
+    document.addEventListener('DOMContentLoaded', initApp);
+  </script>
+
+</body>
+</html>

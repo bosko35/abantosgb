@@ -14,6 +14,11 @@ const nextConfig = {
         source: '/brand/:path*',
         headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
       },
+      {
+        // Deneme sayfaları Google'da listelenmesin
+        source: '/deneme/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
     ]
   },
   async rewrites() {
@@ -21,6 +26,10 @@ const nextConfig = {
       {
         source: '/genel.com',
         destination: '/genel',
+      },
+      {
+        source: '/deneme/uyum-karnesi',
+        destination: '/deneme/uyum-karnesi.html',
       },
     ]
   },
