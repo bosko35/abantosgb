@@ -87,6 +87,8 @@ const data: ServicePageData = {
     { title: "Abant OSGB Gerede: Deri İhtisas OSB", href: "/hizmetler/abant-osgb-gerede" },
     { title: "Abant OSGB Mudurnu", href: "/hizmetler/abant-osgb-mudurnu" },
     { title: "Abant OSGB Mengen", href: "/hizmetler/abant-osgb-mengen" },
+    { title: "Abant OSGB Göynük", href: "/hizmetler/abant-osgb-goynuk" },
+    { title: "Abant OSGB Yeniçağa", href: "/hizmetler/abant-osgb-yenicaga" },
     { title: "Bolu İşyeri Hekimliği", href: "/hizmetler/isyeri-hekimligi-bolu" },
     { title: "Bolu Risk Analizi", href: "/hizmetler/risk-analizi-bolu" },
     { title: "Yasal Süre Hesaplama", href: "/hesaplama" },

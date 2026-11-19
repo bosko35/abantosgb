@@ -50,6 +50,8 @@ export default function Footer() {
               <li><a href="/hizmetler/abant-osgb-gerede" className="hover:text-white transition-colors">Abant OSGB Gerede</a></li>
               <li><a href="/hizmetler/abant-osgb-mudurnu" className="hover:text-white transition-colors">Abant OSGB Mudurnu</a></li>
               <li><a href="/hizmetler/abant-osgb-mengen" className="hover:text-white transition-colors">Abant OSGB Mengen</a></li>
+              <li><a href="/hizmetler/abant-osgb-goynuk" className="hover:text-white transition-colors">Abant OSGB Göynük</a></li>
+              <li><a href="/hizmetler/abant-osgb-yenicaga" className="hover:text-white transition-colors">Abant OSGB Yeniçağa</a></li>
             </ul>
           </div>
 

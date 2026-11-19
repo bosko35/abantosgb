@@ -30,6 +30,8 @@ import boluOsgb from "./bolu-abant-osgb";
 import geredeOsgb from "./abant-osgb-gerede";
 import mudurnuOsgb from "./abant-osgb-mudurnu";
 import mengenOsgb from "./abant-osgb-mengen";
+import goynukOsgb from "./abant-osgb-goynuk";
+import yenicagaOsgb from "./abant-osgb-yenicaga";
 import deriKimya from "./deri-ve-kimya-sektorunde-isg";
 
 export const servicesBySlug: Record<string, ServicePageData> = {
@@ -42,6 +44,8 @@ export const servicesBySlug: Record<string, ServicePageData> = {
   [geredeOsgb.slug]: geredeOsgb,
   [mudurnuOsgb.slug]: mudurnuOsgb,
   [mengenOsgb.slug]: mengenOsgb,
+  [goynukOsgb.slug]: goynukOsgb,
+  [yenicagaOsgb.slug]: yenicagaOsgb,
   [deriKimya.slug]: deriKimya,
 };
 
